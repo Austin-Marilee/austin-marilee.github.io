@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bike Services | The Mountain Spoke</title>
+        <meta name="author" content="Marilee Austin">
+        <meta name="description" content="The Mountain Spoke is a fictitious, retail store and shop located in Bozeman, Montana specializing in bicycles, bicycle parts, bicycle repair, and tours.">
+
+        <!-- external style references in the proper cascading order -->
+        <link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Open+Sans" rel="stylesheet"><!-- Google API font reference -->
+        <!-- favicon links -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ea2309">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#ffffff">
+        <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="styles/small.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+        <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+    </head>
+    <body>
+        <a href="index.html"><header>
+            <img src="images/mountain-logo.png" alt="Mountain Logo">
+            <div>
+                <h1>MOUNTAIN SPOKE</h1>
+                <div class="subheading">BOZEMAN, MONTANA</div>
+            </div>
+            </header></a>
+
+        <!-- Navigation -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul class="hide mainmenu" id="primaryNav">
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="adventures.html">ADVENTURES</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="callToAction">
+                <h2 class="h2Contrast">BIKE<br>SERVICES</h2>
+                <figure>
+                    <img src="images/bike-services.jpg" alt="Bicycle Being Serviced" sizes="100vw"
+                         srcset="images/bike-services-400.jpg 400w,
+                                 images/bike-services-800.jpg 800w,
+                                 images/bike-services-1200.jpg 1200w">
+                </figure>
+            </section>
+
+            <section class="intro">
+                <p>We offer highly trained and experienced repair technicians who care about your saftey and will make sure that your bike is in optimal condition. All our staff are friendly and knowledgeable and you can trust their advice. Besides offering individual parts and services we have three complete service packages to fit your needs.</p>
+            </section>
+
+<section></section>
+
+            <section class="customersTalk">
+                <h3>Call 801-555-2690 to book your adventure today!</h3>
+            </section>
+
+            <section class="logo2">
+                <img src="images/logo2.png" alt="Company Logo">
+            </section>
+
+            <section class="customersTalk">
+                <h3>PRAISE FOR OUR BIKE TOURS</h3>
+                <aside class="reviews">
+                    <blockquote >"The Winter package was amazing. I've never had a trip take me away like this one did."<br><br>Eric&mdash;New York</blockquote>
+                    <blockquote >"We rode the Summer trip and are coming back for Autumn. We might come every year from now on. It was that fun."<br><br>Candice&mdash;Denver</blockquote>
+                    <blockquote >"Go in the Fall! The Autumn colors make every effort on the hills worth it. It'w worth every penny too. I'd recommend it to anyone."<br><br>George&mdash;Manchester</blockquote>
+                </aside>
+            </section>
+        </main>
+        <footer>
+
+            <section class="footerLinks">
+                <ul>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="adventures.html">ADVENTURES</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-bar">
+                <div>
+                    <a class="socialmedia" target="_blank" href="https://www.facebook.com/"><img class="icon" src="images/facebook.png" alt="facebook"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.instagram.com/"><img class="icon" src="images/instagram.png" alt="instagram"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.twitter.com/"><img class="icon" src="images/twitter.png" alt="twitter"></a>
+                </div>
+                <p>Mountain Spoke<br>3950 Valley Commons Dr.<br>Bozeman, Montana</p><p>&copy;2018 Mountain Spoke Bicycle Company<br><br><span id="currentdate"></span></p>
+            </section>
+        </footer>
+        <script src="scripts/bikeservices.js"></script>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/mainmenu.js"></script>
+        <script src="scripts/currentdate.js"></script>
+    </body>
+</html>

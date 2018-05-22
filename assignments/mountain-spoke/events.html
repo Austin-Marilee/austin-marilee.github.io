@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Events | The Mountain Spoke</title>
+        <meta name="author" content="Marilee Austin">
+        <meta name="description" content="The Mountain Spoke hosts an annual charity event called Cycle the Continental Divide. The event benefits a Children's Hospital in the area.">
+
+        <!-- external style references in the proper cascading order -->
+        <link href="https://fonts.googleapis.com/css?family=Asap+Condensed%7COpen+Sans" rel="stylesheet"><!-- Google API font reference -->
+        <!-- favicon links -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ea2309">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#ffffff">
+        <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="styles/small.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+        <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+    </head>
+
+    <body>
+        <a href="index.html"><header>
+            <img src="images/mountain-logo.png" alt="Mountain Logo">
+            <div>
+                <h1>MOUNTAIN SPOKE</h1>
+                <div class="subheading">BOZEMAN, MONTANA</div>
+            </div>
+            </header></a>
+
+        <!-- Navigation -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul class="hide mainmenu" id="primaryNav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="adventures.html">ADVENTURES</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="callToAction">
+                <h2 class="h2Contrast">CYCLE THE<br>CONTINENTAL DIVIDE</h2>
+                <div class="blackBox">EVENT REGISTRATION</div>
+                <figure>
+                    <img src="images/event-cover.jpg" alt="Group of Cyclists" sizes="100vw"
+                         srcset="images/event-cover400.jpg 400w,
+                                 images/event-cover800.jpg 800w,
+                                 images/event-cover1200.jpg 1200w">
+                </figure>
+            </div>
+
+            <div class="intro">
+                <p>Join us for our annual event ride "Cycle the Continental Divide" which benefits our local children's hospital. Cycling teams and families of all skill levels are welcome to join. This annual event is a favorite for our community and is supported by numerous volunteers. Whether you ride a bike or not, we welcome your support. All proceeds benefit Children's Hospital, Bozeman.  </p>
+            </div>
+
+            <section class="event">
+                <h2>Event Informaton</h2>
+                <p>This cycling journey takes place <span>July 10-13, 2018</span> with routes starting ending in Bozeman. Mapped trails include a simplie six-mile ride from the city center to Sourdough Canyon Road, a former logging route with views of Saddle Peak. Other more difficult routes are available for our experienced riders. Initial <span>registration costs are $100</span> but we encourage all riders to raise more funds to donate to the cause.</p>
+            </section>
+
+            <h3>Event Registration</h3>
+            <form action="thanks.html" method="get" enctype="multipart/form-data" name="event" id="userReport">
+                <fieldset>
+                    <legend><span>Contact Information</span></legend>
+                    <label><span>Full Name:</span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{5,99}" required ></label>
+                    <label><span>Email:</span><input name="email" type="email" value="" placeholder="example@email.com" ></label>
+                    <label><span>Phone:</span><input name="phone" type="tel" value="" placeholder="1235551234" pattern="[0-9]{10,20}" required ></label>
+                    <label><span>Zip Code:</span><input name="zip" type="number" required></label>
+                </fieldset>
+                <fieldset>
+                    <legend><span>Rider Information</span></legend>
+                    <label><span>Date of Birth:</span><input name="date" type="date" ></label>
+                    <label><span>Home State/Country:</span><input type="text" name="stateType" list="states">
+                        <datalist id="states">
+                            <option value="Montana"></option>
+                            <option value="North Dakota"></option>
+                            <option value="Idaho"></option>
+                            <option value="Wyoming"></option>
+                            <option value="Canada"></option>
+                        </datalist>
+                    </label>
+                    <label><span>Skill Level (1 to 10):</span><span id="ratingvalue">5</span><input type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)"></label>
+                    <label><span>Team Type:</span>
+                        <select name="teams">
+                            <option value="select" disabled selected>Select Team Type</option>
+                            <option value="individual">Individual Rider</option>
+                            <option value="company">Company Team</option>
+                            <option value="family">Family Group Team</option>
+                            <option value="volunteer">Volunteer</option>
+                        </select></label>
+                    <label><span>Special Accommodations:</span></label>
+                    <label class="container"><span class="answer">Yes</span>
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container"><span class="answer">Maybe</span>
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container"><span class="answer">No</span>
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend><span>Additional Information:</span></legend>
+                    <textarea name="comments" rows="15" cols="35"></textarea>
+                </fieldset>
+
+                <input type="submit" value="Submit" class="submitBtn">
+                <input type="hidden" value="Event Registration" name="subject" >
+                <input name="redirect" type="hidden" value="thanks.html">
+            </form>
+
+            <div class="logo2">
+                <img src="images/logo2.png" alt="Company Logo">
+            </div>
+        </main>
+
+        <footer>
+            <div class="footerLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="adventures.html">ADVENTURES</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <section class="footer-bar">
+                <div>
+                    <a class="socialmedia" target="_blank" href="https://www.facebook.com/"><img class="icon" src="images/facebook.png" alt="facebook"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.instagram.com/"><img class="icon" src="images/instagram.png" alt="instagram"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.twitter.com/"><img class="icon" src="images/twitter.png" alt="twitter"></a>
+                </div>
+                    <p>Mountain Spoke<br>3950 Valley Commons Dr.<br>Bozeman, Montana</p><p>&copy;2018 Mountain Spoke Bicycle Company<br><br><span id="currentdate"></span></p>
+                <div id="reference">
+                    <a href="resources.html"><h2>RESOURCES</h2></a> | <a href="overview.html"><h2>OVERVIEW</h2></a>
+                </div>
+            </section>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/mainmenu.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/skill-level.js"></script>
+    </body>
+</html>

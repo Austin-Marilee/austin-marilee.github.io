@@ -1,0 +1,65 @@
+{
+    "servicePkgs" : [
+        {
+            "name": "THE SPOKE",
+            "type": "Basic Tune Up",
+            "price": "$45",
+            "items" : [
+                "Frame & Fork Safety Inspection(Including Pivots, Shocks & Linkages)",
+                "Drivetrain Component seat inspection & Cable/House Inspection",
+                "Bearing Wear Inspection(Wheel Bearings/Bottom Bracket/Headset/Pulley Wheels and Pedals)",
+                "Drivetrain Clean (On Bike) and Lubrication",
+                "Frame White Down",
+                "Gear Adjust and Tune",
+                "Brake Adjust",
+                "Minor Wheel Truing (On Bike)",
+                "Headset/Bottom Bracket Adjust",
+                "Full Bike Bold Torque Check and Adjustment",
+                "Post Service Test Ride"
+            ],
+            "disclaimer": "Package pricing does not include parts or installation."
+        },
+        {
+            "name": "THE ROCK HOPPER",
+            "type": "Major Tune Up",
+            "price": "$100",
+            "items" : [
+                "Frame & Fork Safety Inspection(Including Pivots, Shocks & Linkages)",
+                "Drivetrain Component Seat inspection & Cable/House Inspection",
+                "Bearing Wear Inspection(Wheel Bearings/Bottom Bracket/Headset/Pulley Wheels and Pedals)",
+                "Gear Adjust and Tune",
+                "Brake Adjust",
+                "Headset/Bottom Bracket Adjust",
+                "Full Bike Bold Torque Check and Adjustment",
+                "Post Service Test Ride",
+                "Full Drivetrain Strip, Soak and Scrub off bike and lubrication",
+                "Frame Clean and Polish",
+                "Full Wheel Tuning"
+            ],
+            "disclaimer": "Package pricing does not include parts or installation."
+        },
+
+        {
+            "name": "THE MUDSLIDE",
+            "type": "Full Overhaul and Tune Up",
+            "price": "$175",
+            "items" : [
+                "Frame & Fork Safety Inspection(Including Pivots, Shocks & Linkages)",
+                "Drivetrain Component seat inspection & Cable/House Inspection",
+                "Bearing Wear Inspection(Wheel Bearings/Bottom Bracket/Headset/Pulley Wheels and Pedals)",
+                "Gear Adjust and Tune",
+                "Brake Adjust",
+                "Full Bike Bold Torque Check and Adjustment",
+                "Post Service Test Ride",
+                "Complete Component Stripping to Bare Frame",
+                "Frame Clean and Polish, Thread Cleaning/Facing",
+                "Derailleur Hanger Alignment",
+                "Full Wheel Truing & Hub Overhaul",
+                "Headset/Bottom Bracket Overhaul & Adjust",
+                "Inner Cable and Housing/Hydraulic Line Replacement",
+                "Full Wheel Tuning"
+            ],
+            "disclaimer": "Package pricing does not include parts or installation."
+        }
+    ]
+}

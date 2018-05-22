@@ -1,0 +1,101 @@
+@media only screen and (min-width: 37.5em) {
+    /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+
+    nav button { display:none; }  /* hamburger button does not need to be shown */
+
+    nav ul.hide {
+        display: inline-flex;
+    }
+
+    nav ul {
+        margin-left: 2%;
+    }
+
+    nav ul li {
+        display: inline-flex;
+    }
+
+    nav ul li a {
+        display: inline-flex;
+        font-size: 1em;
+        border: none;
+        border-right: 1px solid rgba(0,0,0,0.3);
+        padding: .6rem 2rem;
+    }
+
+    section.forecast {
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+    }  /* show the 10-day forecast with the medium view and up */
+
+    .forecast td, .forecast th {
+        border: 1px solid #ddd;
+        font-size: 1.3em;
+    }
+
+    .forecast tbody {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .forecast tr:hover {
+        background-color:#ddd;
+    }
+
+    .forecast th {
+        text-align: center;
+        background-color: #197bbd;
+        color: #fff;
+        padding: 1.3%
+    }
+
+    .forecast td {
+        padding: .8rem;
+    }
+
+    article p.town-article img {}  /* responsive images */
+
+    /*---Weather Gallery Grid-----*/
+    div.weatherGallery {
+        grid-template-columns: repeat(2, 49%);
+        grid-gap: 2%;
+    }
+    /*-----HOMEPAGE------*/
+
+    #homeTowns {
+        padding: 0 2%;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        border: none;
+    }
+    section>article {
+        border: 5px solid #79B473;
+        padding: 0 15px 0 15px;
+        margin: 5%;
+        line-height: normal;
+    }
+    #homeTowns h5 {
+        font-family: 'Candal', sans-serif;
+        font-size: 2vw;
+        color: #222E50;
+        margin: 2% 25%;
+    }
+    #homeTowns p {
+        font-size: 1.5vw;
+        margin: 10px 0;
+    }
+    #homeTowns ul {
+        font-size: 1.5vw;
+        line-height: 1.7em;
+
+    }
+    section#photosBelow {
+        margin: 1rem 0;
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+    }
+    section#photosBelow figure {margin: 0 2%;}
+    section#photosBelow figure img {width: 100%;}
+}

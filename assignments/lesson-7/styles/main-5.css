@@ -1,0 +1,184 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+/* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+    font-size: 16px;
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+    /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+}
+
+header {
+    padding: .5rem 2%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header h1 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 2.3em;
+    margin: 2% 0 0 .5rem;
+}
+
+.logo {
+    margin: 0;
+}
+
+.subheading {
+    color: #222e50;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+    margin-left: .5rem;
+}
+
+nav {
+    background-color: #38aecc;
+    font-family: 'Candal', sans-serif;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {}
+
+nav ul li a {
+    display: flex;
+    flex-flow: row wrap;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul li.active a {background-color: #222e50;}
+nav ul li a:hover {background-color: #79b473;}
+nav ul.hide {display: none;}
+
+main {}
+
+main h2 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 1.8em;
+    padding: .3rem 2%;
+}
+
+main figure.myphoto { margin: 0; }
+main figure.myphoto img { width: 100%; height: auto; }
+
+section {
+    font-family: 'Lato', sans-serif;
+    border: 5px solid #79b473;
+    padding: .8rem 2%;
+    margin: .8rem;
+}
+
+section h3 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 1.5em;
+    margin: 0 0 3% 0;
+}
+
+section#summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.highlow p, .current p, .conditions p {
+    margin: 1% 0;
+}
+
+.highlow, .conditions {
+    font-size: 1.5em;
+}
+
+.current {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    margin: 0 3% 0 0
+}
+
+.forecast {display: none;}
+
+article {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    padding: .8rem 2%;
+}
+
+article h3 {
+    font-family: 'Candal', sans-serif;
+    color: #222e50;
+    margin: 0;
+}
+
+article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+    display: flex;
+    margin: 0;
+    width: 100%;
+    padding: 0 0 2% 0;
+}
+
+/*----WEATHER GALLERY----*/
+
+main.gallerystyle {
+    font-family: 'Lato', sans-serif;
+}
+
+div.weatherGallery {
+    padding: 0 2%;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+}
+div.weatherGallery figure {margin: 1rem 0;}
+div.weatherGallery figure img {width: 100%;}
+div.weatherGallery figure figcaption {text-align: left; font-size: 1.2rem; padding: 2% 1%;}
+
+/*-----FOOTER-----*/
+footer {
+    padding-top: .8rem;
+}
+
+footer aside {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: #79b473;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer>p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #79b473;
+    text-align: center;
+    padding: 1.6rem;
+    margin: 0;
+}
+
+/* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */

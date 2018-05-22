@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bike Services | The Mountain Spoke</title>
+        <meta name="author" content="Marilee Austin">
+        <meta name="description" content="Mountain Bike repair services in three catgories. The service package information is taken from a data table in Json format.">
+
+        <!-- external style references in the proper cascading order -->
+        <link href="https://fonts.googleapis.com/css?family=Asap+Condensed%7COpen+Sans" rel="stylesheet"><!-- Google API font reference -->
+        <!-- favicon links -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ea2309">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#ffffff">
+        <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="styles/small.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+        <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+    </head>
+
+    <body>
+        <a href="index.html"><header>
+            <img src="images/mountain-logo.png" alt="Mountain Logo">
+            <div>
+                <h1>MOUNTAIN SPOKE</h1>
+                <div class="subheading">BOZEMAN, MONTANA</div>
+            </div>
+            </header></a>
+
+        <!-- Navigation -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul class="hide mainmenu" id="primaryNav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="adventures.html">ADVENTURES</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="callToAction">
+                <h2 class="h2Contrast">BIKE<br>SERVICES</h2>
+                <figure>
+                    <img src="images/bike-services.jpg" alt="Bicycle Being Serviced" sizes="100vw"
+                         srcset="images/bike-services-400.jpg 400w,
+                                 images/bike-services-800.jpg 800w,
+                                 images/bike-services-1200.jpg 1200w">
+                </figure>
+            </div>
+
+            <div class="intro">
+                <p>We offer highly trained and experienced repair technicians who care about your saftey and will make sure that your bike is in optimal condition. All our staff are friendly and knowledgeable and you can trust their advice. Besides offering individual parts and services we have three complete service packages to fit your needs. You can choose between "The Spoke", "The Rock Hopper", or "The Mudslide." All our services are guaranteed for 30 days, no questions asked. We also offer roadside or "mountianside" service. Our technicians can come to you. </p>
+            </div>
+
+            <h3>SERVICE PACKAGES</h3>
+            <aside class="serviceTable"></aside>
+            <section class="customersTalk">
+                <h3>Call 801-555-2690 to book your service today!</h3>
+            </section>
+
+            <div class="logo2">
+                <img src="images/logo2.png" alt="Company Logo">
+            </div>
+
+            <section class="customersTalk">
+                <h3 class="servicePkgs">WHAT OUR CUSTOMERS THINK</h3>
+                <aside class="reviews">
+                    <blockquote >"I think my bike is better than brand-new. After the "Mudslide" tune-up, everything is working better than ever."<br><br>Todd&mdash;New Hampshire</blockquote>
+                    <blockquote >"They didn't pressure me to do things I didn't need for my bike. I got just what I needed."<br><br>Jodee&mdash;Idaho</blockquote>
+                    <blockquote >"I take my bike in for service every year just to make sure it's ready for the season. They remember my bike and my name."<br><br>Joe&mdash;Bozeman</blockquote>
+                </aside>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footerLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="adventures.html">ADVENTURES</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <section class="footer-bar">
+                <div>
+                    <a class="socialmedia" target="_blank" href="https://www.facebook.com/"><img class="icon" src="images/facebook.png" alt="facebook"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.instagram.com/"><img class="icon" src="images/instagram.png" alt="instagram"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.twitter.com/"><img class="icon" src="images/twitter.png" alt="twitter"></a>
+                </div>
+                    <p>Mountain Spoke<br>3950 Valley Commons Dr.<br>Bozeman, Montana</p><p>&copy;2018 Mountain Spoke Bicycle Company<br><br><span id="currentdate"></span></p>
+                <div id="reference">
+                    <a href="resources.html"><h2>RESOURCES</h2></a> | <a href="overview.html"><h2>OVERVIEW</h2></a>
+                </div>
+            </section>
+        </footer>
+
+        <script src="scripts/servicedata.js"></script>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/mainmenu.js"></script>
+        <script src="scripts/currentdate.js"></script>
+    </body>
+</html>

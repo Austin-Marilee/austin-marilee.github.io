@@ -1,0 +1,65 @@
+@media only screen and (min-width: 37.5em) {
+    /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+
+    nav button { display:none; }  /* hamburger button does not need to be shown */
+
+    nav ul.hide {
+        display: inline-flex;
+    }
+
+    nav ul {
+        margin-left: 2%;
+    }
+
+    nav ul li {
+        display: inline-flex;
+    }
+
+    nav ul li a {
+        display: inline-flex;
+        font-size: 1em;
+        border: none;
+        border-right: 1px solid rgba(0,0,0,0.3);
+        padding: .6rem 2rem;
+    }
+
+    section.forecast {
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+    }  /* show the 10-day forecast with the medium view and up */
+
+    .forecast td, .forecast th {
+        border: 1px solid #ddd;
+        font-size: 1.3em;
+    }
+
+    .forecast tbody {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .forecast tr:hover {
+        background-color:#ddd;
+    }
+
+    .forecast th {
+        text-align: center;
+        background-color: #197bbd;
+        color: #fff;
+        padding: 1.3%
+    }
+
+    .forecast td {
+        padding: .8rem;
+    }
+
+    article p.town-article img {}  /* responsive images */
+
+    /*---Weather Gallery Grid-----*/
+    div.weatherGallery {
+        grid-template-columns: repeat(2, 49%);
+        grid-gap: 2%;
+    }
+
+}

@@ -1,0 +1,67 @@
+@media only screen and (min-width: 600px) {
+	/*-----BODY -----*/
+	body {}
+
+	/*-----CONTAINER -----*/
+	#container {}
+
+	/*-----HEADER -----*/
+	header h1 {
+		font-size: 1.6em; 
+		padding:.5em;
+	}
+	header h2 {
+		font-size: 1.2em; 
+		padding:.4em;
+	}
+
+
+	/*-----NAVigation -----*/
+	nav {
+		position:relative;
+		}
+	button#showPhoneNav {
+		width: 13em;
+		position:absolute;
+		top: -5em;
+		left: 2%;
+	}
+	
+	nav ul#myNav {
+	width: 100%;
+	margin-left: 0;
+	
+	}
+	
+	/*-----CONTENT -----*/
+	#content {
+
+	}
+	
+	/*-----COLUMNS -----*/
+	div.left {
+		width: 75%;
+		float: left;	
+	}
+	aside.right {
+		width: 23%;
+		margin-right:2%;
+		margin-top:2em;
+		float: right;	
+	}
+	aside.right div.ad {
+		width: 100%;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*----- FOOTER -----*/
+
+	
+} // end of the tablet CSS

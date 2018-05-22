@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Image Gallery of Weather | Hometown Weather</title>
+        <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
+        <meta name="description" content="Weather images dedicated to conserving water in Franklin, Springfield and Greenville, MU">
+        <!-- external style references in the proper cascading order -->
+        <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
+        <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="styles/main-5.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="styles/medium-5.css" rel="stylesheet">  <!-- medium/tablet views -->
+        <link href="styles/large-5.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="images/site.webmanifest">
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+
+        <header>
+            <img src="images/logo0.png" alt="The site logo" srcset="images/logo@1x.png 1x, images/logo@2x.png 2x, images/logo@3x.png 3x">
+            <div>
+                <h1>Hometown Weather</h1>
+                <div class="subheading">Weather You Can Use</div>
+            </div>
+        </header>
+
+        <!-- site navigation use placeholder references -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul id="primaryNav" class="hide">
+                    <li><a href="#">
+                    Home</a></li><li><a href="franklin.html">
+                    Franklin</a></li><li><a href="#">
+                    Greenville</a></li><li><a href="#">
+                    Springfield</a></li><li><a href="stormcenter.html">
+                    Storm Center</a></li><li class="active"><a href="gallery.html">
+                    Gallery</a></li>
+            </ul>
+        </nav>
+
+        <main class="gallerystyle">
+            <h2>Gallery</h2>
+            <div class="weatherGallery">
+                <figure>
+                <img src="images/balloons.jpg" alt="Hot Air Balloons">
+                    <figcaption>Beautiful Weather for Hot Air Ballooning</figcaption>
+                </figure>
+
+                <figure>
+                <img src="images/fall.jpg" alt="Yellow Fall Leaves">
+                    <figcaption>Fall Mountain Leaves in Franklin</figcaption>
+                </figure>
+
+                <figure>
+                <img src="images/hike.jpg" alt="Hiking in Franklin">
+                    <figcaption>Hiking in Franklin is a popular pastime</figcaption>
+                </figure>
+
+                <figure>
+                <img src="images/rain.jpg" alt="Rain over Sandstone">
+                    <figcaption>Rain in Springfield</figcaption>
+                </figure>
+
+                <figure>
+                <img src="images/road.jpg" alt="Road leading to National Park">
+                    <figcaption>Easy Access to Our National Parks</figcaption>
+                </figure>
+
+                <figure>
+                <img src="images/snow.jpg" alt="Snow in Springfield">
+                    <figcaption>Snow in Greenville</figcaption>
+                </figure>
+            </div>
+        </main>
+
+        <footer>
+            <aside>
+                Hometown Weather<br> 123 Main Street<br> Franklin, MU 12345
+            </aside>
+            <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span></p>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/windchill.js"></script>
+
+    </body>
+</html>

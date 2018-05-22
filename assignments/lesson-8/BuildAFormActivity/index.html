@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://spartandesignuniversity.com/rd2/06example/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- This start file was build by Paul Cheney after doing lots of research on the web -->
+<title>Adaptive Navigation Example</title>
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging whena phone is turned sideways-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- STYLE SHEETS -->
+<link href="css/reset.css" rel="stylesheet">
+<!-- phone-default -->
+<link href="css/phone-default.css" rel="stylesheet">
+<!-- enhance-tablet -->
+<link href="css/tablet.css" rel="stylesheet">
+<!-- enhance-desktop -->
+<link href="css/desktop.css" rel="stylesheet">
+
+
+<!-- PHONE MENU HIDER -->
+<script src="js/jquery.min.js"></script><style id="stylerStyle"></style><script id="stylerScript"></script>
+<script src="js/hideMenu.js"></script>
+
+
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+<div id="container">
+<header><div id="logo"><img src="images/header.jpg" alt="logo"></div></header>
+<nav>
+<button id="showPhoneNav">Show Navigation</button>
+<ul id="myNav" class="clearfix">
+<!--This is the health menu-->
+    <li><a href="#">Health</a>
+
+        <ul>
+            <li id="hmMenu"><a href="#">Health Main</a></li>
+            <li id="lwMenu"><a href="3">Living Well</a></li>
+            <li id="dfMenu"><a href="#">Diet and Fitness</a></li>
+            <li id="mhMenu"><a href="#">Mental Health</a></li>
+        </ul>
+    </li>
+
+<!--This is the travel menu-->
+    <li><a href="#">Travel Tips</a>
+
+        <ul>
+        <li><a href="#">This is my test</a></li>
+            <li><a href="#">Destination Adventures is loooong</a></li>
+            <li><a href="#">Luxury Travel</a></li>
+            <li><a href="#">On the Go</a></li>
+        </ul>
+
+    </li>
+
+<!--This is the Tech menu-->
+    <li><a href="#">Technology</a>
+        <ul>
+            <li><a href="#">Computers</a></li>
+            <li><a href="#">Portable Devices</a></li>
+            <li><a href="#">Networking</a></li>
+
+            <li><a href="#">Security</a></li>
+        </ul>
+    </li>
+
+
+
+</ul><!--end of the navigation-->
+<!--end of the navigation-->
+
+</nav>
+
+
+
+
+
+<div id="content" class="clearfix">
+<h1>Newsletter Registration</h1>
+
+   <div class="row">
+<div class="left">
+    <p>Progress:<progress value="3" max="5"></progress></p>
+
+    <form action="" method="post" enctype="multipart/form-data" name="attend" id="conference">
+        <fieldset>
+            <legend><span>Personal Information</span></legend>
+            <label><span>Full Name:</span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{3,99}" required ></label>
+            <label><span>Address:</span><input name="address" type="text" value="" placeholder="Address" pattern="[a-zA-Z -._]{3,99}" required ></label>
+            <label><span>Email:</span><input name="email" type="email" value="" placeholder="zen@gmail.com" required ></label>
+            <label><span>Phone:</span><input name="phone" type="tel" value="" placeholder="1235551234" pattern="[0-9]{10,20}" required ></label>
+        </fieldset>
+        <fieldset>
+        <legend><span>Company Info</span></legend>
+            <label><span>Company:</span><input name="company" type="text" ></label>
+            <label><span>Number of Employees:</span><input name="employeeCount" type="number" ></label>
+            <label><span>Web Site:</span><input name="webURL" type="url" placeholder="" ></label>
+            <label><span>Prefered Date:</span><input name="date" type="date" ></label>
+            <label><span>Badge Color:</span><input name="color" type="color" ></label>
+            <label><span>Credit Card:</span><input name="credit" type="number" autocomplete="off"></label>
+        </fieldset>
+        <fieldset>
+            <legend><span>Other</span></legend>
+            <label>
+                <span>Favorite Cartoon Character:</span><input type="text" name="favChar" list="characters">
+                <datalist id="characters">
+                    <option value="Donald Duck"></option>
+                    <option value="Mickey Mouse"></option>
+                    <option value="Fred Flintstone"></option>
+                </datalist>
+            </label>
+        </fieldset>
+
+    <input type="submit" value="Sign me up!" class="submitBtn">
+    <input type="hidden" value="Conference Registration" name="subject" >
+    <input name="redirect" type="hidden" value="thanks.html">
+
+
+    </form>
+</div><!-- end of left column -->
+
+<aside class="right">
+<h3>Our Sponsors</h3>
+<div class="ad"><a href="#"><img src="images/ad1.jpg" alt="ad1"></a></div><!-- end of  ad -->
+<div class="ad"><a href="#"><img src="images/ad2.jpg" alt="ad1"></a></div><!-- end of  ad -->
+<div class="ad"><a href="#"><img src="images/ad3.jpg" alt="ad1"></a></div><!-- end of  ad -->
+
+</aside><!-- end of  right column -->
+
+</div><!-- end of a row -->
+
+
+
+
+
+
+    </div><!-- end content -->
+    <footer>Page built by Paul Cheney for BYUI CIT-230</footer>
+    </div> <!-- end container -->
+    </div> <!-- end wrapper -->
+
+</body></html>

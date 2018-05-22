@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Us | The Mountain Spoke</title>
+        <meta name="author" content="Marilee Austin">
+        <meta name="description" content="The Mountain Spoke is a fictious mountain bike shop in Bozeman Montana. This page gives contact information and a Google map for location the store.">
+
+        <!-- external style references in the proper cascading order -->
+        <link href="https://fonts.googleapis.com/css?family=Asap+Condensed%7COpen+Sans" rel="stylesheet"><!-- Google API font reference -->
+        <!-- favicon links -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ea2309">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#ffffff">
+        <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="styles/small.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+        <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views -->
+    </head>
+
+    <body>
+        <a href="index.html">
+            <header>
+                <img src="images/mountain-logo.png" alt="Mountain Logo">
+                <div>
+                    <h1>MOUNTAIN SPOKE</h1>
+                    <div class="subheading">BOZEMAN, MONTANA</div>
+                </div>
+            </header></a>
+
+        <!-- Navigation -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul class="hide mainmenu" id="primaryNav">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="adventures.html">ADVENTURES</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <main>
+          <section class="contactUs">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="3" class="title">MOUNTAIN SPOKE</th>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="address">3950 Valley Commons Dr.<br>Bozeman, Montana</th>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="phone">800-555-2690</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>9:30 AM</td>
+                            <td>7:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>9:30 AM</td>
+                            <td>7:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>9:30 AM</td>
+                            <td>7:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>9:30 AM</td>
+                            <td>7:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>9:30 AM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>9:30 AM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td  class="last">Sunday</td>
+                            <td class="last">Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+              <div>
+                  <form action="thanksContact.html" method="get" enctype="multipart/form-data" name="event" id="userReport">
+                      <fieldset>
+                          <legend><span>Contact Us</span></legend>
+                          <label><span>Full Name:</span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{5,99}" required ></label>
+                          <label><span>Email:</span><input name="email" type="email" value="" placeholder="example@email.com" ></label>
+                          <label><span>Phone:</span><input name="phone" type="tel" value="" placeholder="1235551234" pattern="[0-9]{10,20}" required ></label>
+                          <label><span>Message:</span></label>
+                          <textarea name="comments" rows="7" cols="40"></textarea>
+                          <input type="submit" value="Submit" class="submitBtn">
+                      </fieldset>
+                      <input type="hidden" value="Event Registration" name="subject" >
+                      <input name="redirect" type="hidden" value="thanks.html">
+                  </form>
+              </div>
+          </section>
+
+            <div id="googleMap"></div>
+            <script>function myMap() {
+                    var myCenter = new google.maps.LatLng(45.6770,-111.0429);
+                    var mapCanvas = document.getElementById("googleMap");
+                    var mapOptions = {center: myCenter, zoom: 13};
+                    var map = new google.maps.Map(mapCanvas, mapOptions);
+                    var marker = new google.maps.Marker({position:myCenter});
+                    marker.setMap(map);
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAROpUZ0SurMs8tzYf3-TXVd8dlG7U-Q9Q&callback=myMap"></script>
+
+            <div class="logo2">
+                <img src="images/logo2.png" alt="Company Logo">
+            </div>
+        </main>
+
+        <footer class="mainFooter">
+            <div class="footerLinks">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="adventures.html">ADVENTURES</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <section class="footer-bar">
+                <div>
+                    <a class="socialmedia" target="_blank" href="https://www.facebook.com/"><img class="icon" src="images/facebook.png" alt="facebook"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.instagram.com/"><img class="icon" src="images/instagram.png" alt="instagram"></a>
+                    <a class="socialmedia" target="_blank" href="https://www.twitter.com/"><img class="icon" src="images/twitter.png" alt="twitter"></a>
+                </div>
+                    <p>Mountain Spoke<br>3950 Valley Commons Dr.<br>Bozeman, Montana</p><p>&copy;2018 Mountain Spoke Bicycle Company<br><br><span id="currentdate"></span></p>
+                <div id="reference">
+                    <a href="resources.html"><h2>RESOURCES</h2></a> | <a href="overview.html"><h2>OVERVIEW</h2></a>
+                </div>
+            </section>
+        </footer>
+
+        <script src="scripts/mapmarker.js"></script>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/mainmenu.js"></script>
+        <script src="scripts/currentdate.js"></script>
+    </body>
+</html>

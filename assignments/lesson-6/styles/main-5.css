@@ -1,0 +1,155 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+    font-size: 16px;
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+    /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+}
+
+header {
+    padding: .5rem 2%
+}
+
+header h1 {
+    margin: 0;
+    padding-top: .8rem;
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 2.3em;
+}
+
+header figure.logo {
+    float: left;
+    margin: 0 1% 0 0;
+}
+
+header .subheading {
+    color: #222e50;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+}
+
+nav {
+    background-color: #38aecc;
+    font-family: 'Candal', sans-serif;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: rgba(255,255,255,0.8);
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+nav ul li.active a {background-color: #222e50;}
+nav ul li a:hover {background-color: #79b473;}
+nav ul.hide {display: none;}
+
+main {}
+
+main h2 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 1.8em;
+    padding: .3rem 2%;
+}
+
+main figure.myphoto { margin: 0;}
+main figure.myphoto img { width: 100%; height: auto;}
+
+section {
+    font-family: 'Lato', sans-serif;
+    border: 5px solid #79b473;
+    padding: .8rem 2%;
+    margin: .8rem;
+}
+
+section h3 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 1.5em;
+}
+
+.highlow, .conditions {
+    display: flex;
+    flex-flow: column;
+    font-size: 1.5em;
+}
+
+.current {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.forecast {display: none;}
+
+article {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    padding: .8rem 2%;
+}
+
+article h3 {
+    font-family: 'Candal', sans-serif;
+    color: #222e50;
+}
+
+article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+    float: right;
+    width: 100%; /* fill the page in the small/phone view */
+    margin: 0 0 0 2%;
+}
+
+footer {
+    padding-top: .8rem;
+}
+
+footer aside {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: #79b473;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer>p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #79b473;
+    text-align: center;
+    padding: 1.6rem;
+    margin: 0;
+} /* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

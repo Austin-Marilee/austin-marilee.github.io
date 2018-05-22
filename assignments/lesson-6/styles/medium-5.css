@@ -1,0 +1,29 @@
+@media only screen and (min-width: 37.5em) {
+    /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+
+    section.forecast { display: inline-block; }  /* show the 10-day forecast with the medium view and up */
+
+    article p.town-article img { width: 62.666%; float:right; }  /* responsive images */
+
+    .forecast td, .forecast th {
+        border: 1px solid #ddd;
+        padding: 1.2rem;
+    }
+
+    .forecast tbody {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .forecast tr:hover {
+        background-color:#ddd;
+    }
+
+    .forecast th {
+        padding: .8rem 2rem;
+        text-align: center;
+        background-color: #197bbd;
+        color: #fff;
+    }
+
+}
