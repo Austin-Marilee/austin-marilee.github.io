@@ -8,3 +8,5 @@ var windChill = 35.74 + 0.6215 * averageTemp - 35.75 * Math.pow(windSpeed, 0.16)
 windChill = Math.round(windChill);
 
 document.getElementById("windChill").innerHTML = windChill;
+
+//f = 35.74 + 0.6215 t - 35.75 s0.16 + 0.4275 t s0.16
