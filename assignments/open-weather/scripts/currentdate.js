@@ -1,3 +1,5 @@
+window.onload=function() {
+
 var d = new Date();
 var weekday = new Array(7);
 weekday[0] = "Sunday";
@@ -26,3 +28,5 @@ var n = weekday[d.getDay()];
 var m = month[d.getMonth()];
 
 document.getElementById("currentdate").innerHTML = n + ", " + d.getDate() + " " + m + " " + d.getFullYear();
+
+}
