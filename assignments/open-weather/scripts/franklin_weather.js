@@ -1,7 +1,9 @@
 //CURRENT WEATHER CONDITIONS
+// Open Weather IDs, Franklin: 4759986, Greenville: 4695066, Springfield: 4409896
+
 var weatherObject = new XMLHttpRequest()
 
-weatherObject.open('GET','https://api.wunderground.com/api/5cc13ffc94a61b9c/conditions/q/MN/Franklin.json',true);
+weatherObject.open('GET','https://api.openweathermap.org/data/2.5/weather?id=4759986&APPID=2cfc9683fd95c1403584cfef0b9d6573&units=imperial',true);
 
 weatherObject.send();
 
@@ -9,27 +11,23 @@ weatherObject.onload = function() {
 var weatherInfo = JSON.parse(weatherObject.responseText);
 console.log(weatherInfo);
 
-document.getElementById('currentTemp').innerHTML = weatherInfo.current_observation.temp_f;
+document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
 
-document.getElementById('currentConditions').innerHTML = weatherInfo.current_observation.weather;
+    var iconcode = weatherInfo.weather["0"].icon;
+    var icon_path = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    document.getElementById('weatherIcon').innerHTML = icon_path;
 
-document.getElementById('weatherIcon').src = weatherInfo.current_observation.icon_url;
-
-document.getElementById('feelsLike').innerHTML = weatherInfo.current_observation.feelslike_f;
-
-document.getElementById('precipToday').innerHTML = weatherInfo.current_observation.precip_today_metric;
-
-document.getElementById('windSpeed').innerHTML = weatherInfo.current_observation.wind_gust_mph;
-
-document.getElementById('windChill').innerHTML = weatherInfo.current_observation.windchill_f;
+document.getElementById('currentConditions').innerHTML = weatherInfo.weather[0].main;
+document.getElementById('windSpeed').innerHTML = weatherInfo.wind.speed;
+document.getElementById('windChill').innerHTML = weatherInfo.wind.deg;
 
 }//end of onload
+
 
 //WEATHER FORECAST
 var weatherForecast = new XMLHttpRequest()
 
-
-weatherForecast.open('GET','https://api.wunderground.com/api/5cc13ffc94a61b9c/forecast/q/MN/Franklin.json', true);
+weatherObject.open('GET','https://api.openweathermap.org/data/2.5/forecast?id=4759986&APPID=2cfc9683fd95c1403584cfef0b9d6573&units=imperial',true);
 
 weatherForecast.send();
 
@@ -37,9 +35,12 @@ weatherForecast.onload = function() {
     var weatherNew = JSON.parse(weatherForecast.responseText);
     console.log(weatherNew);
 
-    document.getElementById('foreCast').innerHTML = weatherNew.forecast.txt_forecast.forecastday["0"].fcttext;
+    document.getElementById('tempLow').innerHTML = weatherNew.list.main.temp_min;
+    document.getElementById('tempHigh').innerHTML = weatherNew.list.main.temp_max;
 
 }//end of onload
+
+
 
 //10 DAY FORECAST
 var weatherObject10 = new XMLHttpRequest()
@@ -82,24 +83,5 @@ weatherObject10.onload = function() {
     document.getElementById('day5Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[5].low.fahrenheit;
     document.getElementById('day5icon').src = weatherTenday.forecast.simpleforecast.forecastday[5].icon_url;
 
-//day6
-    document.getElementById('day6High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[6].high.fahrenheit;
-    document.getElementById('day6Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[6].low.fahrenheit;
-    document.getElementById('day6icon').src = weatherTenday.forecast.simpleforecast.forecastday[6].icon_url;
-
- //day7
-    document.getElementById('day7High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[7].high.fahrenheit;
-    document.getElementById('day7Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[7].low.fahrenheit;
-    document.getElementById('day7icon').src = weatherTenday.forecast.simpleforecast.forecastday[7].icon_url;
-
- //day8
-    document.getElementById('day8High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[8].high.fahrenheit;
-    document.getElementById('day8Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[8].low.fahrenheit;
-    document.getElementById('day8icon').src = weatherTenday.forecast.simpleforecast.forecastday[8].icon_url;
-
- //day9
-    document.getElementById('day9High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[9].high.fahrenheit;
-    document.getElementById('day9Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[9].low.fahrenheit;
-    document.getElementById('day9icon').src = weatherTenday.forecast.simpleforecast.forecastday[9].icon_url;
 
 }//end of onload

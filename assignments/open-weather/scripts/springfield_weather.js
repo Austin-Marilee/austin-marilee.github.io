@@ -9,17 +9,11 @@ weatherObject.onload = function() {
     console.log(weatherInfo);
 
     document.getElementById('currentTemp').innerHTML = weatherInfo.current_observation.temp_f;
-
     document.getElementById('currentConditions').innerHTML = weatherInfo.current_observation.weather;
-
     document.getElementById('weatherIcon').src = weatherInfo.current_observation.icon_url;
-
     document.getElementById('feelsLike').innerHTML = weatherInfo.current_observation.feelslike_f;
-
     document.getElementById('precipToday').innerHTML = weatherInfo.current_observation.precip_today_metric;
-
     document.getElementById('windSpeed').innerHTML = weatherInfo.current_observation.wind_gust_mph;
-
     document.getElementById('humidity').innerHTML = weatherInfo.current_observation.relative_humidity;
 
 }//end of onload

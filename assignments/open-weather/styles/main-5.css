@@ -52,7 +52,7 @@ nav ul li a {
     border-top: 1px solid rgba(0,0,0,0.3);
 }
 
-nav ul li.active a {background-color: #222e50;}
+nav ul.mainmneu li.active a {background-color: #222e50;}
 nav ul li a:hover {background-color: #79b473;}
 nav ul.hide {display: none;}
 

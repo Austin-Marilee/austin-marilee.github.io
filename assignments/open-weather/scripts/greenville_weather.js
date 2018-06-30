@@ -1,6 +1,6 @@
 var weatherObject = new XMLHttpRequest()
 
-weatherObject.open('GET','https://api.wunderground.com/api/5cc13ffc94a61b9c/conditions/q/TX/Greenville.json',true);
+weatherObject.open('GET','https://api.openweathermap.org/data/2.5/weather?id=5236279&APPID=2cfc9683fd95c1403584cfef0b9d6573&units=imperial',true);
 
 weatherObject.send();
 
@@ -9,17 +9,11 @@ weatherObject.onload = function() {
     console.log(weatherInfo);
 
     document.getElementById('currentTemp').innerHTML = weatherInfo.current_observation.temp_f;
-
     document.getElementById('currentConditions').innerHTML = weatherInfo.current_observation.weather;
-
     document.getElementById('weatherIcon').src = weatherInfo.current_observation.icon_url;
-
     document.getElementById('feelsLike').innerHTML = weatherInfo.current_observation.feelslike_f;
-
     document.getElementById('precipToday').innerHTML = weatherInfo.current_observation.precip_today_metric;
-
     document.getElementById('windSpeed').innerHTML = weatherInfo.current_observation.wind_gust_mph;
-
     document.getElementById('humidity').innerHTML = weatherInfo.current_observation.relative_humidity;
 
 }//end of onload
