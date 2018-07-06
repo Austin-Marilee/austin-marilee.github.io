@@ -43,7 +43,7 @@
         </nav>
 
         <main>
-            <h2>The City of Springfield</h2>
+            <h2><span id="place"></span> City</h2>
             <figure class="myphoto">
                 <img src="images/mountolympus1200.jpg" alt="Mount Olympus" sizes="100vw"
                      srcset="images/mountolympus400.jpg 400w,
@@ -55,20 +55,18 @@
             <section id="summary">
                 <h3>Weather Summary</h3>
                 <h4><span id="currentdate"></span></h4>
-                <p class="current"><span id="currentTemp" > 120</span>&deg;F
-                    <img src="images/sunny.png" alt="Weather Icon" id="weatherIcon" class="current"></p>
+                <p class="current"><span id="currentTemp"> 120</span>&deg;F
+
+                    <img src="images/sunny.png" alt="Weather Icon" id="weather_icon" class="current"></p>
+
                 <div class="conditions">
-                    <p>Current Conditions: <span id="currentConditions"> sunny</span></p>
-                    <p>Feels Like: <span id="feelsLike"> 120</span>&deg;F</p>
-                    <p>Precipitation: <span id="precipToday"> 100%</span>%</p>
-                    <p>Wind Speed: <span id="windSpeed"> 5</span> mph</p>
-                    <p>Relative Humidity: <span id="humidity"> 5</span></p>
-                    <p>Forecast: <span id="foreCast"> lows</span></p>
+                    <p>Current Conditions: <span id="weatherDesc"> sunny</span></p>
+                    <p>Forecast: Low <span id="lowTemp"></span>&deg;F, High <span id="highTemp"></span>&deg;F</p>
+                    <p>Wind Speed: <span id="currentWind"></span> mph</p>
                 </div>
             </section>
-
             <section class="forecast">
-                <h3>10 Day Forecast</h3>
+                <h3>5 Day Forecast</h3>
                 <table>
                     <thead>
                         <tr>
@@ -77,25 +75,15 @@
                             <th>Day 3</th>
                             <th>Day 4</th>
                             <th>Day 5</th>
-                            <th>Day 6</th>
-                            <th>Day 7</th>
-                            <th>Day 8</th>
-                            <th>Day 9</th>
-                            <th>Day 10</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 1" id="day0icon"><br>High <span id="day0High">0</span>&deg;F<br>Low <span id="day0Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 2" id="day1icon"><br>High <span id="day1High">0</span>&deg;F<br>Low <span id="day1Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 3" id="day2icon"><br>High <span id="day2High">0</span>&deg;F<br>Low <span id="day2Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 4" id="day3icon"><br>High <span id="day3High">0</span>&deg;F<br>Low <span id="day3Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 5" id="day4icon"><br>High <span id="day4High">0</span>&deg;F<br>Low <span id="day4Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 6" id="day5icon"><br>High <span id="day5High">0</span>&deg;F<br>Low <span id="day5Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 7" id="day6icon"><br>High <span id="day6High">0</span>&deg;F<br>Low <span id="day6Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 8" id="day7icon"><br>High <span id="day7High">0</span>&deg;F<br>Low <span id="day7Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 9" id="day8icon"><br>High <span id="day8High">0</span>&deg;F<br>Low <span id="day8Low">0</span>&deg;F</td>
-                            <td><img src="images/sunny.png" alt="Weather Icon Day 10" id="day9icon"><br>High <span id="day9High">0</span>&deg;F<br>Low <span id="day9Low">0</span>&deg;F</td>
+                            <td><img src="images/sunny.png" id="weather_iconone" alt="Weather Icon Day 1"><br>High <span id="dayonetemp">0</span>&deg;F<br>Low <span id="dayonetemp1">0</span>&deg;F</td>
+                            <td><img src="images/sunny.png" id="weather_icontwo" alt="Weather Icon Day 2"><br>High <span id="daytwotemp">0</span>&deg;F<br>Low <span id="daytwotemp2">0</span>&deg;F</td>
+                            <td><img src="images/sunny.png" id="weather_iconthree" alt="Weather Icon Day 3"><br>High <span id="daythreetemp">0</span>&deg;F<br>Low <span id="daythreetemp3">0</span>&deg;F</td>
+                            <td><img src="images/sunny.png" id="weather_iconfour" alt="Weather Icon Day 4"><br>High <span id="dayfourtemp">0</span>&deg;F<br>Low <span id="dayfourtemp4">0</span>&deg;F</td>
+                            <td><img src="images/sunny.png" id="weather_iconfive" alt="Weather Icon Day 5"><br>High <span id="dayfivetemp">0</span>&deg;F<br>Low <span id="dayfivetemp5">0</span>&deg;F</td>
                         </tr>
                     </tbody>
                 </table>

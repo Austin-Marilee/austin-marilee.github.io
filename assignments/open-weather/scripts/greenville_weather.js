@@ -1,95 +1,78 @@
-var weatherObject = new XMLHttpRequest()
+var weatherObject = new XMLHttpRequest
+weatherObject.open('GET', '//api.openweathermap.org/data/2.5/weather?id=4695066&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
-weatherObject.open('GET','https://api.openweathermap.org/data/2.5/weather?id=5236279&APPID=2cfc9683fd95c1403584cfef0b9d6573&units=imperial',true);
+//Franklin VA  4759986
 
 weatherObject.send();
 
-weatherObject.onload = function() {
+weatherObject.onload = function () {
+
+
+
     var weatherInfo = JSON.parse(weatherObject.responseText);
     console.log(weatherInfo);
 
-    document.getElementById('currentTemp').innerHTML = weatherInfo.current_observation.temp_f;
-    document.getElementById('currentConditions').innerHTML = weatherInfo.current_observation.weather;
-    document.getElementById('weatherIcon').src = weatherInfo.current_observation.icon_url;
-    document.getElementById('feelsLike').innerHTML = weatherInfo.current_observation.feelslike_f;
-    document.getElementById('precipToday').innerHTML = weatherInfo.current_observation.precip_today_metric;
-    document.getElementById('windSpeed').innerHTML = weatherInfo.current_observation.wind_gust_mph;
-    document.getElementById('humidity').innerHTML = weatherInfo.current_observation.relative_humidity;
+    document.getElementById('place').innerHTML = weatherInfo.name;
+    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
+    document.getElementById('highTemp').innerHTML = weatherInfo.main.temp_max;
+    document.getElementById('lowTemp').innerHTML = weatherInfo.main.temp_min;
+    document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
+    document.getElementById('currentWind').innerHTML = weatherInfo.wind.speed;
 
-}//end of onload
 
-var weatherForecast = new XMLHttpRequest()
 
-weatherForecast.open('GET','https://api.wunderground.com/api/5cc13ffc94a61b9c/forecast/q/TX/Greenville.json', true);
+    var iconcode = weatherInfo.weather[0].icon;
+
+    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    document.getElementById('weather_icon').src = icon_path;
+
+
+}
+
+//forecast
+var weatherForecast = new XMLHttpRequest
+weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?id=4695066&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
+
 
 weatherForecast.send();
 
-weatherForecast.onload = function() {
-    var weatherNew = JSON.parse(weatherForecast.responseText);
-    console.log(weatherNew);
+weatherForecast.onload = function () {
 
-    document.getElementById('foreCast').innerHTML = weatherNew.forecast.txt_forecast.forecastday["0"].fcttext;
+    var weatherInfo = JSON.parse(weatherForecast.responseText);
+    console.log(weatherInfo);
 
+    document.getElementById('dayonetemp').innerHTML = weatherInfo.list[1].main.temp_max;
+    document.getElementById('daytwotemp').innerHTML = weatherInfo.list[2].main.temp_max;
+    document.getElementById('daythreetemp').innerHTML = weatherInfo.list[3].main.temp_max;
+    document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[4].main.temp_max;
+    document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[5].main.temp_max;
+
+
+    document.getElementById('dayonetemp1').innerHTML = weatherInfo.list[1].main.temp_min;
+    document.getElementById('daytwotemp2').innerHTML = weatherInfo.list[2].main.temp_min;
+    document.getElementById('daythreetemp3').innerHTML = weatherInfo.list[3].main.temp_min;
+    document.getElementById('dayfourtemp4').innerHTML = weatherInfo.list[4].main.temp_min;
+    document.getElementById('dayfivetemp5').innerHTML = weatherInfo.list[5].main.temp_min;
+    //icons
+
+    var iconcode = weatherInfo.list[1].weather["0"].icon;
+    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    document.getElementById('weather_iconone').src = icon_path;
+
+    var iconcode = weatherInfo.list[2].weather["0"].icon;
+    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    document.getElementById('weather_icontwo').src = icon_path;
+
+    var iconcode = weatherInfo.list[3].weather["0"].icon;
+    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    document.getElementById('weather_iconthree').src = icon_path;
+
+    var iconcode = weatherInfo.list[4].weather["0"].icon;
+    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    document.getElementById('weather_iconfour').src = icon_path;
+
+    var iconcode = weatherInfo.list[5].weather["0"].icon;
+    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    document.getElementById('weather_iconfive').src = icon_path;
 }
-//10 DAY FORECAST
-var weatherObject10 = new XMLHttpRequest()
-
-weatherObject10.open('GET','https://api.wunderground.com/api/5cc13ffc94a61b9c/forecast10day/q/TX/Greenville.json', true);
-
-weatherObject10.send();
-
-weatherObject10.onload = function() {
-    var weatherTenday = JSON.parse(weatherObject10.responseText);
-    console.log(weatherTenday);
-
-    //day0
-    document.getElementById('day0High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[0].high.fahrenheit;
-    document.getElementById('day0Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[0].low.fahrenheit;
-    document.getElementById('day0icon').src = weatherTenday.forecast.simpleforecast.forecastday[0].icon_url;
-
-    //day1
-    document.getElementById('day1High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[1].high.fahrenheit;
-    document.getElementById('day1Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[1].low.fahrenheit;
-    document.getElementById('day1icon').src = weatherTenday.forecast.simpleforecast.forecastday[1].icon_url;
-
-    //day2
-    document.getElementById('day2High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[2].high.fahrenheit;
-    document.getElementById('day2Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[2].low.fahrenheit;
-    document.getElementById('day2icon').src = weatherTenday.forecast.simpleforecast.forecastday[2].icon_url;
-
-    //day3
-    document.getElementById('day3High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[3].high.fahrenheit;
-    document.getElementById('day3Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[3].low.fahrenheit;
-    document.getElementById('day3icon').src = weatherTenday.forecast.simpleforecast.forecastday[3].icon_url;
-
-    //day4
-    document.getElementById('day4High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[4].high.fahrenheit;
-    document.getElementById('day4Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[4].low.fahrenheit;
-    document.getElementById('day4icon').src = weatherTenday.forecast.simpleforecast.forecastday[4].icon_url;
-
-    //day5
-    document.getElementById('day5High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[5].high.fahrenheit;
-    document.getElementById('day5Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[5].low.fahrenheit;
-    document.getElementById('day5icon').src = weatherTenday.forecast.simpleforecast.forecastday[5].icon_url;
-
-    //day6
-    document.getElementById('day6High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[6].high.fahrenheit;
-    document.getElementById('day6Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[6].low.fahrenheit;
-    document.getElementById('day6icon').src = weatherTenday.forecast.simpleforecast.forecastday[6].icon_url;
-
-    //day7
-    document.getElementById('day7High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[7].high.fahrenheit;
-    document.getElementById('day7Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[7].low.fahrenheit;
-    document.getElementById('day7icon').src = weatherTenday.forecast.simpleforecast.forecastday[7].icon_url;
-
-    //day8
-    document.getElementById('day8High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[8].high.fahrenheit;
-    document.getElementById('day8Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[8].low.fahrenheit;
-    document.getElementById('day8icon').src = weatherTenday.forecast.simpleforecast.forecastday[8].icon_url;
-
-    //day9
-    document.getElementById('day9High').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[9].high.fahrenheit;
-    document.getElementById('day9Low').innerHTML = weatherTenday.forecast.simpleforecast.forecastday[9].low.fahrenheit;
-    document.getElementById('day9icon').src = weatherTenday.forecast.simpleforecast.forecastday[9].icon_url;
-
-}//end of onload
+//end of the function
