@@ -3,9 +3,10 @@
 
     article p.town-article img { width: 29.333%; }
 
+/*-----Navigation-----*/
     nav button { display:none; }  /* hamburger button does not need to be shown */
 
-/*-----Navigation-----*/
+
 
 /*-----Weather Gallery Grid-----*/
     div.weatherGallery {
