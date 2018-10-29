@@ -6,10 +6,6 @@ body {
     font-size: 16px;
 }
 
-header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
-    /* Declare the maximum width and other main element rules to limit the stretch on wide views */
-}
-
 header {
     padding: .5rem 2%;
     display: flex;

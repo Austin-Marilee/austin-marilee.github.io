@@ -1,5 +1,5 @@
 var weatherObject = new XMLHttpRequest
-weatherObject.open('GET', '//api.openweathermap.org/data/2.5/weather?id=4759986&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
+weatherObject.open('GET', '//api.openweathermap.org/data/2.5/weather?id=5678757&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
 //Franklin VA  4759986
 
@@ -31,7 +31,7 @@ weatherObject.onload = function () {
 
 //forecast
 var weatherForecast = new XMLHttpRequest
-weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?id=4759986&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
+weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?id=5678757&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
 
 weatherForecast.send();

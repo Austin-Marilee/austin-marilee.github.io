@@ -1,44 +1,51 @@
 /* This main css file contains the default rules and is geared toward the small/phone view */
 
 body {
-    font-size: 16px;
+    font-size: 14px;
 }
 
+/*HEADER*/
 header {
-    padding: .5rem 2%;
-    display: flex;
-    flex-flow: row nowrap;
-    background-color: #38AECC;
     text-align: center;
 }
+div.title {
+    display: inline-block;
+}
 header img {
-    margin: 20px 0px 0px 15px;
+    max-width: 100px;
+    padding-top: 10px;
+    vertical-align: top;
 }
-
 header h1 {
-    color: #fff;
+    color: #197BBD;
     font-family: 'Candal', sans-serif;
-    font-size: 1.3em;
-    margin: 35px 40px 5px;
-}
+    font-size: 2.3em;
+    margin-bottom: 0;
+    padding-left: 10px;
 
+}
 .subheading {
     color: #222e50;
     font-family: 'Lato', sans-serif;
-    font-size: 1.3em;
-    margin-left: .5rem;
+    font-size: 1.9em;
+    margin-bottom: 20px;
+
+}
+div.current_conditions {
+    display: none;
 }
 
+/*NAVIGATION*/
 nav {
     background-color: #222E50;
     font-family: 'Candal', sans-serif;
+    text-align: center;
 }
-
 nav button {
     margin: .2rem 2%;
     background-color: transparent;
     border: none;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #fff;
 }
 
@@ -46,7 +53,6 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 
 nav ul li a {
@@ -54,57 +60,75 @@ nav ul li a {
     flex-flow: row wrap;
     padding: .8rem 2%;
     text-decoration: none;
-    color: rgba(255,255,255,0.8);
-    border-top: 1px solid rgba(0,0,0,0.3);
-
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    justify-content: center;
 }
 
-nav ul.mainmneu li.active a {background-color: #222e50;}
-nav ul li a:hover {background-color: #79b473;}
-nav ul.hide {display: none;}
+nav ul.mainmneu li.active a {
+    background-color: #222e50;
+}
+
+nav ul li a:hover {
+    background-color: #79b473;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+/*HERO IMAGE*/
 
 main h2 {
     color: #222e50;
     font-family: 'Candal', sans-serif;
     font-size: 1.8em;
     padding: .3rem 2%;
+    text-align: center;
 }
 
-main figure.myphoto { margin: 0; }
-main figure.myphoto img { width: 100%; height: auto; }
-
-section {
+main figure {
+    margin: 0;
+}
+section.hero {
+    position: relative;
+}
+img.myphoto {
+    width: 100%;
+    height: auto;
+    margin-bottom: 150px;
+}
+div#summary {
+    background-color: #79B473;
+    opacity: 0.8;
+    max-width: 225px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+div#summary h3{
+    font-size: .8rem;
+    padding: 10px 0 7px 10px;
+    border-bottom: 4px solid #222e50;
+}
+div#summary p {
     font-family: 'Lato', sans-serif;
-    border: 5px solid #79b473;
-    border-radius: .3em;
-    padding: .8rem 2%;
-    margin: .8rem;
+    padding: 0 10px;
+    font-size: 1rem;
+    padding-bottom: 7px;
+    margin: 0;
 }
 
-section h3 {
-    color: #222e50;
-    font-family: 'Candal', sans-serif;
-    font-size: 1.7em;
-    margin: 0 0 1.5% 0;
+.forecast {
+    display: none;
 }
 
-.current p, .conditions p {
-    margin: 1% 0;
-}
-
- .conditions {
-    font-size: 1.5em;
-}
-
-.current {
-    font-size: 3em;
-    align-items: center;
-    margin: 0 3% 0 0
-}
-
-.forecast {display: none;}
-
+/*ARTICLE*/
 article {
+    background-color: #E5E5E5 ;
+    border: 2px solid #D1D1D1;
+    margin: 20px;
     display: flex;
     flex-flow: column;
     font-family: 'Lato', sans-serif;
@@ -112,18 +136,26 @@ article {
     line-height: 1.3em;
     padding: .8rem 2%;
 }
+section h3 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 1.7em;
+    margin: 0 0 1.5% 0;
+}
 
 article h3 {
     font-family: 'Candal', sans-serif;
     color: #222e50;
     margin: 0;
 }
+
 article h4 {
     font-family: 'lato', sans-serif;
     margin: .4% 0;
 }
 
-article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+article p.town-article img {
+    /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
     display: flex;
     margin: 0;
     width: 100%;
@@ -141,20 +173,33 @@ div.weatherGallery {
     display: grid;
     grid-template-columns: repeat(1, 100%);
 }
-div.weatherGallery figure {margin: 1rem 0;}
-div.weatherGallery figure img {width: 100%;}
-div.weatherGallery figure figcaption {text-align: left; font-size: 1.2rem; padding: 2% 1%;}
+
+div.weatherGallery figure {
+    margin: 1rem 0;
+}
+
+div.weatherGallery figure img {
+    width: 100%;
+}
+
+div.weatherGallery figure figcaption {
+    text-align: left;
+    font-size: 1.2rem;
+    padding: 2% 1%;
+}
 
 /*-----Storm Center Form-------*/
 
 form#userReport {
     margin: 1em 3%;
 }
+
 fieldset {
     border-radius: .3em;
     margin: 1.5em 0;
     border: #79B473 solid 5px;
 }
+
 legend {
     font-family: "lato", sans-serif;
     font-size: 1.2em;
@@ -164,10 +209,12 @@ legend {
     background-color: #222E50;
     border-radius: .3em;
 }
+
 label {
     display: block;
     margin: .5em;
 }
+
 label span {
     font-family: "lato", sans-serif;
     display: block;
@@ -176,8 +223,10 @@ label span {
     padding-top: .9em;
     padding-bottom: .2em;
 }
+
 input.submitBtn {
-    -webkit-appearance: none; /*remove the apple mobile default styling*/
+    -webkit-appearance: none;
+    /*remove the apple mobile default styling*/
     color: #fff;
     border: solid 1px #197BBD;
     border-radius: 7px;
@@ -186,7 +235,8 @@ input.submitBtn {
     padding: .6em;
     background: #197BBD;
     font-family: "lato", sans-serif;
-    font-size: 1.5em; /*old browsers*/
+    font-size: 1.5em;
+    /*old browsers*/
     box-shadow: 4px 4px 10px #222E50;
 }
 
@@ -223,12 +273,12 @@ input.submitBtn {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
     background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
     background-color: #38AECC;
 }
 
@@ -245,7 +295,7 @@ label span.dangerAnswer {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
     display: block;
 }
 
@@ -273,31 +323,40 @@ label input {
     background-repeat: no-repeat;
     background-position: 4px -11px;
 }
+
 label #rating {
     max-width: 200px;
 }
 
 /*The input that currently has the focus*/
 input:focus {
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.5) inset;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) inset;
 }
+
 /*identifies all the required fields*/
 input:required {
-    background-position: 4px -61px; /*shows the red star*/
+    background-position: 4px -61px;
+    /*shows the red star*/
 }
+
 /*Validation*/
 input:focus:invalid {
-    background-position: 4px -111px; /*shows the yelllow cirle*/
+    background-position: 4px -111px;
+    /*shows the yelllow cirle*/
 }
+
 /*Valid*/
 input:required:valid {
     background-color: #fff;
-    background-position: 4px -161px; /*shows the green check*/
+    background-position: 4px -161px;
+    /*shows the green check*/
 }
+
 /*-----HOMEPAGE-----*/
 #homeTowns {
     display: none;
 }
+
 #photosBelow {
     display: none;
 }

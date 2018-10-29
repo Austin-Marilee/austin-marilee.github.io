@@ -12,7 +12,10 @@ function showData(jsonObj) {
     var data = jsonObj['towns'];
 
     for (var i = 0; i < data.length; i++) {
+        if (i === 0) { continue; }
         if (i === 2) { continue; }
+        if (i === 3) { continue; }
+        if (i === 6) { continue; }
         var myArticle = document.createElement('article');
         var myH5 = document.createElement('h5');
         var myPara1 = document.createElement('h6');
@@ -31,7 +34,7 @@ function showData(jsonObj) {
 
         var townEvents = data[i].events;
         for (var j = 0; j < townEvents.length; j++) {
-            if (i === 2) { continue; }
+            if (i === 0) { continue; }
             var listItem = document.createElement('li');
             listItem.textContent = townEvents[j];
             myList.appendChild(listItem);
@@ -44,7 +47,6 @@ function showData(jsonObj) {
         myArticle.appendChild(myPara4);
         myArticle.appendChild(myPara5);
         myArticle.appendChild(myList);
-
         section.appendChild(myArticle);
     }
 }

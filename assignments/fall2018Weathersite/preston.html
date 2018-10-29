@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page | Hometown Weather</title>
+    <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
+    <meta name="description" content="Weather information for Franklin, Greenville and Springfield, MU">
+    <!-- external style references in the proper cascading order -->
+    <!-- Google API font reference -->
+    <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet"> <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <header includefile="header.html">
+    </header>
+
+    <!-- site navigation -->
+    <nav>
+        <button onclick="toggleNavMenu()">&#9776;</button>
+        <ul class="hide mainmenu" id="primaryNav">
+            <li><a href="index.html">
+                    Home</a></li>
+            <li><a href="preston.html">
+                    Preston</a></li>
+            <li><a href="sodasprings.html">
+                    Soda Springs</a></li>
+            <li><a href="fishhaven.html">
+                    Fish Haven</a></li>
+            <li><a href="stormcenter.html">
+                    Storm Center</a></li>
+            <li><a href="gallery.html">
+                    Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+            <h2><span id="place"></span> City</h2>
+        <section class="hero">
+
+            <img class="myphoto" src="images/franklin_weather.jpg" alt="Sunny Day in Franklin City" sizes="100vw"
+                srcset="images/franklin_weather800.jpg 400w,
+                             images/franklin_weather1000.jpg 800w,
+                             images/franklin_weather2000.jpg 1200w">
+            <div id="summary">
+                <h3>Weather Summary</h3>
+                <p>Currently: <span id="weatherDesc"> Sunny</span></p>
+                <p>Temperature: <span id="currentTemp"> 120</span>&deg;F</p>
+                <p>Humidity: <span id="lowTemp">69%</span></p>
+                <p>Precipitation: <span id="precip">0 inches</span></p>
+                <p>Wind Speed: <span id="currentWind"> </span> mph</p>
+            </div>
+        </section>
+        <section class="forecast">
+            <h3>5 Day Forecast</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day 1</th>
+                        <th>Day 2</th>
+                        <th>Day 3</th>
+                        <th>Day 4</th>
+                        <th>Day 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/sunny.png" id="weather_iconone" alt="Weather Icon Day 1"><br>High <span id="dayonetemp">0</span>&deg;F<br>Low
+                            <span id="dayonetemp1">0</span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icontwo" alt="Weather Icon Day 2"><br>High <span id="daytwotemp">0</span>&deg;F<br>Low
+                            <span id="daytwotemp2">0</span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_iconthree" alt="Weather Icon Day 3"><br>High <span
+                                id="daythreetemp">0</span>&deg;F<br>Low <span id="daythreetemp3">0</span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_iconfour" alt="Weather Icon Day 4"><br>High <span
+                                id="dayfourtemp">0</span>&deg;F<br>Low <span id="dayfourtemp4">0</span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_iconfive" alt="Weather Icon Day 5"><br>High <span
+                                id="dayfivetemp">0</span>&deg;F<br>Low <span id="dayfivetemp5">0</span>&deg;F</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <article>
+            <h3>Drough Tolerant Plants Save Water, Money and Time</h3>
+            <h4>Michigan State University | January 10, 2014 | Mary Wilson</h4>
+            <p class="town-article">
+                <img src="images/landscape_original.jpg" alt="Desert Landscape" sizes="100vw" srcset="images/landscape200.jpg 500w,
+                                 images/landscape300.jpg 800w,
+                                 images/landscape400.jpg 1024w">
+                When creating a water-wise landscape, follow these key strategies for success. Recognize site
+                variations. Areas in your landscape may significantly vary in soil type (sand versus clay), exposure to
+                light (sun versus shade) and wind, evaporation rates and moisture levels. Sandy, well-drained soil
+                dries out quicker, while heavy clay soil is likely to remain moist longer. Adding in exposure to sun
+                and wind can create a dry microclimate even in areas with adequate rainfall. Select plants that match
+                the site conditions. Use plants that thrive under existing site conditions. A poor match leads to poor
+                performance and possible plant death. Group plants of “like needs.” Intentionally group plants together
+                that have similar water and sun exposure needs. Group any water-demanding plants together in a site
+                close to a water source. Provide care during establishment. Even drought-tolerant plants require
+                supplemental watering during establishment. Once the root system is established, the plant will require
+                less attention. Apply mulch to conserve soil moisture for newly developing roots.
+            </p>
+        </article>
+
+    </main>
+
+    <footer includefile="footer.html">
+    </footer>
+
+    <script src="scripts/include.js"></script>
+    <script src="scripts/preston_weather.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/mainmenu.js"></script>
+    <script src="scripts/currentdate.js"></script>
+
+
+</body>
+
+</html>
