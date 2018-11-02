@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home Page | Hometown Weather</title>
+        <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
+        <meta name="description" content="Weather information for Franklin, Greenville and Springfield, MU">
+        <!-- external style references in the proper cascading order -->
+        <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
+        <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="images/site.webmanifest">
+        <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>
+
+        <header includefile="header.html">
+        </header>
+
+        <!-- site navigation -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776; Menu</button>
+            <ul class="hide mainmenu" id="primaryNav">
+                <li><a href="index.html">
+                Home</a></li><li><a href="preston.html">
+                Preston</a></li><li><a href="sodasprings.html">
+                Soda Springs</a></li><li><a href="fishhaven.html">
+                Fish Haven</a></li><li><a href="stormcenter.html">
+                Storm Center</a></li><li><a href="gallery.html">
+                Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2 class="welcomehead">Welcome</h2>
+            <figure class="myphoto">
+                <img src="images/EnveitgFrance2000.jpg" alt="Sunny Day in Franklin City" sizes="100vw"
+                     srcset="images/EnveitgFrance500.jpg 400w,
+                             images/EnveitgFrance1000.jpg 800w,
+                             images/EnveitgFrance2000.jpg 1200w">
+            </figure>
+            <article><h3>What is Drought?</h3>
+                     <h4>Utah Division of Water Resources</h4>
+                <p>Drought is a normal and recurring feature of climate. Although it occurs in virtually all of the world's climatic zones, its characteristics vary significantly from one region to another. In some of the world's most arid regions, a drought occurs when annual precipitation drops below 7 inches per year, while in the world's most moisture rich regions, a few weeks without rain might constitute a drought! Consequently, there is no universal definition of drought. In the most general sense, drought is a result of a deficiency of precipitation over an extended period of time, resulting in a water shortage, which impacts normal water usage. The severity of a drought depends upon the degree of moisture deficiency, its duration, and the size of the affected area. Because it is so hard to develop a quantitative definition for drought, it is difficult to determine precisely when a drought starts and ends.</p>
+            </article>
+                <section id="homeTowns">
+                </section>
+                <section id="photosBelow">
+                    <div>
+                        <figure>
+                            <img src="images/farmroad.jpg" alt="Southern Farm Road">
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="images/mntlake.jpg" alt="Mountain Lake">
+                        </figure>
+                    </div>
+                    <div>
+                        <figure class="townPhoto">
+                            <img src="images/bluff.jpg" alt="Bluff">
+                        </figure>
+                        </div>
+                </section>
+        </main>
+
+        <footer includefile="footer.html">
+        </footer>
+
+        <script src="scripts/include.js"></script>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/towndata.js"></script>
+        <script src="scripts/mainmenu.js"></script>
+
+    </body>
+</html>
