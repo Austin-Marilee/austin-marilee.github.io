@@ -97,11 +97,10 @@ section.hero {
 img.myphoto {
     width: 100%;
     height: auto;
-    margin-bottom: 150px;
 }
 div#summary {
     background-color: #79B473;
-    opacity: 0.8;
+    opacity: 0.9;
     max-width: 225px;
     position: absolute;
     top: 15px;

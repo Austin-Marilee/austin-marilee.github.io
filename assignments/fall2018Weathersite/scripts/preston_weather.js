@@ -1,7 +1,7 @@
 var weatherObject = new XMLHttpRequest
-weatherObject.open('GET', '//api.openweathermap.org/data/2.5/weather?id=4872164&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
+weatherObject.open('GET', '//api.openweathermap.org/data/2.5/weather?id=5061036&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
-//Preston Idaho 4872164
+//Preston Idaho 5061036
 
 weatherObject.send();
 
@@ -31,7 +31,7 @@ weatherObject.onload = function () {
 
 //forecast
 var weatherForecast = new XMLHttpRequest
-weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?id=4872164&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
+weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?id=5061036&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
 
 weatherForecast.send();
