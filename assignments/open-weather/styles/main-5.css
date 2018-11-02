@@ -1,4 +1,4 @@
-/* This main css file contains the default rules and is geared toward the small/phone view */
+/*-----MAIN/SMALL VIEW----*/
 
 body {
     font-size: 16px;
@@ -10,6 +10,9 @@ header {
     flex-flow: row wrap;
 }
 
+header a {
+    text-decoration: none;
+}
 header h1 {
     color: #222e50;
     font-family: 'Candal', sans-serif;
@@ -23,6 +26,8 @@ header h1 {
     font-size: 1.4em;
     margin-left: .5rem;
 }
+
+/*-------NAVIGATION-------*/
 
 nav {
     background-color: #38aecc;
@@ -56,6 +61,8 @@ nav ul.mainmneu li.active a {background-color: #222e50;}
 nav ul li a:hover {background-color: #79b473;}
 nav ul.hide {display: none;}
 
+/*-------MAIN STYLES-----*/
+
 main h2 {
     color: #222e50;
     font-family: 'Candal', sans-serif;
@@ -66,11 +73,13 @@ main h2 {
 main figure.myphoto { margin: 0; }
 main figure.myphoto img { width: 100%; height: auto; }
 
+/*-----WEATHER SUMMARY-----*/
+
 section {
     font-family: 'Lato', sans-serif;
     border: 5px solid #79b473;
     border-radius: .3em;
-    padding: .8rem 2%;
+    padding: .8rem 1%;
     margin: .8rem;
 }
 
@@ -81,21 +90,35 @@ section h3 {
     margin: 0 0 1.5% 0;
 }
 
+span#currentdate {
+    font-size: 1.2rem;
+}
+
 .current p, .conditions p {
-    margin: 1% 0;
+    margin: .5% 0;
 }
 
  .conditions {
     font-size: 1.5em;
 }
 
-.current {
+div.current {
+    display: flex;
     font-size: 3em;
-    align-items: center;
-    margin: 0 3% 0 0
+    margin: 0 3% 0 0;
+}
+
+p.temp {
+    margin-top: 25px;
+}
+
+#weather_icon {
+    width: 100px;
 }
 
 .forecast {display: none;}
+
+/*------ARTICLE-----*/
 
 article {
     display: flex;
@@ -138,7 +161,7 @@ div.weatherGallery figure {margin: 1rem 0;}
 div.weatherGallery figure img {width: 100%;}
 div.weatherGallery figure figcaption {text-align: left; font-size: 1.2rem; padding: 2% 1%;}
 
-/*-----Storm Center Form-------*/
+/*-----STORM CENTER-------*/
 
 form#userReport {
     margin: 1em 3%;
@@ -183,8 +206,9 @@ input.submitBtn {
     box-shadow: 4px 4px 10px #222E50;
 }
 
-/*----Radio Buttons----*/
-/* The container */
+/*----RADIO BUTTONS----*/
+
+/* THE CONTAINER */
 .container {
     display: block;
     position: relative;
@@ -287,6 +311,7 @@ input:required:valid {
     background-color: #fff;
     background-position: 4px -161px; /*shows the green check*/
 }
+
 /*-----HOMEPAGE-----*/
 #homeTowns {
     display: none;
@@ -324,7 +349,3 @@ footer>p {
     padding: 1.6rem;
     margin: 0;
 }
-
-/* This structure refers to p elements that are direct children of the footer element */
-
-/* Other Class Selectors */

@@ -1,5 +1,5 @@
 var section = document.querySelector('section');
-var requestURL = 'scripts/data/servicedata.json';
+var requestURL = 'scripts/data/bikeservices.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
