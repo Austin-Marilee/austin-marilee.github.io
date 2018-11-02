@@ -55,13 +55,15 @@
             <section id="summary">
                 <h3>Weather Summary</h3>
                 <h4><span id="currentdate"></span></h4>
-                <p class="current"><span id="currentTemp"> 120</span>&deg;F
-
-                    <img src="images/sunny.png" alt="Weather Icon" id="weather_icon" class="current"></p>
+                <div class="current">
+                    <p class="temp"><span id="currentTemp"> 120</span>&deg;F</p>
+                    <p><img src="images/sunny.png" alt="Weather Icon" id="weather_icon" class="current"></p>
+                </div>
 
                 <div class="conditions">
                     <p>Current Conditions: <span id="weatherDesc"> sunny</span></p>
-                    <p>Forecast: Low <span id="lowTemp"></span>&deg;F, High <span id="highTemp"></span>&deg;F</p>
+                    <p>Low: <span id="lowTemp"></span>&deg;F</p>
+                    <p>High: <span id="highTemp"></span>&deg;F</p>
                     <p>Wind Speed: <span id="currentWind"></span> mph</p>
                 </div>
             </section>
