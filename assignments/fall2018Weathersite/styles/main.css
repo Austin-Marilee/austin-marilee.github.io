@@ -10,6 +10,7 @@ header {
 }
 div.title {
     display: inline-block;
+    text-align: center;
 }
 header img {
     max-width: 100px;
@@ -105,6 +106,7 @@ div#summary {
     position: absolute;
     top: 15px;
     left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 div#summary h3{
     font-size: .8rem;
@@ -191,6 +193,8 @@ div.weatherGallery figure figcaption {
 
 form#userReport {
     margin: 1em 3%;
+    max-width: 600px;
+    margin: auto;
 }
 
 fieldset {
@@ -351,14 +355,50 @@ input:required:valid {
     /*shows the green check*/
 }
 
-/*-----HOMEPAGE-----*/
-#homeTowns {
-    display: none;
-}
+    /*-----HOMEPAGE------*/
 
-#photosBelow {
-    display: none;
-}
+    article#homeTowns {
+        background-color: #EAEAEA;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 4%;
+        border: none;
+        max-width: 1000px;
+        margin-top: 30px;
+        padding: 20px 30px;
+        }
+
+    #homeTowns div {
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        grid-gap: 5%;
+        }
+
+    #homeTowns h5 {
+        font-family: 'Candal', sans-serif;
+        font-size: 1.2rem;
+        color: #222E50;
+        margin: 5% 0 0 0;
+    }
+
+    #homeTowns h6 {
+        font-family: 'lato', sans-serif;
+        color: #79B473;
+        font-size: .7rem;
+        margin: 5% 0;
+        padding: 0 10px;
+    }
+
+    #homeTowns p {
+        font-size: 1rem;
+        margin: 2%;
+        padding: 10px;
+    }
+    img.homePhoto {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 
 h2.welcomehead {
     margin: 2% 2% 1% 0;
@@ -369,6 +409,7 @@ h2.welcomehead {
 /*-----FOOTER-----*/
 footer {
     padding-top: .8rem;
+    margin-top: 200px;
 }
 
 footer aside {

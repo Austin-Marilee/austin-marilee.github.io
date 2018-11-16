@@ -27,17 +27,22 @@
         <header includefile="header.html">
         </header>
 
-        <!-- site navigation -->
-        <nav>
-            <button onclick="toggleNavMenu()">&#9776; Menu</button>
+    <!-- site navigation -->
+    <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
             <ul class="hide mainmenu" id="primaryNav">
                 <li><a href="index.html">
-                Home</a></li><li><a href="preston.html">
-                Preston</a></li><li><a href="sodasprings.html">
-                Soda Springs</a></li><li><a href="fishhaven.html">
-                Fish Haven</a></li><li><a href="stormcenter.html">
-                Storm Center</a></li><li><a href="gallery.html">
-                Gallery</a></li>
+                        Home</a></li>
+                <li><a href="preston.html">
+                        Preston</a></li>
+                <li><a href="sodasprings.html">
+                        Soda Springs</a></li>
+                <li><a href="fishhaven.html">
+                        Fish Haven</a></li>
+                <li><a href="stormcenter.html">
+                        Storm Center</a></li>
+                <li><a href="gallery.html">
+                        Gallery</a></li>
             </ul>
         </nav>
 
@@ -47,20 +52,15 @@
             <img class="myphoto" src="images/sodasprings.jpg" alt="Mountain View of Soda Springs" sizes="100vw" srcset="images/sodasprings200.jpg 200w,
                              images/sodasprings400.jpg 400w,
                              images/sodasprings800.jpg 800w">
-        </section>
-
-        <section id="summary">
-            <h3>Weather Summary</h3>
-            <h4><span id="currentdate"></span></h4>
-            <p class="current"><span id="currentTemp"> 120</span>&deg;F
-
-                <img src="images/sunny.png" alt="Weather Icon" id="weather_icon" class="current"></p>
-
-            <div class="conditions">
-                <p>Current Conditions: <span id="weatherDesc"> sunny</span></p>
-                <p>Forecast: Low <span id="lowTemp"></span>&deg;F, High <span id="highTemp"></span>&deg;F</p>
-                <p>Wind Speed: <span id="currentWind"></span> mph</p>
-            </div>
+                             <div id="summary">
+                                    <h3>Weather Summary</h3>
+                                    <p>Currently: <span id="weatherDesc"> Sunny</span></p>
+                                    <p>Temperature: <span id="currentTemp"> 120</span>&deg;F</p>
+                                    <p>Low: <span id="lowTemp">69%</span> &deg;F</p>
+                                    <p>High <span id="highTemp"></span>&deg;F</p>
+                                    <p>Precipitation: <span id="precip">0 inches</span></p>
+                                    <p>Wind Speed: <span id="currentWind"> </span> mph</p>
+                                </div>
         </section>
         <section class="forecast">
             <h3>5 Day Forecast</h3>
