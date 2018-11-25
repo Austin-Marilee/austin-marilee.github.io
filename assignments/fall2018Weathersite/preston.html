@@ -8,11 +8,13 @@
     <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
     <meta name="description" content="Weather Information for Preston, Idaho">
     <!-- external style references in the proper cascading order -->
-    <!-- Google API font reference -->
-    <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
     <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
     <link href="styles/main.css" rel="stylesheet"> <!-- default styles - small/phone views -->
     <link href="styles/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+    <!-- Google API font reference -->
+    <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -25,8 +27,16 @@
 </head>
 
 <body>
-
-    <header includefile="header.html">
+    <header>
+        <a href="index.html"><img src="images/logo0.png" alt="Umbrella logo"></a>
+        <div class="title">
+            <h1>Hometown Weather</h1>
+            <div class="subheading">Weather You Can Use</div>
+        </div>
+        <div class="current_conditions">
+            <img src="images/sunny.png" alt="Weather Icon" id="weather_icon" class="current">
+            <p><span class="weatherDesc"> sunny</span></p>
+        </div>
     </header>
 
     <!-- site navigation -->
@@ -57,7 +67,7 @@
                              images/franklin800.jpg 800w">
             <div id="summary">
                 <h3>Weather Summary</h3>
-                <p>Currently: <span id="weatherDesc"> Sunny</span></p>
+                <p>Currently: <span class="weatherDesc"> Sunny</span></p>
                 <p>Temperature: <span id="currentTemp"> 120</span>&deg;F</p>
                 <p>Low: <span id="lowTemp">69%</span>&deg;F</p>
                 <p>High <span id="highTemp"></span>&deg;F</p>
@@ -98,9 +108,7 @@
             <h3>Drough Tolerant Plants Save Water, Money and Time</h3>
             <h4>Michigan State University | January 10, 2014 | Mary Wilson</h4>
             <p class="town-article">
-                <img src="images/landscape_original.jpg" alt="Desert Landscape" sizes="100vw" srcset="images/landscape200.jpg 500w,
-                                 images/landscape300.jpg 800w,
-                                 images/landscape400.jpg 1024w">
+                <img src="images/river.jpg" alt="Snake River">
                 When creating a water-wise landscape, follow these key strategies for success. Recognize site
                 variations. Areas in your landscape may significantly vary in soil type (sand versus clay), exposure to
                 light (sun versus shade) and wind, evaporation rates and moisture levels. Sandy, well-drained soil
@@ -114,17 +122,32 @@
                 less attention. Apply mulch to conserve soil moisture for newly developing roots.
             </p>
         </article>
-
     </main>
 
-    <footer includefile="footer.html">
+    <footer>
+        <aside>
+            <img class="footer-img" src="images/pivot.jpg" alt="Farm Pivot">
+            <div class="contact">
+                            <p><b>Hometown Weather</b></p>
+            <p><i class="material-icons">location_on</i> 123 Main Street <br>Preston, ID 12345</p>
+            <p><i class="material-icons">phone_iphone</i> 000-555-3333</p>
+            <p><i class="material-icons">mail_outline</i> hometown@weather.com</p>
+            <img class="social-icons" src="images/facebook.png" alt="Pinterest Icon">
+            <img class="social-icons" src="images/pinterest.png" alt="Pinterest Icon">
+            <img class="social-icons" src="images/twitter.png" alt="Pinterest Icon">
+            <img class="social-icons" src="images/google.png" alt="Pinterest Icon">
+            </div>
+            <div id="googleMap"></div><br>
+        </aside>
+        <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
     </footer>
 
-    <script src="scripts/include.js"></script>
     <script src="scripts/preston_weather.js"></script>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/mainmenu.js"></script>
     <script src="scripts/currentdate.js"></script>
+    <script src="scripts/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2jNA6KO_qXVYTeCySYU8c81WSArLgHGo&callback=myMap"></script>
 
 
 </body>

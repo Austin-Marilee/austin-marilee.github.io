@@ -13,7 +13,7 @@ weatherObject.onload = function () {
     console.log(weatherInfo);
 
     document.getElementById('place').innerHTML = weatherInfo.name;
-    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
+    document.getElementsByClassName('weatherDesc').innerHTML = weatherInfo.weather[0].main;
     document.getElementById('highTemp').innerHTML = weatherInfo.main.temp_max;
     document.getElementById('lowTemp').innerHTML = weatherInfo.main.temp_min;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;

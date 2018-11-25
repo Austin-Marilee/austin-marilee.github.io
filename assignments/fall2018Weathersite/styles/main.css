@@ -6,15 +6,15 @@ body {
 
 /*HEADER*/
 header {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 div.title {
-    display: inline-block;
     text-align: center;
 }
 header img {
-    max-width: 100px;
-    padding-top: 10px;
+    max-width: 50px;
+    padding-top: 30px;
     vertical-align: top;
 }
 header h1 {
@@ -158,8 +158,8 @@ article h4 {
 article p.town-article img {
     /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
     display: flex;
-    margin: 0;
-    width: 100%;
+    margin: auto;
+    max-width: 100%;
     padding: 0 0 2% 0;
 }
 
@@ -192,7 +192,7 @@ div.weatherGallery figure figcaption {
 /*-----Storm Center Form-------*/
 
 form#userReport {
-    margin: 1em 3%;
+    padding: 0 10px;
     max-width: 600px;
     margin: auto;
 }
@@ -408,29 +408,44 @@ h2.welcomehead {
 
 /*-----FOOTER-----*/
 footer {
-    padding-top: .8rem;
-    margin-top: 200px;
+    margin-top: 100px;
 }
-
+.footer-img {
+    display: none;
+}
 footer aside {
     font-family: 'Lato', sans-serif;
-    font-size: 1.3em;
     color: #fff;
+    font-size: 1rem;
     background-color: #79b473;
+    padding-top: 30px;
     text-align: center;
-    padding: 1rem;
 }
 
-footer>p {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #79b473;
-    text-align: center;
-    padding: 1.6rem;
+footer aside p {
+    padding-bottom: 10px;
     margin: 0;
 }
+footer i {
+    vertical-align: middle;
+}
+.social-icons {
+    max-width: 35px;
+    padding-bottom: 20px;
+}
+p.footer-bar {
+    background-color: #222E50;
+    padding: 25px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+div#googleMap {
+    margin: 20px;
+    max-width: 100%;
+    height: 200px;
+    border: 1px solid black;
+}
 
-/* This structure refers to p elements that are direct children of the footer element */
-
-/* Other Class Selectors */

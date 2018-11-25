@@ -2,10 +2,12 @@
     /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
 
     /*HEADER*/
+    header img {
+        padding-left: 100px;
+    }
     div.current_conditions {
         display: flex;
-        float: right;
-        margin: 20px 100px 0 0;
+        margin: 20px 0 0 20px;
         font-family: 'Lato', sans-serif;
         font-size: 1rem;
         vertical-align: text-bottom;
@@ -13,21 +15,21 @@
 
     div.current_conditions img {
         display: inline-block;
-        width: 75px;
+        max-width: 75px;
+        margin: auto;
         padding: 0;
     }
 
     div.current_conditions p {
         display: inline-block;
         vertical-align: middle;
-        margin-top: 25px;
+        margin-top: 30px;
+    }
+    .header-nocurrent {
+        padding-left: 0;
     }
 
-    h1 {
-        margin: 1rem 2rem;
-    }
-
-    /*NAVIGATION*/
+      /*NAVIGATION*/
     nav button {
         display: none;
     }
@@ -66,7 +68,7 @@
         flex-direction: column;
         font-family: 'Lato', sans-serif;
         border-radius: .3em;
-        padding: 1.2rem 2%;
+        padding: 1.2rem;
         text-align: center;
     }
      .forecast td,
@@ -100,12 +102,23 @@
     /*ARTICLE*/
     article {
         margin: auto;
-        max-width: 950px;
+        max-width: 1000px;
+        padding: 0;
     }
     
     article p.town-article img {
-        width: 300px;
+        width: 400px;
         float: right;
+        padding-left: 20px;
+    }
+    article p {
+        padding: 20px;
+    }
+     
+    article h3 {
+        padding: 20px 0 0 20px;
+    }
+    article h4 {
         padding-left: 20px;
     }
 
@@ -116,6 +129,26 @@
      /*-----Weather Gallery Grid-----*/
     div.weatherGallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*FOOTER*/
+    footer {
+        max-width: 1000px;
+        margin: auto;
+        padding-top: 50px;
+    }
+    footer aside {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+   img.footer-img {
+       display: flex;
+        max-width: 300px;
+        margin: auto;
+        padding: 0px 0 0 25px;
+    }
+    div.contact {
+        padding-top: 30px;
     }
 
 }

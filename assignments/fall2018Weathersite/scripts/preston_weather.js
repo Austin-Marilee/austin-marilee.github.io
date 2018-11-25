@@ -1,41 +1,30 @@
+//Preston Idaho 5061036
 var weatherObject = new XMLHttpRequest
 weatherObject.open('GET', '//api.openweathermap.org/data/2.5/weather?id=5061036&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
-
-//Preston Idaho 5061036
-
 weatherObject.send();
-
 weatherObject.onload = function () {
-
-
 
     var weatherInfo = JSON.parse(weatherObject.responseText);
     console.log(weatherInfo);
 
     document.getElementById('place').innerHTML = weatherInfo.name;
-    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
+    document.getElementsByClassName('weatherDesc').innerHTML = weatherInfo.weather[0].main;
     document.getElementById('highTemp').innerHTML = weatherInfo.main.temp_max;
     document.getElementById('lowTemp').innerHTML = weatherInfo.main.temp_min;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
     document.getElementById('currentWind').innerHTML = weatherInfo.wind.speed;
 
-
-
+    //Weather Icon
     var iconcode = weatherInfo.weather[0].icon;
-
     var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_icon').src = icon_path;
-
-
 }
 
 //forecast
 var weatherForecast = new XMLHttpRequest
 weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?id=5061036&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
-
 weatherForecast.send();
-
 weatherForecast.onload = function () {
 
     var weatherInfo = JSON.parse(weatherForecast.responseText);
