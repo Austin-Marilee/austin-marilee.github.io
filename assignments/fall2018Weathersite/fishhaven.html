@@ -59,19 +59,18 @@
     </nav>
 
     <main>
-        <h2><span id="place"></span> City</h2>
+        <h2><span id="place"></span>Fish Haven</h2>
         <section class="hero">
             <img class="myphoto" src="images/fishhaven.jpg" alt="Mount Olympus" sizes="100vw" srcset="images/fishhaven200.jpg 200w,
                              images/fishhaven400.jpg 400w,
                              images/fishhaven800.jpg 800w">
             <div id="summary">
                 <h3>Weather Summary</h3>
-                <p>Currently: <span class="weatherDesc"> Sunny</span></p>
-                <p>Temperature: <span id="currentTemp"> 120</span>&deg;F</p>
-                <p>Low: <span id="lowTemp">69%</span> &deg;F</p>
-                <p>High <span id="highTemp"></span>&deg;F</p>
-                <p>Precipitation: <span id="precip">0 inches</span></p>
-                <p>Wind Speed: <span id="currentWind"> </span> mph</p>
+                <p>Temperature: <span id="currentTemp"></span>&deg;F</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind Speed: <span id="windSpeed"></span>mph</p>
+                <p>Wind Direction: <span id="direction"></span>&deg;</p>
+                <p>Wind Chill: <span id="windChill"></span>&deg;F</p>
             </div>
         </section>
         <section class="forecast">
@@ -140,7 +139,6 @@
         </aside>
         <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
     </footer>
-
     <script src="scripts/fishhaven_weather.js"></script>
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/mainmenu.js"></script>
