@@ -67,12 +67,12 @@ nav ul li a {
     justify-content: center;
 }
 
-nav ul.mainmneu li.active a {
-    background-color: #222e50;
+li.active  {
+    background-color: #79B473;
 }
 
 nav ul li a:hover {
-    background-color: #79b473;
+    background-color: #197BBD;
 }
 
 nav ul.hide {
@@ -184,7 +184,7 @@ div.weatherGallery figure img {
 }
 
 div.weatherGallery figure figcaption {
-    text-align: left;
+    text-align: center;
     font-size: 1.2rem;
     padding: 2% 1%;
 }
@@ -409,6 +409,7 @@ h2.welcomehead {
 /*-----FOOTER-----*/
 footer {
     margin-top: 100px;
+    margin-bottom: 300px;
 }
 .footer-img {
     display: none;

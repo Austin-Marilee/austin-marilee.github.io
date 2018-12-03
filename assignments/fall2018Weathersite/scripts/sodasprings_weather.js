@@ -1,5 +1,5 @@
 var weatherObject = new XMLHttpRequest
-weatherObject.open('GET', '//api.openweathermap.org/data/2.5/weather?id=5607916&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
+weatherObject.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=5607916&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
 //Soda Springs 5607916
 
@@ -11,7 +11,7 @@ weatherObject.onload = function () {
 
     //Weather Icon
     var iconcode = weatherInfo.weather[0].icon;
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_icon').src = icon_path;
     document.getElementsByClassName('weatherDesc').innerHTML = weatherInfo.weather[0].main;
     document.getElementById('place').innerHTML = weatherInfo.name;
@@ -29,7 +29,7 @@ weatherObject.onload = function () {
 
 //forecast
 var weatherForecast = new XMLHttpRequest
-weatherForecast.open('GET', '//api.openweathermap.org/data/2.5/forecast?id=5607916&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
+weatherForecast.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?id=5607916&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 
 weatherForecast.send();
 weatherForecast.onload = function () {
@@ -51,19 +51,19 @@ weatherForecast.onload = function () {
     month[10] = "November";
     month[11] = "December";
 
-    var date1 = new Date(weatherInfo.list[4].dt * 1000);
+    var date1 = new Date(weatherInfo.list[3].dt * 1000);
     var m1 = month[date1.getMonth()];
 
-    var date2 = new Date(weatherInfo.list[12].dt * 1000);
+    var date2 = new Date(weatherInfo.list[11].dt * 1000);
     var m2 = month[date2.getMonth()];
 
-    var date3 = new Date(weatherInfo.list[20].dt * 1000);
+    var date3 = new Date(weatherInfo.list[19].dt * 1000);
     var m3 = month[date3.getMonth()];
 
-    var date4 = new Date(weatherInfo.list[28].dt * 1000);
+    var date4 = new Date(weatherInfo.list[27].dt * 1000);
     var m4 = month[date4.getMonth()];
 
-    var date5 = new Date(weatherInfo.list[36].dt * 1000);
+    var date5 = new Date(weatherInfo.list[35].dt * 1000);
     var m5 = month[date5.getMonth()];
 
     document.getElementById('dayone').innerHTML = m1 + ' ' + date1.getDate();
@@ -72,38 +72,32 @@ weatherForecast.onload = function () {
     document.getElementById('dayfour').innerHTML = m4 + ' ' + date4.getDate();
     document.getElementById('dayfive').innerHTML = m5 + ' ' + date5.getDate();
 
-    document.getElementById('dayonetemp').innerHTML = weatherInfo.list[4].main.temp_max;
-    document.getElementById('daytwotemp').innerHTML = weatherInfo.list[12].main.temp_max;
-    document.getElementById('daythreetemp').innerHTML = weatherInfo.list[20].main.temp_max;
-    document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[28].main.temp_max;
-    document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[36].main.temp_max;
+    document.getElementById('dayonetemp').innerHTML = weatherInfo.list[3].main.temp_max;
+    document.getElementById('daytwotemp').innerHTML = weatherInfo.list[11].main.temp_max;
+    document.getElementById('daythreetemp').innerHTML = weatherInfo.list[19].main.temp_max;
+    document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[27].main.temp_max;
+    document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[35].main.temp_max;
 
-
-    document.getElementById('dayonetemp1').innerHTML = weatherInfo.list[4].main.temp_min;
-    document.getElementById('daytwotemp2').innerHTML = weatherInfo.list[12].main.temp_min;
-    document.getElementById('daythreetemp3').innerHTML = weatherInfo.list[20].main.temp_min;
-    document.getElementById('dayfourtemp4').innerHTML = weatherInfo.list[28].main.temp_min;
-    document.getElementById('dayfivetemp5').innerHTML = weatherInfo.list[36].main.temp_min;
     //icons
 
-    var iconcode = weatherInfo.list[4].weather["0"].icon;
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    var iconcode = weatherInfo.list[3].weather["0"].icon;
+    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconone').src = icon_path;
 
-    var iconcode = weatherInfo.list[12].weather["0"].icon;
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    var iconcode = weatherInfo.list[11].weather["0"].icon;
+    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_icontwo').src = icon_path;
 
-    var iconcode = weatherInfo.list[20].weather["0"].icon;
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    var iconcode = weatherInfo.list[19].weather["0"].icon;
+    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconthree').src = icon_path;
 
-    var iconcode = weatherInfo.list[28].weather["0"].icon;
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    var iconcode = weatherInfo.list[27].weather["0"].icon;
+    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconfour').src = icon_path;
 
-    var iconcode = weatherInfo.list[36].weather["0"].icon;
-    var icon_path = "//openweathermap.org/img/w/" + iconcode + ".png";
+    var iconcode = weatherInfo.list[35].weather["0"].icon;
+    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconfive').src = icon_path;
 }
 //end of the function
