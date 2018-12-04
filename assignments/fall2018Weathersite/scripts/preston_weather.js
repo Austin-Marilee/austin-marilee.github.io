@@ -11,7 +11,7 @@ weatherObject.onload = function () {
     var iconcode = weatherInfo.weather[0].icon;
     var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_icon').src = icon_path;
-    document.getElementsByClassName('weatherDesc').innerHTML = weatherInfo.weather[0].main;
+    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
     document.getElementById('place').innerHTML = weatherInfo.name;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
     document.getElementById('humidity').innerHTML = weatherInfo.main.humidity;
@@ -74,31 +74,31 @@ weatherForecast.onload = function () {
 
     //high temp
 
-    document.getElementById('dayonetemp').innerHTML = weatherInfo.list[3].main.temp_max;
-    document.getElementById('daytwotemp').innerHTML = weatherInfo.list[11].main.temp_max;
-    document.getElementById('daythreetemp').innerHTML = weatherInfo.list[19].main.temp_max;
-    document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[27].main.temp_max;
-    document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[35].main.temp_max;
+    document.getElementById('dayonetemp').innerHTML = weatherInfo.list[6].main.temp_max;
+    document.getElementById('daytwotemp').innerHTML = weatherInfo.list[14].main.temp_max;
+    document.getElementById('daythreetemp').innerHTML = weatherInfo.list[22].main.temp_max;
+    document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[30].main.temp_max;
+    document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[38].main.temp_max;
 
     //icons
 
-    var iconcode = weatherInfo.list[3].weather["0"].icon;
+    var iconcode = weatherInfo.list[6].weather["0"].icon;
     var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconone').src = icon_path;
 
-    var iconcode = weatherInfo.list[11].weather["0"].icon;
+    var iconcode = weatherInfo.list[14].weather["0"].icon;
     var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_icontwo').src = icon_path;
 
-    var iconcode = weatherInfo.list[19].weather["0"].icon;
+    var iconcode = weatherInfo.list[22].weather["0"].icon;
     var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconthree').src = icon_path;
 
-    var iconcode = weatherInfo.list[27].weather["0"].icon;
+    var iconcode = weatherInfo.list[30].weather["0"].icon;
     var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconfour').src = icon_path;
 
-    var iconcode = weatherInfo.list[35].weather["0"].icon;
+    var iconcode = weatherInfo.list[38].weather["0"].icon;
     var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
     document.getElementById('weather_iconfive').src = icon_path;
 }
