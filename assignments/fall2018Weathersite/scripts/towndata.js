@@ -39,12 +39,16 @@ function showData(jsonObj) {
         if (i === 1)
             myPhoto.src = 'images/home2.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
+        myPhoto.setAttribute('alt', 'Fish Haven Photo');
         if (i === 4)
             myPhoto.src = 'images/home1.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
+        myPhoto.setAttribute('alt', 'Preston Photo');
         if (i === 5)
             myPhoto.src = 'images/home3.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
+        myPhoto.setAttribute('alt', 'Soda Springs Photo');
+
         article.appendChild(myArticle);
     }
 }

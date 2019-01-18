@@ -8,9 +8,9 @@ weatherObject.onload = function () {
     console.log(weatherInfo);
 
     //Weather Icon
-    var iconcode = weatherInfo.weather[0].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    document.getElementById('weather_icon').src = icon_path;
+/*     var iconcode = weatherInfo.weather[0].icon;
+    var icon_path = "https://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png"; */
+    document.getElementById('weather_icon').src ="https://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png";
     document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
     document.getElementById('place').innerHTML = weatherInfo.name;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
@@ -37,19 +37,8 @@ weatherForecast.onload = function () {
 
     //date
 
-    var month = new Array(12);
-    month[0] = "January";
-    month[1] = "February";
-    month[2] = "March";
-    month[3] = "April";
-    month[4] = "May";
-    month[5] = "June";
-    month[6] = "July";
-    month[7] = "August";
-    month[8] = "September";
-    month[9] = "October";
-    month[10] = "November";
-    month[11] = "December";
+var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
 
     var date1 = new Date(weatherInfo.list[3].dt * 1000);
     var m1 = month[date1.getMonth()];
@@ -73,6 +62,13 @@ weatherForecast.onload = function () {
     document.getElementById('dayfive').innerHTML = m5 + ' ' + date5.getDate();
 
     //high temp
+/* 
+    var i = weatherInfo.list[i];
+    for (var i = 0; i < data.length; i++) {
+        if (i === includes("15:00:00")) {
+            var date = new Date(weatherInfo.list[i].dt * 1000);
+        }
+    } */
 
     document.getElementById('dayonetemp').innerHTML = weatherInfo.list[6].main.temp_max;
     document.getElementById('daytwotemp').innerHTML = weatherInfo.list[14].main.temp_max;
