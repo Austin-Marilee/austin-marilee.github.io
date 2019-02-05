@@ -1,0 +1,212 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+body {
+    font-size: .8em;
+}
+
+/*HEADER*/
+header {
+    position: relative;
+    text-align: center;
+}
+
+header img {
+    position: absolute;
+    margin: 25px -100px;
+    max-width: 75px;
+}
+
+div.title {
+    display: inline-block;
+    text-align: center;
+}
+
+header h1 {
+    color: #197BBD;
+    font-family: 'Candal', sans-serif;
+    margin-bottom: 0;
+}
+
+.subheading {
+    color: #222e50;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.9em;
+    margin-bottom: 20px;
+}
+
+/*NAVIGATION*/
+nav {
+    background-color: #222E50;
+    font-family: 'Candal', sans-serif;
+    text-align: center;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    justify-content: center;
+}
+
+li.active {
+    background-color: #79B473;
+}
+
+nav ul li a:hover {
+    background-color: #197BBD;
+}
+
+
+/*HERO IMAGE*/
+
+main h2 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 1.8em;
+    padding: .3rem 2%;
+    text-align: center;
+}
+
+main figure {
+    margin: 0;
+}
+
+section.hero {
+    position: relative;
+}
+
+img.myphoto {
+    width: 100%;
+    height: auto;
+}
+
+div#summary {
+    background-color: #79B473;
+    opacity: 0.9;
+    position: absolute;
+    padding: 10px;
+    top: 15px;
+    left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#summary h3 {
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #222e50;
+}
+
+div#summary p {
+    font-family: 'Lato', sans-serif;
+    padding-bottom: 5px;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.forecast {
+    display: none;
+}
+
+/*ARTICLE*/
+article {
+    background-color: #E5E5E5;
+    border: 2px solid #D1D1D1;
+    margin: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    padding: .8rem 2%;
+}
+
+section h3 {
+    color: #222e50;
+    font-family: 'Candal', sans-serif;
+    font-size: 1.7em;
+    margin: 0 0 1.5% 0;
+}
+
+article h3 {
+    font-family: 'Candal', sans-serif;
+    color: #222e50;
+    margin: 0;
+}
+
+article h4 {
+    font-family: 'lato', sans-serif;
+    margin: .4% 0;
+}
+
+article p.town-article img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+
+/*-----FOOTER-----*/
+footer {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-img {
+    display: none;
+}
+
+footer aside {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+    background-color: #79b473;
+    padding-top: 30px;
+    text-align: center;
+}
+
+footer aside p {
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+footer i {
+    vertical-align: middle;
+}
+
+.social-icons {
+    max-width: 35px;
+    padding-bottom: 20px;
+}
+
+p.footer-bar {
+    background-color: #222E50;
+    padding: 25px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+div#googleMap {
+    margin: 20px;
+    max-width: 100%;
+    height: 200px;
+    border: 1px solid black;
+}
