@@ -9,15 +9,18 @@ header {
     display: flex;
     justify-content: center;
 }
+
 div.title {
     text-align: center;
 }
+
 header img {
     max-width: 50px;
-    padding-top: 30px;
+    padding-top: 20px;
     vertical-align: top;
     margin-right: 10px;
 }
+
 header h1 {
     color: #197BBD;
     font-family: 'Candal', sans-serif;
@@ -26,15 +29,13 @@ header h1 {
     padding-left: 10px;
 
 }
+
 .subheading {
     color: #222e50;
     font-family: 'Lato', sans-serif;
     font-size: 1.9em;
     margin-bottom: 20px;
 
-}
-div.current_conditions {
-    display: none;
 }
 
 /*NAVIGATION*/
@@ -43,6 +44,7 @@ nav {
     font-family: 'Candal', sans-serif;
     text-align: center;
 }
+
 nav button {
     margin: .2rem 2%;
     background-color: transparent;
@@ -68,7 +70,7 @@ nav ul li a {
     justify-content: center;
 }
 
-li.active  {
+li.active {
     background-color: #79B473;
 }
 
@@ -93,27 +95,46 @@ main h2 {
 main figure {
     margin: 0;
 }
+
 section.hero {
     position: relative;
 }
+
 img.myphoto {
     width: 100%;
     height: auto;
 }
+
+/* SUMMARY */
+#weatherDesc {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+}
+
+img#weather_icon.current {
+    vertical-align: sub;
+    width: 50px;
+}
+
+div#conditions {
+    padding-bottom: 15px;
+}
+
 div#summary {
     background-color: #79B473;
     opacity: 0.9;
-    max-width: 225px;
     position: absolute;
     top: 15px;
     left: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-div#summary h3{
-    font-size: .8rem;
-    padding: 10px 0 7px 10px;
+
+div#summary h3 {
+    font-size: .9rem;
+    padding: 10px 10px 7px 10px;
     border-bottom: 4px solid #222e50;
 }
+
 div#summary p {
     font-family: 'Lato', sans-serif;
     padding: 0 10px;
@@ -128,7 +149,7 @@ div#summary p {
 
 /*ARTICLE*/
 article {
-    background-color: #E5E5E5 ;
+    background-color: #E5E5E5;
     border: 2px solid #D1D1D1;
     margin: 20px;
     display: flex;
@@ -138,6 +159,7 @@ article {
     line-height: 1.3em;
     padding: .8rem 2%;
 }
+
 section h3 {
     color: #222e50;
     font-family: 'Candal', sans-serif;
@@ -356,50 +378,51 @@ input:required:valid {
     /*shows the green check*/
 }
 
-    /*-----HOMEPAGE------*/
+/*-----HOMEPAGE------*/
 
-    article#homeTowns {
-        background-color: #EAEAEA;
-        text-align: center;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 4%;
-        border: none;
-        max-width: 1000px;
-        margin-top: 30px;
-        padding: 20px 30px;
-        }
+article#homeTowns {
+    background-color: #EAEAEA;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4%;
+    border: none;
+    max-width: 1000px;
+    margin-top: 30px;
+    padding: 20px 30px;
+}
 
-    #homeTowns div {
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        grid-gap: 5%;
-        }
+#homeTowns div {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    grid-gap: 5%;
+}
 
-    #homeTowns h5 {
-        font-family: 'Candal', sans-serif;
-        font-size: 1.2rem;
-        color: #222E50;
-        margin: 5% 0 0 0;
-    }
+#homeTowns h5 {
+    font-family: 'Candal', sans-serif;
+    font-size: 1.2rem;
+    color: #222E50;
+    margin: 5% 0 0 0;
+}
 
-    #homeTowns h6 {
-        font-family: 'lato', sans-serif;
-        color: #79B473;
-        font-size: .7rem;
-        margin: 5% 0;
-        padding: 0 10px;
-    }
+#homeTowns h6 {
+    font-family: 'lato', sans-serif;
+    color: #79B473;
+    font-size: .7rem;
+    margin: 5% 0;
+    padding: 0 10px;
+}
 
-    #homeTowns p {
-        font-size: 1rem;
-        margin: 2%;
-        padding: 10px;
-    }
-    img.homePhoto {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
+#homeTowns p {
+    font-size: 1rem;
+    margin: 2%;
+    padding: 10px;
+}
+
+img.homePhoto {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
 
 h2.welcomehead {
     margin: 2% 2% 1% 0;
@@ -412,9 +435,11 @@ footer {
     margin-top: 100px;
     margin-bottom: 20px;
 }
+
 .footer-img {
     display: none;
 }
+
 footer aside {
     font-family: 'Lato', sans-serif;
     color: #fff;
@@ -428,13 +453,16 @@ footer aside p {
     padding-bottom: 10px;
     margin: 0;
 }
+
 footer i {
     vertical-align: middle;
 }
+
 .social-icons {
     max-width: 35px;
     padding-bottom: 20px;
 }
+
 p.footer-bar {
     background-color: #222E50;
     padding: 25px;
@@ -444,10 +472,10 @@ p.footer-bar {
     text-align: center;
     margin: 0;
 }
+
 div#googleMap {
     margin: 20px;
     max-width: 100%;
     height: 200px;
     border: 1px solid black;
 }
-

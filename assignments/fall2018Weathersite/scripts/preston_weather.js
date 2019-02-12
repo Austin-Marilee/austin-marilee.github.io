@@ -1,4 +1,4 @@
-//Preston Idaho 5061036
+//PRESTON IDAHO 5061036
 var weatherObject = new XMLHttpRequest
 weatherObject.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=5604473&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
 weatherObject.send();
@@ -7,10 +7,8 @@ weatherObject.onload = function () {
     var weatherInfo = JSON.parse(weatherObject.responseText);
     console.log(weatherInfo);
 
-    //Weather Icon
-/*     var iconcode = weatherInfo.weather[0].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png"; */
-    document.getElementById('weather_icon').src ="https://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png";
+    //WEATHER SUMMARY
+    document.getElementById('weather_icon').src = "https://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png";
     document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
     document.getElementById('place').innerHTML = weatherInfo.name;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
@@ -25,20 +23,18 @@ weatherObject.onload = function () {
 
 }
 
-//forecast
+//FORECAST
 var weatherForecast = new XMLHttpRequest
 weatherForecast.open('GET', 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=1b85c554f737909311537328716a5d15&units=imperial', true);
-
 weatherForecast.send();
 weatherForecast.onload = function () {
 
     var weatherInfo = JSON.parse(weatherForecast.responseText);
     console.log(weatherInfo);
 
-    //date
+    //DATE
 
-var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-
+    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     var date1 = new Date(weatherInfo.list[3].dt * 1000);
     var m1 = month[date1.getMonth()];
@@ -61,20 +57,24 @@ var month = ["January","February","March","April","May","June","July","August","
     document.getElementById('dayfour').innerHTML = m4 + ' ' + date4.getDate();
     document.getElementById('dayfive').innerHTML = m5 + ' ' + date5.getDate();
 
-    //high temp
-/* 
-    var i = weatherInfo.list[i];
-    for (var i = 0; i < data.length; i++) {
-        if (i === includes("15:00:00")) {
-            var date = new Date(weatherInfo.list[i].dt * 1000);
-        }
-    } */
+    //HIGH TEMPERATURE
 
-    document.getElementById('dayonetemp').innerHTML = weatherInfo.list[6].main.temp_max;
-    document.getElementById('daytwotemp').innerHTML = weatherInfo.list[14].main.temp_max;
-    document.getElementById('daythreetemp').innerHTML = weatherInfo.list[22].main.temp_max;
-    document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[30].main.temp_max;
-    document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[38].main.temp_max;
+    var i;
+    var temp = "";
+    for (var i = 0; i < weatherInfo.list[i].length; i++) {
+        if (weatherInfo.list[i].clouds.dt_txt === includes("15:00:00")) {
+        temp += weatherInfo.list[i].main.temp_max;
+        }
+        document.getElementById("dayonetemp").innerHTML = temp;
+    }
+
+
+
+    /*     document.getElementById('dayonetemp').innerHTML = weatherInfo.list[6].main.temp_max;
+        document.getElementById('daytwotemp').innerHTML = weatherInfo.list[14].main.temp_max;
+        document.getElementById('daythreetemp').innerHTML = weatherInfo.list[22].main.temp_max;
+        document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[30].main.temp_max;
+        document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[38].main.temp_max; */
 
     //icons
 
