@@ -18,7 +18,7 @@ div.title {
 
 header img {
     max-width: 50px;
-    padding-top: 30px;
+    padding-top: 20px;
     vertical-align: top;
     margin-right: 10px;
 }
@@ -26,7 +26,7 @@ header img {
 header h1 {
     color: #197BBD;
     font-family: 'Candal', sans-serif;
-    font-size: 2.5em;
+    font-size: 1.5em;
     margin-bottom: 0;
     padding-left: 10px;
 
@@ -185,7 +185,7 @@ article p.town-article img {
     display: flex;
     margin: auto;
     max-width: 100%;
-    padding: 0 0 2% 0;
+    padding: 0 0 8% 0;
 }
 
 /*----WEATHER GALLERY----*/

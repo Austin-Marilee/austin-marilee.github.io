@@ -6,13 +6,17 @@
         padding-left: 0;
     }
 
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header img {
+        padding-top: 30px;
+    }
+
     /*NAVIGATION*/
     nav button {
         display: none;
-    }
-
-    nav ul.hide {
-        display: inline-flex;
     }
 
     nav ul {
@@ -20,11 +24,10 @@
     }
 
     nav ul li {
-        display: inline-flex;
+        display: inline-block;
     }
 
     nav ul li a {
-        display: inline-flex;
         font-size: 1.3em;
         border: none;
         border-right: 1px solid rgba(0, 0, 0, 0.3);
@@ -52,6 +55,7 @@
         text-align: center;
         max-width: 100%;
     }
+
     .forecast th {
         background-color: #197bbd;
         color: #fff;
@@ -62,7 +66,7 @@
     .forecast td,
     .forecast th {
         border: 3px solid #ddd;
-       }
+    }
 
     .forecast td {
         text-align: center;
@@ -71,9 +75,9 @@
         padding: 20px 45px;
     }
 
- 
 
-   
+
+
     /*WEATHER GALLERY*/
     div.weatherGallery {
         grid-template-columns: repeat(2, 49%);
