@@ -1,0 +1,142 @@
+@media only screen and (min-width: 45em) {
+    /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+
+    /*HEADER*/
+    .header-nocurrent {
+        padding-left: 0;
+    }
+
+    /*NAVIGATION*/
+    nav button {
+        display: none;
+    }
+
+    nav ul.hide {
+        display: inline-flex;
+    }
+
+    nav ul {
+        margin-left: 2%;
+    }
+
+    nav ul li {
+        display: inline-flex;
+    }
+
+    nav ul li a {
+        display: inline-flex;
+        font-size: 1.3em;
+        border: none;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+        padding: .6rem 1rem;
+    }
+
+    /*HERO*/
+    section.hero {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    /*5 DAY FORECAST*/
+    table {
+        display: inline-block;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    section.forecast {
+        display: block;
+        font-family: 'Lato', sans-serif;
+        border-radius: .3em;
+        padding: 1.2rem;
+        text-align: center;
+        max-width: 100%;
+    }
+    .forecast th {
+        background-color: #197bbd;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .forecast td,
+    .forecast th {
+        border: 3px solid #ddd;
+       }
+
+    .forecast td {
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1.4em;
+        padding: 20px 45px;
+    }
+
+ 
+
+   
+    /*WEATHER GALLERY*/
+    div.weatherGallery {
+        grid-template-columns: repeat(2, 49%);
+        grid-gap: 2%;
+    }
+
+    /*ARTICLE*/
+    article {
+        margin: auto;
+        max-width: 1000px;
+        padding: 0;
+    }
+
+    article p.town-article img {
+        width: 400px;
+        float: right;
+        padding-left: 20px;
+    }
+
+    article p {
+        padding: 20px;
+    }
+
+    article h3 {
+        padding: 20px 0 0 20px;
+    }
+
+    article h4 {
+        padding-left: 20px;
+    }
+
+    article#homeTowns {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    /*-----Weather Gallery Grid-----*/
+    div.weatherGallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*FOOTER*/
+    footer {
+        max-width: 1000px;
+        margin: auto auto 20px auto;
+        padding-top: 50px;
+    }
+
+    footer aside {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+
+    img.footer-img {
+        display: flex;
+        max-width: 300px;
+        margin: auto;
+        padding: 0px 0 0 25px;
+    }
+
+    div.contact {
+        padding-top: 30px;
+    }
+
+}

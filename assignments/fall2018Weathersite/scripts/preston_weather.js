@@ -61,8 +61,10 @@ weatherForecast.onload = function () {
 
     var i;
     var temp = "";
+    var n = weatherInfo.list[5].dt_txt;
     for (var i = 0; i < weatherInfo.list[i].length; i++) {
-        if (weatherInfo.list[i].clouds.dt_txt === includes("15:00:00")) {
+ 
+        if (n.includes("15:00:00") = true) {
         temp += weatherInfo.list[i].main.temp_max;
         }
         document.getElementById("dayonetemp").innerHTML = temp;

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preston Weather | Hometown Weather</title>
+    <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
+    <meta name="description" content="Weather Information for Preston, Idaho">
+    <!-- external style references in the proper cascading order -->
+    <link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+    <link href="css/main.css" rel="stylesheet"> <!-- default styles - small/phone views -->
+    <link href="css/medium.css" rel="stylesheet"> <!-- medium/tablet views -->
+    <!-- Google API font reference -->
+    <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo0.png" alt="Umbrella logo"></a>
+        <div class="title">
+            <h1>Hometown Weather</h1>
+            <div class="subheading">Weather You Can Use</div>
+        </div>
+    </header>
+
+    <!-- site navigation -->
+    <nav>
+        <button onclick="toggleNavMenu()">&#9776;</button>
+        <ul class="hide mainmenu" id="primaryNav">
+            <li><a href="index.html">
+                    Home</a></li>
+            <li class="active"><a href="preston.html">
+                    Preston</a></li>
+            <li><a href="sodasprings.html">
+                    Soda Springs</a></li>
+            <li><a href="fishhaven.html">
+                    Fish Haven</a></li>
+            <li><a href="stormcenter.html">
+                    Storm Center</a></li>
+            <li><a href="gallery.html">
+                    Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Preston City</h2>
+        <section class="hero">
+
+            <img class="myphoto" src="images/franklin.jpg" alt="Sunny Day in Preston Idaho" sizes="50vw" srcset="images/franklin200.jpg 400w,
+                             images/franklin400.jpg 800w,
+                             images/franklin800.jpg 1000w">
+            <div id="summary">
+                <h3>Weather Summary</h3>
+                <p>Temperature: <span id="currentTemp"></span>75&deg;F</p>
+                <p>Humidity: <span id="humidity"></span>60%</p>
+                <p>Wind Speed: <span id="windSpeed"></span>15mph</p>
+                <p>Wind Direction: <span id="direction"></span>80&deg;</p>
+                <p>Wind Chill: <span id="windChill"></span>14&deg;F</p>
+            </div>
+        </section>
+        <section class="forecast">
+
+            <table>
+                    <h3>5 Day Forecast</h3>
+                <thead>
+                    <tr>
+                        <th><span id="dayone">Monday</span></th>
+                        <th><span id="daytwo">Tuesday</span></th>
+                        <th><span id="daythree">Wednesday</span></th>
+                        <th><span id="dayfour">Thursday</span></th>
+                        <th><span id="dayfive">Friday</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/sunny.png" id="weather_iconone" alt="Weather Icon"><br>High <span id="dayonetemp"></span>14&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icontwo" alt="Weather Icon"><br>High <span id="daytwotemp"></span>22&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_iconthree" alt="Weather Icon"><br>High <span id="daythreetemp"></span>16&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_iconfour" alt="Weather Icon"><br>High <span id="dayfourtemp"></span>18&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_iconfive" alt="Weather Icon"><br>High <span id="dayfivetemp"></span>35&deg;F</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <article>
+            <h3>Drough Tolerant Plants Save Water, Money and Time</h3>
+            <h4>Michigan State University | January 10, 2014 | Mary Wilson</h4>
+            <p class="town-article">
+                <img src="images/river.jpg" alt="Snake River">
+                When creating a water-wise landscape, follow these key strategies for success. Recognize site
+                variations. Areas in your landscape may significantly vary in soil type (sand versus clay), exposure to
+                light (sun versus shade) and wind, evaporation rates and moisture levels. Sandy, well-drained soil
+                dries out quicker, while heavy clay soil is likely to remain moist longer. Adding in exposure to sun
+                and wind can create a dry microclimate even in areas with adequate rainfall. <br><br>Select plants that
+                match
+                the site conditions. Use plants that thrive under existing site conditions. A poor match leads to poor
+                performance and possible plant death. Group plants of “like needs.” Intentionally group plants together
+                that have similar water and sun exposure needs. Group any water-demanding plants together in a site
+                close to a water source. Provide care during establishment. <br><br>Even drought-tolerant plants
+                require
+                supplemental watering during establishment. Once the root system is established, the plant will require
+                less attention. Apply mulch to conserve soil moisture for newly developing roots.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <aside>
+            <div class="contact">
+                <p><b>Hometown Weather</b></p>
+                <p><i class="material-icons">location_on</i> 123 Main Street <br>Preston, ID 12345</p>
+                <p><i class="material-icons">phone_iphone</i> 000-555-3333</p>
+                <p><i class="material-icons">mail_outline</i> hometown@weather.com</p>
+                <img class="social-icons" src="images/facebook.png" alt="Pinterest Icon">
+                <img class="social-icons" src="images/pinterest.png" alt="Pinterest Icon">
+                <img class="social-icons" src="images/twitter.png" alt="Pinterest Icon">
+                <img class="social-icons" src="images/google.png" alt="Pinterest Icon">
+            </div>
+            <div id="googleMap"></div><br>
+        </aside>
+        <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
+    </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/mainmenu.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2jNA6KO_qXVYTeCySYU8c81WSArLgHGo&callback=myMap"></script>
+
+
+</body>
+
+</html>
