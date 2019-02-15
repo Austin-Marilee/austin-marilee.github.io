@@ -22,6 +22,9 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--MAPBOX API-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -57,8 +60,7 @@
         <section class="hero">
 
             <img class="myphoto" src="images/franklin.jpg" alt="Sunny Day in Preston Idaho" sizes="50vw" srcset="images/franklin200.jpg 400w,
-                             images/franklin400.jpg 800w,
-                             images/franklin800.jpg 1000w">
+                             images/franklin800.jpg 900w">
             <div id="summary">
                 <h3>Weather Summary</h3>
                 <p>Temperature: <span id="currentTemp"></span>75&deg;F</p>
@@ -126,7 +128,7 @@
                 <img class="social-icons" src="images/twitter.png" alt="Pinterest Icon">
                 <img class="social-icons" src="images/google.png" alt="Pinterest Icon">
             </div>
-            <div id="googleMap"></div><br>
+            <div id="map"></div><br>
         </aside>
         <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
     </footer>
@@ -134,8 +136,7 @@
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/currentdate.js"></script>
     <script src="scripts/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2jNA6KO_qXVYTeCySYU8c81WSArLgHGo&callback=myMap"></script>
-
+    
 
 </body>
 

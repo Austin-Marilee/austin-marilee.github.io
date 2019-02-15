@@ -17,7 +17,7 @@ div.title {
 }
 
 header img {
-    max-width: 50px;
+    max-width: 40px;
     padding-top: 20px;
     vertical-align: top;
     margin-right: 10px;
@@ -26,18 +26,15 @@ header img {
 header h1 {
     color: #197BBD;
     font-family: 'Candal', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-bottom: 0;
-    padding-left: 10px;
-
 }
 
 .subheading {
     color: #222e50;
     font-family: 'Lato', sans-serif;
-    font-size: 1.9em;
+    font-size: 1.3em;
     margin-bottom: 20px;
-
 }
 
 /*NAVIGATION*/
@@ -66,9 +63,9 @@ nav ul li a {
     flex-flow: row wrap;
     padding: .8rem 2%;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: #fff;
     border-top: 1px solid rgba(0, 0, 0, 0.3);
-    font-size: 1rem;
+    font-size: .9rem;
     justify-content: center;
 }
 
@@ -471,9 +468,10 @@ p.footer-bar {
     margin: 0;
 }
 
-div#googleMap {
-    margin: 20px;
-    max-width: 100%;
-    height: 200px;
-    border: 1px solid black;
+div#map {
+    width: 400px; height: 300px;
+}
+
+canvas {
+    position: relative !important;
 }

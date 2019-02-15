@@ -1,26 +1,10 @@
-//Map for Preston
-function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(42.0963, -111.8766),
-        zoom: 12,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
+mapboxgl.accessToken = 'pk.eyJ1IjoibXBhdXN0aW4iLCJhIjoiY2pzNmNxa3d4MGFscDQ5bXYzZ3d0bDB4OSJ9.T4H6-wayVCA2MN73PmF8aQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-111.8766, 42.0963], // starting position
+zoom: 9
+});
 
-//Map for Soda Springs
-function myMap2() {
-    var mapProp = {
-        center: new google.maps.LatLng(42.6544, -111.6047),
-        zoom: 12,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
-
-//Map for Fish Haven
-function myMap3() {
-    var mapProp = {
-        center: new google.maps.LatLng(42.0372, -111.3960),
-        zoom: 12,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
