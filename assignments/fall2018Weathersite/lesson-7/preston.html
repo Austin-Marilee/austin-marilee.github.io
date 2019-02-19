@@ -7,15 +7,13 @@
     <title>Preston Weather | Hometown Weather</title>
     <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
     <meta name="description" content="Weather Information for Preston, Idaho">
-    <!-- external style references in the proper cascading order -->
-    <link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
-    <link href="css/small.css" rel="stylesheet"> <!-- default styles - small/phone views -->
-    <link href="css/large.css" rel="stylesheet"> <!-- medium/tablet views -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/small.css" rel="stylesheet"> 
+    <link href="css/large.css" rel="stylesheet"> 
     <!-- Google Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--MAPBOX API-->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
@@ -55,11 +53,11 @@
                              images/franklin800.jpg 900w">
             <div id="summary">
                 <h3>Weather Summary</h3>
-                <p>Temperature: <span id="currentTemp"></span>75&deg;F</p>
+                <p>Temperature: <span id="currentTemp">50</span>&deg;F</p>
                 <p>Humidity: <span id="humidity"></span>60%</p>
-                <p>Wind Speed: <span id="windSpeed"></span>15mph</p>
+                <p>Wind Speed: <span id="windSpeed">15</span>mph</p>
                 <p>Wind Direction: <span id="direction"></span>80&deg;</p>
-                <p>Wind Chill: <span id="windChill"></span>14&deg;F</p>
+                <p>Wind Chill: <span id="windChill"></span>&deg;F</p>
             </div>
         </section>
         <section class="forecast">
@@ -127,7 +125,10 @@
 
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/currentdate.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="scripts/map.js"></script>
+
     
 
 </body>

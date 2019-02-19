@@ -10,11 +10,8 @@ body {
 
 header {
     text-align: center;
-}
-
-div.title {
-    text-align: center;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
 }
 
 header img {
@@ -49,7 +46,7 @@ nav button {
     margin: .2rem 2%;
     background-color: transparent;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #fff;
 }
 
@@ -69,11 +66,11 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: .9rem;
-    justify-content: center;
 }
 
 li.active {
     background-color: #79B473;
+
 }
 
 nav ul li:hover {
@@ -94,10 +91,6 @@ main h2 {
     text-align: center;
 }
 
-main figure {
-    margin: 0;
-}
-
 section.hero {
     position: relative;
 }
@@ -108,19 +101,6 @@ img.myphoto {
 }
 
 /* SUMMARY */
-#weatherDesc {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.1rem;
-}
-
-img#weather_icon.current {
-    vertical-align: sub;
-    width: 50px;
-}
-
-div#conditions {
-    padding-bottom: 15px;
-}
 
 div#summary {
     background-color: #79B473;
@@ -132,8 +112,11 @@ div#summary {
 }
 
 div#summary h3 {
-    font-size: .9rem;
-    padding: 10px 10px 7px 10px;
+    margin-bottom: 5px;
+    font-family: 'Candal', sans-serif;
+    color: #222E50;
+    font-size: 1rem;
+    padding: 0px 10px 7px 10px;
     border-bottom: 4px solid #222e50;
 }
 
@@ -154,19 +137,10 @@ article {
     background-color: #E5E5E5;
     border: 2px solid #D1D1D1;
     margin: 20px;
-    display: flex;
-    flex-flow: column;
     font-family: 'Lato', sans-serif;
     font-size: 1.3em;
     line-height: 1.3em;
     padding: .8rem 2%;
-}
-
-section h3 {
-    color: #222e50;
-    font-family: 'Candal', sans-serif;
-    font-size: 1.7em;
-    margin: 0 0 1.5% 0;
 }
 
 article h3 {
@@ -181,17 +155,34 @@ article h4 {
 }
 
 article p.town-article img {
-    /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
-    display: flex;
+    display: block;
     margin: auto;
     max-width: 100%;
     padding: 0 0 8% 0;
 }
 
+/*----WEATHER GALLERY----*/
+
+div.weatherGallery {
+    padding: 0 2%;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+}
+
+div.weatherGallery figure img {
+    width: 100%;
+}
+
+div.weatherGallery figure figcaption {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2% 1%;
+}
+
 /*-----FOOTER-----*/
 footer {
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin-top: 75px;
 }
 
 footer aside {
@@ -228,7 +219,8 @@ p.footer-bar {
 }
 
 div#map {
-    width: 400px; height: 300px;
+    width: 400px;
+    height: 300px;
     margin: auto;
 }
 

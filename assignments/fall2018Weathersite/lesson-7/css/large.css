@@ -1,4 +1,4 @@
-@media only screen and (min-width: 55em) {
+@media only screen and (min-width: 64em) {
     /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
 
     /*HEADER*/
@@ -15,26 +15,28 @@
     }
 
     /*NAVIGATION*/
+    nav {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
     nav button {
         display: none;
     }
 
-    nav ul {
-        margin-left: 2%;
-    }
-
     nav ul li {
-        display: inline-block;
+        display: inline-flex;
+        padding: 3px;
+        border: none;
     }
 
     nav ul li a {
         font-size: 1.2em;
         border: none;
-        padding: .6rem 1rem;
+        padding: .6rem 1.8rem;
     }
 
     nav ul.hide {
-        display: inline-block;
+        display: inline-flex;
     }
 
     /*HERO*/
@@ -46,6 +48,11 @@
     /*5 DAY FORECAST*/
     table {
         margin: auto;
+    }
+
+    section h3 {
+        font-family: 'Candal', sans-serif;
+        font-size: 1.2rem;
     }
 
     section.forecast {
@@ -75,20 +82,11 @@
         padding: 20px 45px;
     }
 
-
-
-
-    /*WEATHER GALLERY*/
-    div.weatherGallery {
-        grid-template-columns: repeat(2, 49%);
-        grid-gap: 2%;
-    }
-
     /*ARTICLE*/
     article {
         margin: auto;
         max-width: 1000px;
-        padding: 0;
+        padding: 0 0 80px 0;
     }
 
     article p.town-article img {
@@ -109,14 +107,16 @@
         padding-left: 20px;
     }
 
-    article#homeTowns {
-        grid-template-columns: repeat(3, 1fr);
-
-    }
 
     /*-----Weather Gallery Grid-----*/
     div.weatherGallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 2300px;
+        margin: auto;
+    }
+
+    div.weatherGallery figure:hover {
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
     }
 
     /*FOOTER*/
