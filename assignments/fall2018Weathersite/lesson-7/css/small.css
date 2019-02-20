@@ -37,7 +37,11 @@ header h1 {
 
 /*NAVIGATION*/
 nav {
-    background-color: #222E50;
+    background-image:
+    linear-gradient(
+      to right, 
+      #222E50, #197BBD
+    );
     font-family: 'Candal', sans-serif;
     text-align: center;
 }
@@ -209,7 +213,11 @@ footer i {
 }
 
 p.footer-bar {
-    background-color: #222E50;
+    background-image:
+    linear-gradient(
+      to right, 
+      #222E50, #197BBD
+    );
     padding: 25px;
     color: white;
     font-family: 'Lato', sans-serif;

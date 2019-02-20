@@ -15,9 +15,6 @@
     }
 
     /*NAVIGATION*/
-    nav {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
 
     nav button {
         display: none;
@@ -26,12 +23,12 @@
     nav ul li {
         display: inline-flex;
         padding: 3px;
-        border: none;
+
     }
 
     nav ul li a {
         font-size: 1.2em;
-        border: none;
+
         padding: .6rem 1.8rem;
     }
 
@@ -47,7 +44,8 @@
 
     /*5 DAY FORECAST*/
     table {
-        margin: auto;
+        margin: 10px auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     section h3 {
@@ -122,7 +120,7 @@
     /*FOOTER*/
     footer {
         max-width: 1000px;
-        margin: auto auto 20px auto;
+        margin: auto;
         padding-top: 50px;
     }
 
