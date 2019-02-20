@@ -1,5 +1,5 @@
-@media only screen and (min-width: 64em) {
-    /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+@media only screen and (min-width: 54em) {
+    /*LARGE VIEW*/
 
     /*HEADER*/
     .header-nocurrent {
@@ -20,15 +20,14 @@
         display: none;
     }
 
-    nav ul li {
+    nav ul {
         display: inline-flex;
-        padding: 3px;
+        border: none;
 
     }
 
     nav ul li a {
         font-size: 1.2em;
-
         padding: .6rem 1.8rem;
     }
 
@@ -44,7 +43,7 @@
 
     /*5 DAY FORECAST*/
     table {
-        margin: 10px auto;
+        margin: 10px auto 30px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
