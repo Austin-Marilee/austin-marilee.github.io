@@ -83,7 +83,7 @@
     article {
         margin: auto;
         max-width: 1000px;
-        padding: 0 0 80px 0;
+        padding: 0 0 100px 0;
     }
 
     article p.town-article img {
@@ -118,18 +118,18 @@
 
     /*FOOTER*/
     footer {
-        max-width: 1000px;
-        margin: auto;
-        padding-top: 50px;
+          padding-top: 50px;
     }
 
     footer aside {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         margin: 0;
+    
     }
 
     div.contact {
+        grid-column-start: 2;
         padding-top: 30px;
     }
 

@@ -6,6 +6,10 @@ body {
     font-size: 14px;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*HEADER*/
 
 header {
@@ -42,6 +46,7 @@ nav {
         #222E50, #197BBD);
     font-family: 'Candal', sans-serif;
     text-align: center;
+
 }
 
 nav button {
@@ -56,10 +61,14 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    transition: 5s;
 }
 
 nav li {
     border-top: 1px solid rgba(0, 0, 0, .2);
+}
+nav a {
+    transition: 1s;
 }
 
 nav ul li a {
@@ -135,13 +144,15 @@ section.forecast {
 
 /*ARTICLE*/
 article {
-    background-color: #E5E5E5;
+    background-image:
+    linear-gradient(to right,
+    #ffffff, #E5E5E5);
     border: 2px solid #D1D1D1;
     margin: 20px;
     font-family: 'Lato', sans-serif;
     font-size: 1.3em;
     line-height: 1.3em;
-    padding: .8rem 2%;
+    padding: 10px;
 }
 
 article h3 {
@@ -158,7 +169,7 @@ article h4 {
 article p.town-article img {
     display: block;
     margin: auto;
-    max-width: 100%;
+    max-width: 80%;
     padding: 0 0 8% 0;
 }
 
@@ -173,7 +184,7 @@ figure {
 div.weatherGallery {
     padding: 0 2%;
     display: grid;
-    grid-template-columns: repeat(1, 100%);
+    grid-template-columns: 1fr;
 }
 
 div.weatherGallery figure img {
@@ -195,11 +206,14 @@ footer {
 }
 
 footer aside {
+    border-top: 1px solid rgba(0, 0, 0, .3);
     font-family: 'Lato', sans-serif;
-    color: #fff;
+    color: #ffffff;
     font-size: 1rem;
-    background-color: #79b473;
-    padding-top: 30px;
+    background-image:
+    linear-gradient(to right,
+    #79B473, rgb(187, 236, 183));
+    padding: 20px 0;
     text-align: center;
 }
 
