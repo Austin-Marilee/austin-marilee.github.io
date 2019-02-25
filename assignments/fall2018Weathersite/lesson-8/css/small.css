@@ -1,17 +1,19 @@
-/* This main css file contains the default rules and is geared toward the small/phone view */
-
-@import url('https://fonts.googleapis.com/css?family=Candal|Lato');
-
 body {
     font-size: 14px;
+    height: 100%;
+}
+html {
+    height: 100%;
 }
 
+main {
+    min-height: 30%;
+}
 a {
     text-decoration: none;
 }
 
 /*HEADER*/
-
 header {
     text-align: center;
     display: flex;
@@ -46,7 +48,6 @@ nav {
         #222E50, #197BBD);
     font-family: 'Candal', sans-serif;
     text-align: center;
-
 }
 
 nav button {
@@ -61,14 +62,10 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    transition: 5s;
 }
 
 nav li {
     border-top: 1px solid rgba(0, 0, 0, .2);
-}
-nav a {
-    transition: 1s;
 }
 
 nav ul li a {
@@ -85,6 +82,7 @@ li.active {
 
 nav ul li a:hover {
     background-color: #197BBD;
+    transition: 1s;
 }
 
 nav ul.hide {
@@ -92,7 +90,6 @@ nav ul.hide {
 }
 
 /*HERO IMAGE*/
-
 main h2 {
     color: #222e50;
     font-family: 'Candal', sans-serif;
@@ -111,7 +108,6 @@ img.myphoto {
 }
 
 /* SUMMARY */
-
 div#summary {
     background-color: #79B473;
     opacity: 0.9;
@@ -145,8 +141,8 @@ section.forecast {
 /*ARTICLE*/
 article {
     background-image:
-    linear-gradient(to right,
-    #ffffff, #E5E5E5);
+        linear-gradient(to right,
+        #ffffff, #E5E5E5);
     border: 2px solid #D1D1D1;
     margin: 20px;
     font-family: 'Lato', sans-serif;
@@ -173,12 +169,227 @@ article p.town-article img {
     padding: 0 0 8% 0;
 }
 
+/*STORM CENTER*/
+h3.required {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    margin-top: -20px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+fieldset {
+    border: none;
+    padding: 20px;
+}
+
+legend {
+    font-family: 'Candal', sans-serif;
+    padding-top: 10px;
+    font-size: .8rem;
+}
+
+label {
+    display: block;
+}
+
+label span {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: .7rem;
+    padding-bottom: 5px;
+
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 7px;
+    border-radius: 4px;
+    width: 96%;
+}
+
+/* Autofill change default color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset;
+}
+
+/* slider styles from W3Schools*/
+.slidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    /* Full-width */
+    height: 25px;
+    /* Specified height */
+    background: #e4e3e3;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    padding: 0;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #4CAF50;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #4CAF50;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+div#severity {
+    display: inline-flex;
+    font-family: 'Lato', sans-serif;
+    font-size: .7rem;
+    padding-bottom: 5px;
+}
+
+#ratingvalue {
+    font-family: 'Candal', sans-serif;
+    font-weight: 400;
+    color: #197BBD;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+/*----Radio Buttons----*/
+/* The container */
+.container {
+   position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #38AECC;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+label span.dangerAnswer {
+    padding-top: .2em;
+    font-size: .9em;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+input[type="submit"] {
+    max-width: 93%;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    background-image:
+    linear-gradient(to bottom,
+    #222E50, #197BBD);
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 1rem;
+}
 /*----WEATHER GALLERY----*/
 
 figure {
     background-image:
-    linear-gradient(to right,
-    #ffffff, #E5E5E5);
+        linear-gradient(to right,
+        #ffffff, #E5E5E5);
 }
 
 div.weatherGallery {
@@ -211,8 +422,8 @@ footer aside {
     color: #ffffff;
     font-size: 1rem;
     background-image:
-    linear-gradient(to right,
-    #79B473, rgb(187, 236, 183));
+        linear-gradient(to right,
+        #79B473, rgb(187, 236, 183));
     padding: 20px 0;
     text-align: center;
 }
@@ -245,7 +456,7 @@ p.footer-bar {
 
 div#map {
     max-width: 300px;
-    height: 300px;
+    height: 200px;
     margin: auto;
 }
 
