@@ -458,7 +458,6 @@ div#map {
     max-width: 300px;
     height: 200px;
     margin: auto;
-    margin-left: 0;
 }
 
 canvas {
