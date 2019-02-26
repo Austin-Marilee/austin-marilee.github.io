@@ -371,7 +371,7 @@ textarea {
     height: 200px;
 }
 input[type="submit"] {
-    max-width: 93%;
+    max-width: 90%;
     padding: 10px;
     margin: 0 20px;
     border-radius: 5px;
@@ -420,7 +420,7 @@ footer aside {
     border-top: 1px solid rgba(0, 0, 0, .3);
     font-family: 'Lato', sans-serif;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: .8rem;
     background-image:
         linear-gradient(to right,
         #79B473, rgb(187, 236, 183));
@@ -449,7 +449,7 @@ p.footer-bar {
     padding: 25px;
     color: white;
     font-family: 'Lato', sans-serif;
-    font-size: 1rem;
+    font-size: .7rem;
     text-align: center;
     margin: 0;
 }
