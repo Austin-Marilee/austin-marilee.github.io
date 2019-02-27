@@ -291,6 +291,7 @@ div#severity {
     font-family: 'Candal', sans-serif;
     font-weight: 400;
     color: #197BBD;
+    padding-top: 5px;
 }
 
 select {
