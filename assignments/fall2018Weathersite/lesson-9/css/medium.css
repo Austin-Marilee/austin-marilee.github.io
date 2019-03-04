@@ -1,0 +1,17 @@
+@media only screen and (min-width: 45em) {
+
+    /*MEDUIM VIEW*/
+
+    div.weatherGallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    article#homeTowns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div.home-hero {
+        font-size: 4.2vw;
+    }
+
+}
