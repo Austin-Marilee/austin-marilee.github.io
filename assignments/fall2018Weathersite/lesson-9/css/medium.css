@@ -14,4 +14,17 @@
         font-size: 4.2vw;
     }
 
+    .visit-idaho h4 {
+        margin-top: 0;
+    }
+
+    .home-links {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0;
+    }
+
+    .home-links a {
+        justify-self: center;
+    }
+
 }

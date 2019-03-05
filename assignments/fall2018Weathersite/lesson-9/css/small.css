@@ -481,6 +481,28 @@ article#homeTowns div:nth-of-type(3) {
     order: 2;
 }
 
+.visit-idaho {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.visit-idaho h4 {
+    font-family: 'Candal', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    color: #222E50;
+    margin-top: 130px;
+}
+
+.home-links {
+    display: grid;
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.home-links img {
+    max-width: 200px;
+}
 
 /*----WEATHER GALLERY----*/
 

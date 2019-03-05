@@ -83,6 +83,11 @@
         padding: 20px 45px;
     }
 
+    /*HOMEPAGE*/
+    .visit-idaho h4 {
+        margin-top: 30px;
+    }
+
     /*ARTICLE*/
     article {
         margin: auto;
