@@ -9,7 +9,7 @@ weatherObject.onload = function () {
     var weatherInfo = JSON.parse(weatherObject.responseText);
     console.log(weatherInfo);
 
-    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
+    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].description;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
     document.getElementById('humidity').innerHTML = weatherInfo.main.humidity;
     document.getElementById('windSpeed').innerHTML = weatherInfo.wind.speed;
@@ -28,92 +28,55 @@ weatherForecast.onload = function () {
     var weatherInfo = JSON.parse(weatherForecast.responseText);
     console.log(weatherInfo);
 
+    //find date, temp and weather icon for 15:00:00 each day
+    //adds each item to a separate array to use for display
+
     var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var listDate = [];
+    var listDay = []
+    var listMonth = [];
+    var listTemp = [];
+    var listIconCode = [];
 
-    var date1 = new Date(weatherInfo.list[3].dt * 1000);
-    var m1 = month[date1.getMonth()];
-
-    var date2 = new Date(weatherInfo.list[11].dt * 1000);
-    var m2 = month[date2.getMonth()];
-
-    var date3 = new Date(weatherInfo.list[19].dt * 1000);
-    var m3 = month[date3.getMonth()];
-
-    var date4 = new Date(weatherInfo.list[27].dt * 1000);
-    var m4 = month[date4.getMonth()];
-
-    var date5 = new Date(weatherInfo.list[35].dt * 1000);
-    var m5 = month[date5.getMonth()];
-
-    document.getElementById('dayone').innerHTML = m1 + ' ' + date1.getDate();
-    document.getElementById('daytwo').innerHTML = m2 + ' ' + date2.getDate();
-    document.getElementById('daythree').innerHTML = m3 + ' ' + date3.getDate();
-    document.getElementById('dayfour').innerHTML = m4 + ' ' + date4.getDate();
-    document.getElementById('dayfive').innerHTML = m5 + ' ' + date5.getDate();
-
-
-    var index, time, temp;
-    for (index = 0; index < weatherInfo.list.length; ++index) {
-        time = weatherInfo.list[index].dt_txt;
+    for (i = 0; i < weatherInfo.list.length; ++i) {
+        time = weatherInfo.list[i].dt_txt;
         if (time.includes("15:00:00")) {
-            var temp = weatherInfo.list[index].main.temp_max;
-            var listTemp = [temp];
-            for (i = 1; i < listTemp.length; ++i) {
-                listTemp.push(temp);
-                break;
-                }
-
+            //date
+            var date = new Date(weatherInfo.list[i].dt * 1000);
+            var findMonth = month[date.getMonth()];
+            var findDay = weekday[date.getDay()];
+            listDate.push(date);
+            listDay.push(findDay);
+            listMonth.push(findMonth);
+            //temp
+            var temp = weatherInfo.list[i].main.temp_max;
+            listTemp.push(temp);
+            //icon
+            var iconcode = weatherInfo.list[i].weather["0"].icon;
+            var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
+            listIconCode.push(icon_path);
         }
         continue;
     }
 
-        document.getElementById("highTemp1").innerHTML = listTemp[0];
-        document.getElementById("highTemp2").innerHTML = listTemp[1];
-        document.getElementById("highTemp3").innerHTML = listTemp[2];
-        document.getElementById("highTemp4").innerHTML = listTemp[3];
-        document.getElementById("highTemp5").innerHTML = listTemp[4];
+    //Display forecast date
+    document.getElementById('day1').innerHTML = listDay[0] + ',<br>' + listMonth[0] + ' ' + listDate[0].getDate();
+    document.getElementById('day2').innerHTML = listDay[1] + ',<br>' + listMonth[1] + ' ' + listDate[1].getDate();
+    document.getElementById('day3').innerHTML = listDay[2] + ',<br>' + listMonth[2] + ' ' + listDate[2].getDate();
+    document.getElementById('day4').innerHTML = listDay[3] + ',<br>' + listMonth[3] + ' ' + listDate[3].getDate();
+    document.getElementById('day5').innerHTML = listDay[4] + ',<br>' + listMonth[4] + ' ' + listDate[4].getDate();
+    //Display corresponding weather icon
+    document.getElementById('weather_icon1').src = listIconCode[0];
+    document.getElementById('weather_icon2').src = listIconCode[1];
+    document.getElementById('weather_icon3').src = listIconCode[2];
+    document.getElementById('weather_icon4').src = listIconCode[3];
+    document.getElementById('weather_icon5').src = listIconCode[4];
+    //Display forecasted temperature
+    document.getElementById("highTemp1").innerHTML = listTemp[0];
+    document.getElementById("highTemp2").innerHTML = listTemp[1];
+    document.getElementById("highTemp3").innerHTML = listTemp[2];
+    document.getElementById("highTemp4").innerHTML = listTemp[3];
+    document.getElementById("highTemp5").innerHTML = listTemp[4];
 
-
-
-/*     function myFunction() {
-        var list = document.getElementsByClassName("example")[0];
-        list.getElementsByClassName("child")[0].innerHTML = "Milk";
-
-
-            for (var i = 0; i < result.length; i++) {
-                result[i].innerHTML = temp;
-
-
-
-      } */
-
-
-    /*     document.getElementById('dayonetemp').innerHTML = weatherInfo.list[3].main.temp_max;
-        document.getElementById('daytwotemp').innerHTML = weatherInfo.list[11].main.temp_max;
-        document.getElementById('daythreetemp').innerHTML = weatherInfo.list[19].main.temp_max;
-        document.getElementById('dayfourtemp').innerHTML = weatherInfo.list[27].main.temp_max;
-        document.getElementById('dayfivetemp').innerHTML = weatherInfo.list[35].main.temp_max; */
-
-    //icons
-
-    var iconcode = weatherInfo.list[6].weather["0"].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    document.getElementById('weather_iconone').src = icon_path;
-
-    var iconcode = weatherInfo.list[14].weather["0"].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    document.getElementById('weather_icontwo').src = icon_path;
-
-    var iconcode = weatherInfo.list[22].weather["0"].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    document.getElementById('weather_iconthree').src = icon_path;
-
-    var iconcode = weatherInfo.list[30].weather["0"].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    document.getElementById('weather_iconfour').src = icon_path;
-
-    var iconcode = weatherInfo.list[37].weather["0"].icon;
-    var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
-    document.getElementById('weather_iconfive').src = icon_path;
 }
-//end of the function
