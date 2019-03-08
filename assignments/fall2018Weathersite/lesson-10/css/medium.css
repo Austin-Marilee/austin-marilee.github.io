@@ -1,0 +1,30 @@
+@media only screen and (min-width: 45em) {
+
+    /*MEDUIM VIEW*/
+
+    div.weatherGallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    article#homeTowns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    div.home-hero {
+        font-size: 4.2vw;
+    }
+
+    .visit-idaho h4 {
+        margin-top: 0;
+    }
+
+    .home-links {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0;
+    }
+
+    .home-links a {
+        justify-self: center;
+    }
+
+}

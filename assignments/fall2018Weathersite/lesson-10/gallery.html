@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home Page | Hometown Weather</title>
+    <title>Image Gallery | Hometown Weather</title>
     <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
-    <meta name="description" content="Weather Information You Can Use">
+    <meta name="description" content="Weather Information for Preston, Idaho">
 
     <!--Favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -15,10 +15,10 @@
     <link rel="manifest" href="images/site.webmanifest">
 
     <!-- Google APIs -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--CSS Stylesheets-->
+    <!--STYLESHEETS-->
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
     <link href="css/small.css" type="text/css" rel="stylesheet">
     <link href="css/medium.css" type="text/css" rel="stylesheet">
@@ -36,14 +36,13 @@
                 <div class="subheading">Weather You Can Use</div>
             </div>
         </a>
-
     </header>
 
     <!-- site navigation -->
     <nav>
         <button onclick="toggleNavMenu()">&#9776;</button>
-        <ul id="primaryNav" class="hide">
-            <li class="active"><a href="index.html">
+        <ul class="hide mainmenu" id="primaryNav">
+            <li><a href="index.html">
                     Home</a></li>
             <li><a href="preston.html">
                     Preston</a></li>
@@ -53,34 +52,45 @@
                     Fish Haven</a></li>
             <li><a href="stormcenter.html">
                     Storm Center</a></li>
-            <li><a href="gallery.html">
+            <li class="active"><a href="gallery.html">
                     Gallery</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="hero">
-                <img class="myphoto" src="images/home-hero.jpg" alt="Sunny Day in Preston Idaho" sizes="100vw" 
-                                     srcset="images/home-hero400.jpg 400w,
-                                             images/home-hero1000.jpg 900w">
-            <div class="home-hero">
-                <h3>Weather for our community at the right time.</h3>
-            </div>
-        </section>
+        <h2>Image Gallery</h2>
+        <div class="weatherGallery">
+            <figure>
+                <img src="images/sunset.jpg" alt="Sunset">
+                <figcaption>Mountain Sunset</figcaption>
+            </figure>
 
-        <!--BEGIN JSON TOWN DATA-->
-        <article id="homeTowns">
-        </article>
-        <!--END JSON TOWN DATA-->
+            <figure>
+                <img src="images/rainbow.jpg" alt="Rainbow">
+                <figcaption>Beauty After the Storm</figcaption>
+            </figure>
 
-        <aside class="visit-idaho">
-            <h4>Planning a visit? Try these links.</h4>
-            <div class="home-links">
-            <a href="http://www.prestonidaho.net/"><img src="images/preston-logo-small.png" alt="Preston Idaho City Logo"></a>
-            <a href="http://www.sodaspringsid.com/"><img src="images/Soda-Springs-logo.png" alt="Soda Springs Idaho Logo"></a>
-            <a href="https://idahohighcountry.org/"><img src="images/Idaho-High-Country-100.png" alt="Idaho High Country Logo"></a>
+            <figure>
+                <img src="images/fog.jpg" alt="Fog">
+                <figcaption>Bogus Basin Recreation Area, Boise, United States<br>Photo by Kevin Fitzgerald</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/straw.jpg" alt="Tractor with straw">
+                <figcaption>Photo by Gozha Net</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/shilo.jpg" alt="Old Farm">
+                <figcaption>Photo by Timothy Eberly</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/wind.jpg" alt="Wind Farm">
+                <figcaption>Mölsheim, Germany<br>Photo by
+                    Karsten Würth</figcaption>
+            </figure>
         </div>
-        </aside>
     </main>
 
     <footer>
@@ -102,7 +112,6 @@
 
     <script src="scripts/hamburger.js"></script>
     <script src="scripts/currentdate.js"></script>
-    <script src="scripts/towndata.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="scripts/map.js"></script>
 
