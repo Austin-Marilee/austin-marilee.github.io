@@ -175,7 +175,7 @@ article p.town-article img {
 h3.required {
     text-align: center;
     font-family: 'Lato', sans-serif;
-    margin-top: -20px;
+    margin-top: 0;
 }
 
 form {
