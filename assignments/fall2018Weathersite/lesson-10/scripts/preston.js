@@ -30,28 +30,25 @@ weatherForecast.onload = function () {
 
     //find date, temp and weather icon for 15:00:00 each day
     //adds each item to a separate array to use for display
-
-    var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     var listDate = [];
-    var listDay = []
-    var listMonth = [];
     var listTemp = [];
     var listIconCode = [];
 
     for (i = 0; i < weatherInfo.list.length; ++i) {
         time = weatherInfo.list[i].dt_txt;
         if (time.includes("15:00:00")) {
+
             //date
             var date = new Date(weatherInfo.list[i].dt * 1000);
-            var findMonth = month[date.getMonth()];
-            var findDay = weekday[date.getDay()];
-            listDate.push(date);
-            listDay.push(findDay);
-            listMonth.push(findMonth);
+            var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+            var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var findDate = weekday[date.getDay()] + '<br>' + month[date.getMonth()] + ' ' + date.getDate();
+            listDate.push(findDate);
+
             //temp
             var temp = weatherInfo.list[i].main.temp_max;
             listTemp.push(temp);
+
             //icon
             var iconcode = weatherInfo.list[i].weather["0"].icon;
             var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
@@ -61,11 +58,11 @@ weatherForecast.onload = function () {
     }
 
     //Display forecast date
-    document.getElementById('day1').innerHTML = listDay[0] + ',<br>' + listMonth[0] + ' ' + listDate[0].getDate();
-    document.getElementById('day2').innerHTML = listDay[1] + ',<br>' + listMonth[1] + ' ' + listDate[1].getDate();
-    document.getElementById('day3').innerHTML = listDay[2] + ',<br>' + listMonth[2] + ' ' + listDate[2].getDate();
-    document.getElementById('day4').innerHTML = listDay[3] + ',<br>' + listMonth[3] + ' ' + listDate[3].getDate();
-    document.getElementById('day5').innerHTML = listDay[4] + ',<br>' + listMonth[4] + ' ' + listDate[4].getDate();
+    document.getElementById('day1').innerHTML = listDate[0];
+    document.getElementById('day2').innerHTML = listDate[1];
+    document.getElementById('day3').innerHTML = listDate[2];
+    document.getElementById('day4').innerHTML = listDate[3];
+    document.getElementById('day5').innerHTML = listDate[4];
     //Display corresponding weather icon
     document.getElementById('weather_icon1').src = listIconCode[0];
     document.getElementById('weather_icon2').src = listIconCode[1];

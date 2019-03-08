@@ -13,7 +13,8 @@ function showData(jsonObj) {
     var data = jsonObj['towns'];
 
     for (var i = 0; i < data.length; i++) {
-        if (i === 0 || i === 2 || i === 3 || i === 6) {
+        var name = data[i].name;
+        if((name.includes("Preston") || name.includes("Soda Springs") || name.includes("Fish Haven")) == false) {
             continue;
         }
         var myArticle = document.createElement('div');
@@ -36,15 +37,15 @@ function showData(jsonObj) {
         myArticle.appendChild(myPara3);
         myArticle.appendChild(myPara4);
         myArticle.appendChild(myPhoto);
-        if (i === 1)
+        if (name.includes("Fish Haven"))
             myPhoto.src = 'images/home2.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
         myPhoto.setAttribute('alt', 'Fish Haven Photo');
-        if (i === 4)
+        if (name.includes("Preston"))
             myPhoto.src = 'images/home1.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
         myPhoto.setAttribute('alt', 'Preston Photo');
-        if (i === 5)
+        if (name.includes("Soda Springs"))
             myPhoto.src = 'images/home3.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
         myPhoto.setAttribute('alt', 'Soda Springs Photo');
