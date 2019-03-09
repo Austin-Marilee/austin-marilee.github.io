@@ -32,19 +32,26 @@ function showData(jsonObj) {
         myPara4.textContent = 'Average Rainfall: ' + data[i].averageRainfall;
 
 
-        if (name.includes("Fish Haven"))
+        if (name.includes("Fish Haven")) {
             myPhoto.src = 'images/home2.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
         myPhoto.setAttribute('alt', 'Fish Haven Photo');
-        if (name.includes("Preston"))
+        myArticle.style.order = "3";
+        }
+
+        if (name.includes("Preston")) {
             myPhoto.src = 'images/home1.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
         myPhoto.setAttribute('alt', 'Preston Photo');
-        if (name.includes("Soda Springs"))
+        myArticle.style.order = "1";
+        }
+
+        if (name.includes("Soda Springs")) {
             myPhoto.src = 'images/home3.jpg'
         myPhoto.setAttribute('class', 'homePhoto');
         myPhoto.setAttribute('alt', 'Soda Springs Photo');
-
+        myArticle.style.order = "2";
+        }
 
         myArticle.appendChild(myH5);
         myArticle.appendChild(myPara1);

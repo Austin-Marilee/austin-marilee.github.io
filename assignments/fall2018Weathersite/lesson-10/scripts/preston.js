@@ -47,6 +47,7 @@ weatherForecast.onload = function () {
 
             //temp
             var temp = weatherInfo.list[i].main.temp_max;
+            var temp = Math.round(temp);
             listTemp.push(temp);
 
             //icon
