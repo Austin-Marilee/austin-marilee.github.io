@@ -1,40 +1,56 @@
-var section = document.querySelector('section');
+var article = document.querySelector('article');
 var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
-request.onload = function() {
+request.onload = function () {
     var townData = request.response;
     showData(townData);
 }
+
 function showData(jsonObj) {
     var data = jsonObj['towns'];
 
     for (var i = 0; i < data.length; i++) {
-        if (i === 2) { continue; }
-        var myArticle = document.createElement('article');
+        var name = data[i].name;
+        if ((name.includes("Preston") || name.includes("Soda Springs") || name.includes("Fish Haven")) == false) {
+            continue;
+        }
+        var myArticle = document.createElement('div');
         var myH5 = document.createElement('h5');
         var myPara1 = document.createElement('h6');
         var myPara2 = document.createElement('p');
         var myPara3 = document.createElement('p');
         var myPara4 = document.createElement('p');
-        var myPara5 = document.createElement('h5');
-        var myList = document.createElement('ul');
+        var myPhoto = document.createElement('img');
 
         myH5.textContent = data[i].name;
         myPara1.textContent = data[i].motto;
         myPara2.textContent = 'Year Founded: ' + data[i].yearFounded;
         myPara3.textContent = 'Current Population: ' + data[i].currentPopulation;
         myPara4.textContent = 'Average Rainfall: ' + data[i].averageRainfall;
-        myPara5.textContent = 'Events';
 
-        var townEvents = data[i].events;
-        for (var j = 0; j < townEvents.length; j++) {
-            if (i === 2) { continue; }
-            var listItem = document.createElement('li');
-            listItem.textContent = townEvents[j];
-            myList.appendChild(listItem);
+
+        if (name.includes("Fish Haven")) {
+            myPhoto.src = 'images/home2.jpg'
+        myPhoto.setAttribute('class', 'homePhoto');
+        myPhoto.setAttribute('alt', 'Fish Haven Photo');
+        myArticle.style.order = "3";
+        }
+
+        if (name.includes("Preston")) {
+            myPhoto.src = 'images/home1.jpg'
+        myPhoto.setAttribute('class', 'homePhoto');
+        myPhoto.setAttribute('alt', 'Preston Photo');
+        myArticle.style.order = "1";
+        }
+
+        if (name.includes("Soda Springs")) {
+            myPhoto.src = 'images/home3.jpg'
+        myPhoto.setAttribute('class', 'homePhoto');
+        myPhoto.setAttribute('alt', 'Soda Springs Photo');
+        myArticle.style.order = "2";
         }
 
         myArticle.appendChild(myH5);
@@ -42,10 +58,7 @@ function showData(jsonObj) {
         myArticle.appendChild(myPara2);
         myArticle.appendChild(myPara3);
         myArticle.appendChild(myPara4);
-        myArticle.appendChild(myPara5);
-        myArticle.appendChild(myList);
-
-        section.appendChild(myArticle);
+        myArticle.appendChild(myPhoto);
+        article.appendChild(myArticle);
     }
 }
-
