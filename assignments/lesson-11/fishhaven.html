@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fish Haven Weather | Hometown Weather</title>
+    <meta name="author" content="Marilee Austin | CIT 230 BYU-Idaho">
+    <meta name="description" content="Weather Information for Fish Haven, Idaho">
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <!-- Google APIs -->
+    <link href="https://fonts.googleapis.com/css?family=Candal%7CLato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--STYLESHEETS-->
+    <link href="css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="css/small.css" type="text/css" rel="stylesheet">
+    <link href="css/large.css" type="text/css" rel="stylesheet">
+    <link href="css/mapbox-gl.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo0.png" alt="Umbrella logo"></a>
+        <a href="index.html">
+            <div class="title">
+                <h1>Hometown Weather</h1>
+                <div class="subheading">Weather You Can Use</div>
+            </div>
+        </a>
+    </header>
+
+    <!-- site navigation -->
+    <nav>
+        <button onclick="toggleNavMenu()">&#9776;</button>
+        <ul id="primaryNav" class="hide mainmenu">
+            <li><a href="index.html">
+                    Home</a></li>
+            <li><a href="preston.html">
+                    Preston</a></li>
+            <li><a href="sodasprings.html">
+                    Soda Springs</a></li>
+            <li><a href="fishhaven.html">
+                    Fish Haven</a></li>
+            <li><a href="stormcenter.html">
+                    Storm Center</a></li>
+            <li><a href="gallery.html">
+                    Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Fish Haven</h2>
+        <section class="hero">
+            <img class="myphoto" src="images/fishhaven.jpg" alt="Mount Olympus" sizes="100vw" srcset="images/fishhaven200.jpg 200w,
+                             images/fishhaven400.jpg 400w,
+                             images/fishhaven800.jpg 800w">
+            <div id="summary">
+                <h3>Weather Summary</h3>
+                <p>Currently: <span id="weatherDesc"></span></p>
+                <p>Temperature: <span id="currentTemp"></span>&deg;F</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind Speed: <span id="windSpeed"></span>mph</p>
+                <p>Wind Chill: <span id="windChill"></span>&deg;F</p>
+            </div>
+        </section>
+        <section class="forecast">
+            <h3>5 Day Forecast</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th><span id="day1"></span></th>
+                        <th><span id="day2"></span></th>
+                        <th><span id="day3"></span></th>
+                        <th><span id="day4"></span></th>
+                        <th><span id="day5"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/sunny.png" id="weather_icon1" alt="Weather Icon"><br><span id="highTemp1"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon2" alt="Weather Icon"><br><span id="highTemp2"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon3" alt="Weather Icon"><br><span id="highTemp3"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon4" alt="Weather Icon"><br><span id="highTemp4"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon5" alt="Weather Icon"><br><span id="highTemp5"></span>&deg;F</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <article>
+            <h3>Drinking Water in Idaho</h3>
+            <h4>Department of Environmental Quality</h4>
+            <p class="town-article">
+                <img src="images/fire.jpg" alt="Camp fire">
+                <p>DEQ's Drinking Water Program protects public health by ensuring drinking water from public water
+                    systems (PWS) in Idaho is safe. DEQ is authorized to administer Idaho's Drinking Water Program
+                    through the federal Safe Drinking Water Act and the Idaho Rules for Public Drinking Water Systems
+                    (IDAPA 58.01.08). Approximately 95% of Idahoans rely on ground water for drinking water. Surface
+                    water, such as streams, rivers, reservoirs, and springs, supplies the remaining 5%.</p>
+
+                <p>In Idaho, some 1,960 public drinking water systems serve Idaho's population. PWSs, which may be
+                    publicly or privately owned, serve at least 25 people or 15 service connections for at least 60
+                    days per year. Many other Idaho citizens get their drinking water from private wells. These wells
+                    are not regulated under the Safe Drinking Water Act; well owners are responsible for ensuring their
+                    water is safe.</p>
+
+                <p>The PWS Switchboard is a quick and easy way for PWS owners and operators to access a wide range of
+                    information relevant to water system operation in Idaho. It features quick links to state and
+                    federal rules, monitoring schedules, plans and specifications, public notification templates,
+                    sanitary survey forms, drinking water system classification requirements, operator licensing,
+                    reporting tools, and operator hiring information.</p>
+        </article>
+    </main>
+
+    <footer>
+        <aside>
+            <div class="contact">
+                <p><b>Hometown Weather</b></p>
+                <p><i class="material-icons">location_on</i> 123 Main Street <br>Preston, ID 12345</p>
+                <p><i class="material-icons">phone_iphone</i> 000-555-3333</p>
+                <p><i class="material-icons">mail_outline</i> hometown@weather.com</p>
+                <img class="social-icons" src="images/facebook.png" alt="Pinterest Icon">
+                <img class="social-icons" src="images/pinterest.png" alt="Pinterest Icon">
+                <img class="social-icons" src="images/twitter.png" alt="Pinterest Icon">
+                <img class="social-icons" src="images/google.png" alt="Pinterest Icon">
+            </div>
+            <div id="map"></div><br>
+        </aside>
+        <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
+    </footer>
+    <script src="scripts/wayfinding.js"></script>
+    <script src="scripts/fishhaven.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <script src="scripts/map_fishhaven.js"></script>
+
+</body>
+
+</html>
