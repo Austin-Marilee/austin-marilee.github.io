@@ -78,13 +78,12 @@
 
     .forecast td {
         text-align: center;
-        font-size: 1.5em;
-        line-height: 1.4em;
+        font-size: 1.5rem;
         padding: 20px 45px;
     }
 
     .forecast img {
-        width: 75px;
+        width: 90px;
     }
 
     /*HOMEPAGE*/
