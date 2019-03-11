@@ -96,7 +96,6 @@
     article {
         margin: auto;
         max-width: 1000px;
-        padding: 0 0 100px 0;
     }
 
     article p.town-article img {
@@ -104,19 +103,6 @@
         float: right;
         padding-left: 20px;
     }
-
-    article p {
-        padding: 20px;
-    }
-
-    article h3 {
-        padding: 20px 0 0 20px;
-    }
-
-    article h4 {
-        padding-left: 20px;
-    }
-
 
     /*-----Weather Gallery Grid-----*/
     div.weatherGallery {

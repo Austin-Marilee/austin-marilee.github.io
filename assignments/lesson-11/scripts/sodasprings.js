@@ -36,7 +36,7 @@ weatherForecast.onload = function () {
 
     for (i = 0; i < weatherInfo.list.length; ++i) {
         time = weatherInfo.list[i].dt_txt;
-        if (time.includes("15:00:00")) {
+        if (time.includes("18:00:00")) {
 
             //date
             var date = new Date(weatherInfo.list[i].dt * 1000);
