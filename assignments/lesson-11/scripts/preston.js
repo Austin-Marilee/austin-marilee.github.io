@@ -28,7 +28,7 @@ weatherForecast.onload = function () {
     var weatherInfo = JSON.parse(weatherForecast.responseText);
     console.log(weatherInfo);
 
-    //find date, temp and weather icon for 15:00:00 each day
+    //find date, temp and weather icon for 18:00:00 each day
     //adds each item to a separate array to use for display
     var listDate = [];
     var listTemp = [];
@@ -40,7 +40,7 @@ weatherForecast.onload = function () {
 
             //date
             var date = new Date(weatherInfo.list[i].dt * 1000);
-            var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+            var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
             var findDate = weekday[date.getDay()] + '<br>' + month[date.getMonth()] + ' ' + date.getDate();
             listDate.push(findDate);
@@ -76,5 +76,47 @@ weatherForecast.onload = function () {
     document.getElementById("highTemp3").innerHTML = listTemp[2];
     document.getElementById("highTemp4").innerHTML = listTemp[3];
     document.getElementById("highTemp5").innerHTML = listTemp[4];
+    //Display current date in footer 
+    document.getElementById("currentdate").innerHTML = weekday[date.getDay()] + ", " + date.getDate() + " " + month[date.getMonth()] + " " + date.getFullYear();
+    document.getElementById("currentYear").innerHTML = date.getFullYear();
+}
 
+//EVENTS FOR PRESTON
+var aside = document.querySelector('aside');
+var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+request.onload = function () {
+    var townData = request.response;
+    showData(townData);
+}
+
+function showData(jsonObj) {
+    var data = jsonObj['towns'];
+
+    for (var i = 0; i < data.length; i++) {
+        var name = data[i].name;
+        if ((name.includes("Preston")) == false) {
+            continue;
+        }
+
+        var myDiv = document.createElement('div');
+        var myList = document.createElement('ul');
+
+
+        var townEvents = data[i].events;
+        for (var j = 0; j < townEvents.length; j++) {
+            if (i === 2) {
+                continue;
+            }
+            var listItem = document.createElement('li');
+            listItem.textContent = townEvents[j];
+            myList.appendChild(listItem);
+        }
+
+        myDiv.appendChild(myList);
+        aside.appendChild(myDiv);
+    }
 }

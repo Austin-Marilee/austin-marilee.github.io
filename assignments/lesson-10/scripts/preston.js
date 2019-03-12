@@ -28,7 +28,7 @@ weatherForecast.onload = function () {
     var weatherInfo = JSON.parse(weatherForecast.responseText);
     console.log(weatherInfo);
 
-    //find date, temp and weather icon for 15:00:00 each day
+    //find date, temp and weather icon for 18:00:00 each day
     //adds each item to a separate array to use for display
     var listDate = [];
     var listTemp = [];

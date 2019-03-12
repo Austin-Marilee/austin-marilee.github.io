@@ -21,6 +21,7 @@
     <!--STYLESHEETS-->
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
     <link href="css/small.css" type="text/css" rel="stylesheet">
+    <link href="css/medium.css" type="text/css" rel="stylesheet">
     <link href="css/large.css" type="text/css" rel="stylesheet">
     <link href="css/mapbox-gl.css" type="text/css" rel="stylesheet">
 
@@ -118,6 +119,10 @@
                     sanitary survey forms, drinking water system classification requirements, operator licensing,
                     reporting tools, and operator hiring information.</p>
         </article>
+        <aside class="aside-events">
+                <h4 class="h4-events">Upcoming Events in Fish Haven</h4>
+                <img class="aside-events-img" src="images/raspberrydays.jpg" alt="Raspberry Days at Bear Lake">
+        </aside>
     </main>
 
     <footer>
@@ -134,12 +139,11 @@
             </div>
             <div id="map"></div><br>
         </aside>
-        <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
+        <p class="footer-bar">&copy;<span id="currentYear"></span> All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
     </footer>
     <script src="scripts/wayfinding.js"></script>
     <script src="scripts/fishhaven.js"></script>
     <script src="scripts/hamburger.js"></script>
-    <script src="scripts/currentdate.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="scripts/map_fishhaven.js"></script>
 

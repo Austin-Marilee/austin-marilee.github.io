@@ -21,6 +21,7 @@
     <!--STYLESHEETS-->
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
     <link href="css/small.css" type="text/css" rel="stylesheet">
+    <link href="css/medium.css" type="text/css" rel="stylesheet">
     <link href="css/large.css" type="text/css" rel="stylesheet">
     <link href="css/mapbox-gl.css" type="text/css" rel="stylesheet">
 
@@ -114,6 +115,10 @@
                 less attention. Apply mulch to conserve soil moisture for newly developing roots.
             </p>
         </article>
+        <aside class="aside-events">
+                <h4 class="h4-events">Upcoming Events in Preston</h4>
+                <img class="aside-events-img" src="images/Napoleon-Dynamite-10th-anniversary.jpg" alt="Photo of cast from Napoleon Dynamite in Preston Idaho">
+        </aside>
     </main>
 
     <footer>
@@ -130,12 +135,11 @@
             </div>
             <div id="map"></div><br>
         </aside>
-        <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
+        <p class="footer-bar">&copy;<span id="currentYear"></span> All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
     </footer>
     <script src="scripts/wayfinding.js"></script>
     <script src="scripts/preston.js"></script>
     <script src="scripts/hamburger.js"></script>
-    <script src="scripts/currentdate.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <script src="scripts/map_preston.js"></script>
 
