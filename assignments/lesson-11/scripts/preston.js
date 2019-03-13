@@ -46,7 +46,7 @@ weatherForecast.onload = function () {
             listDate.push(findDate);
 
             //temp
-            var temp = weatherInfo.list[i].main.temp_max;
+            var temp = weatherInfo.list[i].main.temp;
             var temp = Math.round(temp);
             listTemp.push(temp);
 

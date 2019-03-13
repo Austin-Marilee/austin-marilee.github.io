@@ -51,6 +51,7 @@ function showData(jsonObj) {
         myPhoto.setAttribute('class', 'homePhoto');
         myPhoto.setAttribute('alt', 'Soda Springs Photo');
         myArticle.style.order = "2";
+
         }
 
         myArticle.appendChild(myH5);
