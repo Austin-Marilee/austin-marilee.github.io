@@ -182,7 +182,7 @@ article h4 {
 article p.town-article img {
     display: block;
     margin: auto;
-    max-width: 300px;
+    max-width: 50%;
     padding: 0 0 20px 0;
 }
 
