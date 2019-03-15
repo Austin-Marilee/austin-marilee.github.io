@@ -1,5 +1,7 @@
 /*DEFAULT OR SMALL SIZES*/
 
+@media (min-width: 0) {
+
 * {
     box-sizing: border-box;
 }
@@ -632,4 +634,5 @@ div#map {
 canvas {
     position: relative !important;
 
+}
 }
