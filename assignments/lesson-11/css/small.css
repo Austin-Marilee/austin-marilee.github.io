@@ -585,8 +585,6 @@ footer {
     clear: both;
 }
 
-
-
 footer aside {
     border-top: 1px solid rgba(0, 0, 0, .3);
     font-family: 'Lato', sans-serif;
@@ -613,17 +611,7 @@ footer i {
     padding-bottom: 20px;
 }
 
-p.footer-bar {
-    background-image:
-        linear-gradient(to right,
-        #222E50, #197BBD);
-    padding: 25px;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: .9rem;
-    text-align: center;
-    margin: 0;
-}
+
 
 div#map {
     max-width: 300px;
@@ -635,4 +623,26 @@ canvas {
     position: relative !important;
 
 }
+
+p.footer-bar {
+    background-image:
+        linear-gradient(to right,
+        #222E50, #197BBD);
+        padding: 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: .7rem;
+    text-align: center;
+    margin: 0;
+}
+
+#weatheratr {
+    color: white;
+}
+#currentdate {
+    border-top: 1px solid white;
+    padding: 10px 50px;
+    margin-bottom: 20px;
+}
+
 }
