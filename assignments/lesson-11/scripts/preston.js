@@ -8,7 +8,6 @@ weatherObject.onload = function () {
 
     var weatherInfo = JSON.parse(weatherObject.responseText);
     console.log(weatherInfo);
-
     document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].description;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
     document.getElementById('humidity').innerHTML = weatherInfo.main.humidity;
@@ -95,27 +94,19 @@ request.onload = function () {
 
 function showData(jsonObj) {
     var data = jsonObj['towns'];
-
     for (var i = 0; i < data.length; i++) {
         var name = data[i].name;
         if ((name.includes("Preston")) == false) {
             continue;
         }
-
         var myDiv = document.createElement('div');
         var myList = document.createElement('ul');
-
-
         var townEvents = data[i].events;
         for (var j = 0; j < townEvents.length; j++) {
-            if (i === 2) {
-                continue;
-            }
             var listItem = document.createElement('li');
             listItem.textContent = townEvents[j];
             myList.appendChild(listItem);
         }
-
         myDiv.appendChild(myList);
         aside.appendChild(myDiv);
     }
