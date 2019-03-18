@@ -628,21 +628,22 @@ p.footer-bar {
     background-image:
         linear-gradient(to right,
         #222E50, #197BBD);
-        padding: 20px;
+    padding: 20px;
     color: white;
     font-family: 'Lato', sans-serif;
     font-size: .7rem;
     text-align: center;
     margin: 0;
+    line-height: 20px;
 }
 
-#weatheratr {
+p.footer-bar a {
     color: white;
 }
+
 #currentdate {
     border-top: 1px solid white;
     padding: 10px 50px;
-    margin-bottom: 20px;
 }
 
 }
