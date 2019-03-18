@@ -9,11 +9,22 @@ weatherObject.onload = function () {
     var weatherInfo = JSON.parse(weatherObject.responseText);
     console.log(weatherInfo);
 
+    //description, temp, humidity, windspeed
     document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].description;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
     document.getElementById('humidity').innerHTML = weatherInfo.main.humidity;
     document.getElementById('windSpeed').innerHTML = weatherInfo.wind.speed;
 
+    //wind direction
+    var degree = weatherInfo.wind.deg; //wind direction
+    var compass = Math.round((degree - 11.25) / 22.5); //compass value
+    // array of abbreviated (compass) names
+    var windNames = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    var direction = windNames[compass]; // convert degrees and find wind direction name
+    document.getElementById('windDegree').innerHTML = Math.round(degree) + '&deg;' + " ";
+    document.getElementById('windDir').innerHTML = direction;
+
+    //windchill
     var windChill = 35.74 + 0.6215 * weatherInfo.main.temp - 35.75 * Math.pow(weatherInfo.wind.speed, 0.16) + 0.4275 * weatherInfo.main.temp * Math.pow(weatherInfo.wind.speed, 0.16);
     windChill = Math.round(windChill);
     document.getElementById("windChill").innerHTML = windChill;
@@ -40,13 +51,13 @@ weatherForecast.onload = function () {
 
             //date
             var date = new Date(weatherInfo.list[i].dt * 1000);
-            var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+            var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
             var findDate = weekday[date.getDay()] + '<br>' + month[date.getMonth()] + ' ' + date.getDate();
             listDate.push(findDate);
 
             //temp
-            var temp = weatherInfo.list[i].main.temp_max;
+            var temp = weatherInfo.list[i].main.temp;
             var temp = Math.round(temp);
             listTemp.push(temp);
 
@@ -76,5 +87,39 @@ weatherForecast.onload = function () {
     document.getElementById("highTemp3").innerHTML = listTemp[2];
     document.getElementById("highTemp4").innerHTML = listTemp[3];
     document.getElementById("highTemp5").innerHTML = listTemp[4];
+    //Display current date in footer 
+    document.getElementById("currentdate").innerHTML = weekday[date.getDay()] + ", " + date.getDate() + " " + month[date.getMonth()] + " " + date.getFullYear();
+    document.getElementById("currentYear").innerHTML = date.getFullYear();
+}
 
+//EVENTS FOR PRESTON
+var aside = document.querySelector('aside');
+var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+request.onload = function () {
+    var townData = request.response;
+    showData(townData);
+}
+
+function showData(jsonObj) {
+    var data = jsonObj['towns'];
+    for (var i = 0; i < data.length; i++) {
+        var name = data[i].name;
+        if ((name.includes("Preston")) == false) {
+            continue;
+        }
+        var myDiv = document.createElement('div');
+        var myList = document.createElement('ul');
+        var townEvents = data[i].events;
+        for (var j = 0; j < townEvents.length; j++) {
+            var listItem = document.createElement('li');
+            listItem.textContent = townEvents[j];
+            myList.appendChild(listItem);
+        }
+        myDiv.appendChild(myList);
+        aside.appendChild(myDiv);
+    }
 }

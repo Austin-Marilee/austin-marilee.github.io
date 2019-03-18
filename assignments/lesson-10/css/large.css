@@ -16,6 +16,10 @@
 
     /*NAVIGATION*/
 
+    nav {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
     nav button {
         display: none;
     }
@@ -23,12 +27,11 @@
     nav ul {
         display: inline-flex;
         border: none;
-
     }
 
     nav ul li a {
         font-size: 1.2em;
-        padding: .6rem 1.8rem;
+        padding: .6rem 37px;
     }
 
     nav ul.hide {
@@ -47,6 +50,7 @@
 
     /*5 DAY FORECAST*/
     table {
+        width: 1000px;
         margin: 10px auto 30px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
@@ -95,6 +99,11 @@
     article {
         margin: auto;
         max-width: 1000px;
+        padding: 0 0 100px 0;
+    }
+
+    article p {
+        padding: 0 30px;
     }
 
     article p.town-article img {
@@ -102,6 +111,15 @@
         float: right;
         padding-left: 20px;
     }
+
+    article h3 {
+        padding: 30px 0 0 30px;
+    }
+
+    article h4 {
+        padding-left: 30px;
+    }
+
 
     /*-----Weather Gallery Grid-----*/
     div.weatherGallery {
@@ -116,20 +134,25 @@
 
     /*FOOTER*/
     footer {
-          padding-top: 50px;
+        padding-top: 50px;
     }
 
     footer aside {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin: 0;
-        }
+    }
 
     div.contact {
         grid-column-start: 2;
         padding-top: 30px;
         align-self: center;
-        margin-left: 100px;
-     }
+    }
+
+    /*TOWNPAGE EVENTS*/
+    .aside-events {
+        max-width: 1000px;
+        margin: 50px auto;
+    }
 
 }

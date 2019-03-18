@@ -21,6 +21,7 @@
     <!--STYLESHEETS-->
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
     <link href="css/small.css" type="text/css" rel="stylesheet">
+    <link href="css/medium.css" type="text/css" rel="stylesheet">
     <link href="css/large.css" type="text/css" rel="stylesheet">
     <link href="css/mapbox-gl.css" type="text/css" rel="stylesheet">
 
@@ -40,10 +41,10 @@
     <!-- site navigation -->
     <nav>
         <button onclick="toggleNavMenu()">&#9776;</button>
-        <ul id="primaryNav" class="hide">
+        <ul id="primaryNav" class="hide mainmenu">
             <li><a href="index.html">
                     Home</a></li>
-            <li class="active"><a href="preston.html">
+            <li><a href="preston.html">
                     Preston</a></li>
             <li><a href="sodasprings.html">
                     Soda Springs</a></li>
@@ -67,6 +68,7 @@
                 <p>Temperature: <span id="currentTemp"></span>&deg;F</p>
                 <p>Humidity: <span id="humidity"></span>%</p>
                 <p>Wind Speed: <span id="windSpeed"></span>mph</p>
+                <p>Wind Direction: <span id="windDegree"></span><span id="windDir"></span></p>
                 <p>Wind Chill: <span id="windChill"></span>&deg;F</p>
             </div>
         </section>
@@ -75,7 +77,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th><span id="day1"></span></th>
+                        <th id="day1"></th>
                         <th><span id="day2"></span></th>
                         <th><span id="day3"></span></th>
                         <th><span id="day4"></span></th>
@@ -85,10 +87,10 @@
                 <tbody>
                     <tr>
                         <td><img src="#" id="weather_icon1" alt="Weather Icon"><br><span id="highTemp1"></span>&deg;F</td>
-                        <td><img src="#" id="weather_icon2" alt="Weather Icon"><br><span id="highTemp2"></span>&deg;F</td>
-                        <td><img src="#" id="weather_icon3" alt="Weather Icon"><br><span id="highTemp3"></span>&deg;F</td>
-                        <td><img src="#" id="weather_icon4" alt="Weather Icon"><br><span id="highTemp4"></span>&deg;F</td>
-                        <td><img src="#" id="weather_icon5" alt="Weather Icon"><br><span id="highTemp5"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon2" alt="Weather Icon"><br><span id="highTemp2"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon3" alt="Weather Icon"><br><span id="highTemp3"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon4" alt="Weather Icon"><br><span id="highTemp4"></span>&deg;F</td>
+                        <td><img src="images/sunny.png" id="weather_icon5" alt="Weather Icon"><br><span id="highTemp5"></span>&deg;F</td>
                     </tr>
                 </tbody>
             </table>
@@ -99,23 +101,25 @@
             <h4>Michigan State University | January 10, 2014 | Mary Wilson</h4>
             <p class="town-article">
                 <img src="images/river.jpg" alt="Snake River">
-                <p>When creating a water-wise landscape, follow these key strategies for success. Recognize site
-                    variations. Areas in your landscape may significantly vary in soil type (sand versus clay),
-                    exposure to light (sun versus shade) and wind, evaporation rates and moisture levels. Sandy,
-                    well-drained soil dries out quicker, while heavy clay soil is likely to remain moist longer. Adding
-                    in exposure to sun and wind can create a dry microclimate even in areas with adequate rainfall.</p>
-
-                <p>Select plants that match the site conditions. Use plants that thrive under existing site conditions.
-                    A poor match leads to poor performance and possible plant death. Group plants of “like needs.”
-                    Intentionally group plants together that have similar water and sun exposure needs. Group any
-                    water-demanding plants together in a site close to a water source. Provide care during
-                    establishment.</p>
-
-                <p>Even drought-tolerant plants require supplemental watering during establishment. Once the root
-                    system is established, the plant will require less attention. Apply mulch to conserve soil moisture
-                    for newly developing roots.
-                </p>
+                When creating a water-wise landscape, follow these key strategies for success. Recognize site
+                variations. Areas in your landscape may significantly vary in soil type (sand versus clay), exposure to
+                light (sun versus shade) and wind, evaporation rates and moisture levels. Sandy, well-drained soil
+                dries out quicker, while heavy clay soil is likely to remain moist longer. Adding in exposure to sun
+                and wind can create a dry microclimate even in areas with adequate rainfall. <br><br>Select plants that
+                match
+                the site conditions. Use plants that thrive under existing site conditions. A poor match leads to poor
+                performance and possible plant death. Group plants of “like needs.” Intentionally group plants together
+                that have similar water and sun exposure needs. Group any water-demanding plants together in a site
+                close to a water source. Provide care during establishment. <br><br>Even drought-tolerant plants
+                require
+                supplemental watering during establishment. Once the root system is established, the plant will require
+                less attention. Apply mulch to conserve soil moisture for newly developing roots.
+            </p>
         </article>
+        <aside class="aside-events">
+                <h4 class="h4-events">Upcoming Events in Preston</h4>
+                <img class="aside-events-img" src="images/Napoleon-Dynamite-10th-anniversary.jpg" alt="Photo of cast from Napoleon Dynamite in Preston Idaho">
+        </aside>
     </main>
 
     <footer>
@@ -132,15 +136,13 @@
             </div>
             <div id="map"></div><br>
         </aside>
-        <p class="footer-bar">&copy;2018 All Rights Reserved | Hometown Weather | <span id="currentdate"></span><br></p>
+        <p class="footer-bar">&copy;<span id="currentYear"></span> Hometown Weather | <a href="http://byui.edu/" target="_blank" >BYU-Idaho</a><br>Weather Information provided by <a id="weatheratr" href="https://openweathermap.org/" target="_blank" >OpenWeatherMap.org</a><br><br><span id="currentdate"></span></p>
     </footer>
-
-    <script src="scripts/preston.js"></script>
-    <script src="scripts/hamburger.js"></script>
-    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/wayfinding.js" async></script>
+    <script src="scripts/preston.js" async></script>
+    <script src="scripts/hamburger.js" async></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    <script src="scripts/map.js"></script>
-
+    <script src="scripts/map_preston.js" async></script>
 </body>
 
 </html>
