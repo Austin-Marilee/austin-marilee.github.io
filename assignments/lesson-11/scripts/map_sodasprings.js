@@ -7,5 +7,3 @@ center: [-111.6047, 42.6544], // starting position
 zoom: 9
 });
 
-// Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
