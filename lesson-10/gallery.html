@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title> Weather Gallery | Toba A. Obiwale|CIT 230</title>
+  <meta name="description" content="Weather Photos.">
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <!--external style references in the proper cascading order -->
+  <!-- Google API font reference -->
+  <link href="https://fonts.googleapis.com/css?family=canda%7CLato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/medium.css">
+  <link rel="stylesheet" href="css/large.css">
+
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="Image/weather.png" alt="Sunshine Logo"></a>
+    <div class="title">
+      <h1>iWeather</h1>
+      <h2>Weather you can trust!</h2>
+    </div>
+  </header>
+
+  <nav>
+    <button onclick="toggleNavMenu()">&#9776;</button>
+    <ul class id="myNav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="preston-10.html">Preston</a></li>
+    <li><a href="sodaspring.html">Soda Spring</a></li>
+    <li><a href="fishhaven.html">Fish Haven</a></li>
+    <li><a href="stormcenter.html">Storm Center</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</nav>
+
+<main>
+    <h2>Image Gallery</h2>
+    <div class="weatherPhotos">
+    <figure>
+      <img src= "image/summerset.jpeg " alt="Summer">
+      <figcaption>Seaside Beauty</figcaption>
+      </figure>
+
+    <figure>
+      <img src="image/mountainview.jpeg" alt="Country View">
+      <figcaption>Country View</figcaption>
+    </figure>
+
+    <figure>
+      <img src="image/colourthunder.jpeg" alt="Thunder">
+      <figcaption>Colourful Thunder</figcaption>
+    </figure>
+
+    <figure> 
+       <img src="image/countryside.jpeg" alt=" Country Side">
+       <figcaption>Country Side</figcaption>
+    </figure>
+
+    <figure>
+      <img src="image/mountainside.jpeg" alt="Mountain View">
+      <figcaption>Mountain Beauty</figcaption>
+    </figure>
+
+    <figure>
+      <img src="image/weedcutter.jpeg" alt="Weed">
+      <figcaption>Men At Work</figcaption>
+    </figure>
+
+
+</main>
+
+<footer>
+    <section class="merry">
+          <div class="contact">
+          <h5>
+            Preston iWeather</h5>
+
+            123 Main Street-Preston, ID 12345<br>
+            Phone - 000123-9900<br>
+            Email - preston@iweather.com<br>
+
+          <img class="social-icons" src="image/gmail.png" alt="google Icon">
+          <img class="social-icons" src="image/twitter.png" alt="twitter Icon">
+          <img class="social-icons" src="image/facebook.jpg" alt="facebook Icon">
+          <img class="social-icons" src="image/linked-in.jpg" alt="linked-in Icon"><br>
+        
+          </div>
+
+          <div>
+            <img src="Image/optimizedprestonidaho.png" alt="Preston-Idaho Map" sizes="50vw"
+            srcset="image/optimizedprestonidaho.png 350w, image/optimizedprestonidaho.png 600w,
+            image/optimizedprestonidaho.png 800w">
+        </div>
+        </section>
+       &copy 2019 All Rights Reserved | Preston Idaho |<span id="currentDate"></span>
+      </footer>
+    
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/currentdate.js"></script>
+  <script src="scripts/map.js"></script>
+  <script src="scripts/windchill.js"></script>
+  
+</body>
+
+</html>

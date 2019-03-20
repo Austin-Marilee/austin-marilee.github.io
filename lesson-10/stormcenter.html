@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title> Storm Center | Toba A. Obiwale |CIT 230</title>
+  <meta name="description" content="Weather Website page for Toba A. Obiwale in CIT 230 BYU- Idaho.">
+  <!-- Google Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <!--external style references in the proper cascading order -->
+  <!-- Google API font reference -->
+  <link href="https://fonts.googleapis.com/css?family=canda%7CLato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/large.css">
+  <link rel="stylesheet" href="css/medium.css">
+  
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="Image/weather.png" alt="Sunshine Logo"></a>
+      <div class="title">
+      <h1>iWeather</h1>
+      <h2>Weather you can trust!</h2>
+    </div>
+  </header>
+
+  <nav>
+      <button onclick="toggleNavMenu()">&#9776;</button>
+      <ul class id="myNav">
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="preston-10.html">Preston</a></li>
+      <li><a href="sodaspring.html">Soda Spring</a></li>
+      <li><a href="fishhaven.html">Fish Haven</a></li>
+      <li><a href="stormcenter.html">Storm Center</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+
+    </ul>
+  </nav>
+
+  <form method="get" action="thanks.html"> 
+        <fieldset>
+        <h3>Personal Information</h3>
+        Full Name: <br>
+        <input type="text" name="Full Name" pattern="[A-Za-z -._]{3,99}" required><br>
+        E-mail: <br>
+        <input type="email" name="mail" placeholder="weather@mail.com"><br>
+        Phone Number: <br>
+        <input type="tel" name="phonenumber" pattern="^\d{3}-\d{3}-\d{4}$" required><br>
+        Zip code: <br>
+        <input type="number" name="zipcode" required><br>
+    </fieldset>
+    <fieldset>
+        <h3>Storm Information</h3>
+        Storm Date: <br>
+        <input type="date" name="stormdate"><br>
+        Storm Type:<br>
+        
+        <input list="weather" name="weather">
+        <datalist id="weather">
+            <option value="Hurricane">
+            <option value="Flashflood">
+            <option value="Hail">
+            <option value="Tornado">
+            <option value="Thunderstorm">
+        </datalist><br>
+
+        Storm Severity: <br>
+        
+        <div class="slidecontainer">
+               
+            <input type="range" min="1" max="10" value="5" class="slider" id="rating" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+            <span id="ratingvalue">5</span>
+        </div>
+        Storm Region: <br>
+                <select name="stormregion">
+            <option value="selectregion">Select Region</option>
+            <option value="preston">Preston</option>
+            <option value="sodasprings">Soda Springs</option>
+            <option value="fishhaven">Fish Haven</option>
+        </select><br>
+        Are you in danger? <br>
+        <input type="radio" name="dangerlevel" value="yes" checked><span class= "answer">Yes</span><br>
+        <input type="radio" name="dangerlevel" value="no" checked><span class= "answer">No</span><br>
+        <input type="radio" name="dangerlevel" value="maybe" checked><span class= "answer">Maybe</span><br>
+    </fieldset>
+        <fieldset>
+            <h3>Additional Information</h3>
+            Comments: <br>
+            <textarea rows="4" cols="50"></textarea> <br>
+        </fieldset>  
+          
+            <button type="submit">Submit</button> 
+        </form>
+
+    <footer>
+            <section class="merry">
+                    <div class="contact">
+                    <h5>
+                      Preston iWeather</h5>
+          
+                      123 Main Street-Preston, ID 12345<br>
+                      Phone - 000123-9900<br>
+                      Email - preston@iweather.com<br>
+              
+                    <img class="social-icons" src="image/gmail.png" alt="google Icon">
+                    <img class="social-icons" src="image/twitter.png" alt="twitter Icon">
+                    <img class="social-icons" src="image/facebook.jpg" alt="facebook Icon">
+                    <img class="social-icons" src="image/linked-in.jpg" alt="linked-in Icon"><br>
+              
+                    </div>
+          
+                    <div>
+              <figure>
+                      <img src="Image/optimizedprestonidaho.png" alt="Preston-Idaho Map" sizes="50vw"
+                      srcset="image/optimizedprestonidaho.png 350w, image/optimizedprestonidaho.png 600w,
+                      image/optimizedprestonidaho.png 800w">
+              </figure>
+                  </div>
+                  </section>
+                 &copy;2019 All Rights Reserved | Preston Idaho |<span id="currentDate"></span>
+                </footer>
+              
+            <script src="scripts/hamburger.js"></script>
+            <script src="scripts/currentdate.js"></script>
+            <script src="scripts/windchill.js"></script>
+            <script src="scripts/severity.js"></script>
+          <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+          
+</html>
