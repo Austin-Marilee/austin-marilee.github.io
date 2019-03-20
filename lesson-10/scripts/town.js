@@ -46,7 +46,7 @@ function townInfo(jsonObj) {
       townPic.setAttribute('class', 'homepic3');
       townPic.setAttribute('alt', 'Beautiful Garden');
    if (i === 1)
-      townPic.src = 'Image/fishhaven.jpeg'
+      townPic.src = 'image/fishhaven.jpeg'
       townPic.setAttribute('class', 'homepic1');
       townPic.setAttribute('alt', 'Fish Haven');
     
