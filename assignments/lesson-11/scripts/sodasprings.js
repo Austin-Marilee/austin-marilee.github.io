@@ -77,9 +77,6 @@ weatherForecast.onload = function () {
     document.getElementById("highTemp3").innerHTML = listTemp[2];
     document.getElementById("highTemp4").innerHTML = listTemp[3];
     document.getElementById("highTemp5").innerHTML = listTemp[4];
-    //Display current date in footer 
-    document.getElementById("currentdate").innerHTML = weekday[date.getDay()] + ", " + date.getDate() + " " + month[date.getMonth()] + " " + date.getFullYear();
-    document.getElementById("currentYear").innerHTML = date.getFullYear();
 }
 //EVENTS FOR SODA SPRINGS
 var aside = document.querySelector('aside');

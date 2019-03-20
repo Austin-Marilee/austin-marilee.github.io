@@ -60,8 +60,6 @@ weatherForecast.onload = function () {
     document.getElementById("highTemp3").innerHTML = listTemp[2];
     document.getElementById("highTemp4").innerHTML = listTemp[3];
     document.getElementById("highTemp5").innerHTML = listTemp[4];
-    document.getElementById("currentdate").innerHTML = weekday[date.getDay()] + ", " + date.getDate() + " " + month[date.getMonth()] + " " + date.getFullYear();
-    document.getElementById("currentYear").innerHTML = date.getFullYear();
 }
 var aside = document.querySelector('aside');
 var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
