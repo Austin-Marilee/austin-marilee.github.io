@@ -28,7 +28,7 @@ header {
     text-align: center;
     display: flex;
     justify-content: center;
-    margin-right: 60px;
+    padding-right: 53px;
 }
 
 header img {
