@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Putting it Together</title>
+    <meta name="author" content="Marilee Austin">
+    <meta name="description" content="Describes how Relative and Absolute Positioning work together">
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+        <div class="banner-box">
+                <h1 class="banner-h1">Positioning with CSS</h1>
+            </div>
+            <div>
+                <h2 class="page-title">Relative + Absolute Positioning</h2>
+        <p class="paragraph">The solution to the problem we had in the last example is to position the element that contains the absolute div.</p>
+            
+        <div class="code">
+            .container {<br>
+                position: relative;<br>}<br><br>
+            
+            .absolute-box {<br>
+            position: absolute;<br>
+            bottom: 194px;<br>
+            left: 140px;<br>
+            }
+        </div>
+               <p class="paragraph">The position of the orange box was not changed in the CSS for this example. Instead, the containing div or the "parent" of the three boxes, was given a position: relative; Now the containing div is the parent instead of the body of the page.</p>
+
+    </div>
+    <hr>
+    <div class="examples">
+            <div class="orangebox absolute"></div>
+            <div class="bluebox"></div>
+            <div class="purplebox"></div>
+        </div>
+        <hr>
+        <nav class="navigation">
+<a class="button" href="absolute.html">Back</a> <a class="button" href="fixed.html">Next</a>
+    </nav>
+</body>
+
+</html>

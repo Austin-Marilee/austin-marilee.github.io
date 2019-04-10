@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Quicksand:400,700');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    color: #2d3142;
+}
+
+.banner-box {
+    background-color: #2d3142;
+    margin: 0 0 20px 0;
+
+}
+
+.banner-h1 {
+    font-size: 1.6rem;
+    padding: 20px;
+    color: white;
+}
+
+.page-title {
+    margin: 0 0 10px 20px;
+    font-size: 1.2rem;
+}
+
+.list {
+    max-width: 650px;
+    padding: 0 35px;
+    color: #FF773D;
+}
+
+.list li {
+    padding: 10px 0;
+}
+
+.navigation {
+    margin: 20px 0 300px 0;
+    clear: both;
+}
+
+.button {
+    background-color: #2d3142;
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    margin: 20px;
+    border-radius: 4px;
+    -webkit-box-shadow: 7px 5px 9px -9px rgba(0, 0, 0, 0.79);
+    -moz-box-shadow: 7px 5px 9px -9px rgba(0, 0, 0, 0.79);
+    box-shadow: 7px 5px 9px -9px rgba(0, 0, 0, 0.79);
+}
+
+.button:hover {
+    background-color: #4f5d75;
+
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
+}
+
+.code {
+    font-familY: 'Anonymous Pro', monospace;
+    margin: 10px 0 20px 70px;
+    font-weight: bold;
+    font-size: .9rem;
+    line-height: 1rem;
+}
+
+.paragraph {
+    padding: 0 20px 20px 20px;
+}
+
+.orangebox {
+    width: 100px;
+    height: 100px;
+    background-color: #FF773D;
+    margin: 20px;
+}
+
+.purplebox {
+    width: 100px;
+    height: 100px;
+    background-color: #2d3142;
+    margin: 20px;
+}
+
+.bluebox {
+    width: 100px;
+    height: 100px;
+    background-color: #4f5d75;
+    margin: 20px;
+}
+
+.examples {
+    position: relative;
+}
+
+.relative {
+    position: relative;
+    top: 120px;
+    left: 180px;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 100px;
+    left: 140px;
+    z-index: -1;
+}
+
+.fixed {
+    position: fixed;
+    left: 250px;
+    z-index: -1;
+}
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Static Postioning</title>
+    <meta name="author" content="Marilee Austin">
+    <meta name="description" content="Describes how to elements are normally positioned in HTML">
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="banner-box">
+        <h1 class="banner-h1">Positioning with CSS</h1>
+    </div>
+    <div>
+        <h2 class="page-title">Normal Flow</h2>
+        <p class="paragraph">The normal flow of an HTML document follows the rules of block and inline elements.
+            Because the div element is a block-level element every new
+            instance will start on a new line. This is the default style but if needed you could specify it like
+            this:</p>
+        <div class="code">
+            .normal-box {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;position: static;<br>
+            }
+        </div>
+        <p class="paragraph">Below there are three divs in different colors. They are in their normal flow of block
+            elements.</p>
+
+    </div>
+    <hr>
+    <div class="examples">
+        <div class="orangebox"></div>
+        <div class="bluebox"></div>
+        <div class="purplebox"></div>
+    </div>
+    <hr>
+    <nav class="navigation">
+        <a class="button back" href="intro.html">Back</a> <a class="button next" href="relative.html">Next</a>
+    </nav>
+</body>
+
+</html>

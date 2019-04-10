@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Normal Postioning</title>
+    <meta name="author" content="Marilee Austin">
+    <meta name="description" content="Describes how to elements are positioned in HTML">
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="banner-box">
+        <h1 class="banner-h1">Positioning with CSS</h1>
+    </div>
+        <div class="instructions">
+            <h2 class="page-title">Fixed Positioning</h2>
+            <p class="paragraph">The last type positioning availble in CSS is fixed. This positions the element in
+                relation to the browser window so that when a user scrolls, the element stays in place. </p>
+            <div class="code">
+                .fixed-box {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;position: fixed;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;left: 200px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;z-index: -1;<br>
+                }
+            </div>
+            <p class="paragraph">The orange div is now in a fixed position. It will stay in place when you scroll up and down.</p>
+        </div>
+        <hr>
+        <div>
+            <div class="orangebox fixed"></div>
+            <div class="bluebox"></div>
+            <div class="purplebox"></div>
+        </div>
+        <hr>
+        <nav class="navigation">
+            <a class="button" href="combined.html">Back</a><a class="button" href="end.html">Next</a>
+        </nav>
+</body>
+
+</html>

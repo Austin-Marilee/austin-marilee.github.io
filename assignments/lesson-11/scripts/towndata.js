@@ -34,24 +34,23 @@ function showData(jsonObj) {
 
         if (name.includes("Fish Haven")) {
             myPhoto.src = 'images/home2.jpg'
-        myPhoto.setAttribute('class', 'homePhoto');
-        myPhoto.setAttribute('alt', 'Fish Haven Photo');
-        myArticle.style.order = "3";
+            myPhoto.setAttribute('class', 'homePhoto');
+            myPhoto.setAttribute('alt', 'Fish Haven Photo');
+            myArticle.style.order = "3";
         }
 
         if (name.includes("Preston")) {
             myPhoto.src = 'images/home1.jpg'
-        myPhoto.setAttribute('class', 'homePhoto');
-        myPhoto.setAttribute('alt', 'Preston Photo');
-        myArticle.style.order = "1";
+            myPhoto.setAttribute('class', 'homePhoto');
+            myPhoto.setAttribute('alt', 'Preston Photo');
+            myArticle.style.order = "1";
         }
 
         if (name.includes("Soda Springs")) {
             myPhoto.src = 'images/home3.jpg'
-        myPhoto.setAttribute('class', 'homePhoto');
-        myPhoto.setAttribute('alt', 'Soda Springs Photo');
-        myArticle.style.order = "2";
-
+            myPhoto.setAttribute('class', 'homePhoto');
+            myPhoto.setAttribute('alt', 'Soda Springs Photo');
+            myArticle.style.order = "2";
         }
 
         myArticle.appendChild(myH5);

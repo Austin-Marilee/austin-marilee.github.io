@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Relative Postioning</title>
+    <meta name="author" content="Marilee Austin">
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="banner-box">
+        <h1 class="banner-h1">Positioning with CSS</h1>
+    </div>
+    <div>
+        <div>
+            <h2 class="page-title">Relative Positioning</h2>
+            <p class="paragraph">Relative position moves an elements in relation to it's normal flow. You do this with
+                the offset properties of top, bottom, right or left to indicate how far you want the element to move.
+                (Without the offset, the element won't look any different than it normally would.) The surrounding
+                elements will not be affected by this change. They will stay in their normal places.</p>
+            <div class="code">
+                .relative-box {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;top: 120px;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;left: 180px;<br>
+                }
+            </div>
+            <p class="paragraph">
+                These are the same three divs as before. But the orange div has been moved with relative
+                positioning. Notice that the space where the orange div was is maintained.
+            </p>
+
+        </div>
+        <hr>
+        <div>
+            <div class="orangebox relative"></div>
+            <div class="bluebox"></div>
+            <div class="purplebox"></div>
+        </div>
+        <hr>
+        <nav class="navigation">
+            <a class="button" href="normal.html">Back</a> <a class="button" href="absolute.html">Next</a>
+        </nav>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Absolute Postioning</title>
+    <meta name="author" content="Marilee Austin">
+    <meta name="description" content="Describes how to elements are absolutely positioned in HTML">
+    <link href="style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="banner-box">
+        <h1 class="banner-h1">Positioning with CSS</h1>
+    </div>
+    <div>
+        <div>
+            <h2 class="page-title">Absolute Positioning</h2>
+            <p class="paragraph">Absolute position moves an elements in relation to it's nearest positioned parent or
+                ancestor. An element is positoned if it's anything other than static. If there isn't an element that is
+                positioned on the page then it uses the body as it's ancestor. The offset properties work as they do
+                with relative positoning. The other elements on the page behave as if the positioned element didn't
+                exist and take up the remaining space.</p>
+            <div class="code">
+                    .absolute-box {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;bottom: 194px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;left: 140px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;z-index: -1;<br>
+                        }
+            </div>
+            <p class="paragraph">This time the orange div has been moved with absolute positioning. Notice that the
+                other divs moved to fill the space. Since the orange box is the only element that is positioned, it's
+                position is relative to the body of the page. This becomes a problem in this case, because when the
+                screen is resized, the element will maintain that relationship. (The z-index insures that the orange div will stay beneath other elements on the page if they overlap.)</p>
+
+        </div>
+        <hr>
+        <div>
+            <div class="orangebox absolute"></div>
+            <div class="bluebox"></div>
+            <div class="purplebox"></div>
+        </div>
+        <hr>
+        <nav class="navigation">
+            <a class="button" href="relative.html">Back</a> <a class="button" href="combined.html">Next</a>
+        </nav>
+</body>
+
+</html>
