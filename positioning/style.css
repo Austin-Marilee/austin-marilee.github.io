@@ -36,7 +36,7 @@
 }
 
 .navigation {
-    margin: 20px 0 1000px 0;
+    margin: 40px 0 1000px 0;
 }
 
 .button {
@@ -121,3 +121,7 @@
     z-index: -1;
 }
 
+.examples {
+    background-color: #E2DCDE;
+    padding: 20px 0;
+}

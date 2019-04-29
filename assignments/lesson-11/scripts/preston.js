@@ -10,7 +10,7 @@ weatherObject.onload = function () {
     console.log(weatherInfo);
 
     //description, temp, humidity, windspeed
-    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].description;
+    document.getElementById('weatherDesc').innerHTML = weatherInfo.weather[0].main;
     document.getElementById('currentTemp').innerHTML = weatherInfo.main.temp;
     document.getElementById('humidity').innerHTML = weatherInfo.main.humidity;
     document.getElementById('windSpeed').innerHTML = weatherInfo.wind.speed;
@@ -66,27 +66,12 @@ weatherForecast.onload = function () {
             var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
             listIconCode.push(icon_path);
         }
-        continue;
     }
-
-    //Display forecast date
-    document.getElementById('day1').innerHTML = listDate[0];
-    document.getElementById('day2').innerHTML = listDate[1];
-    document.getElementById('day3').innerHTML = listDate[2];
-    document.getElementById('day4').innerHTML = listDate[3];
-    document.getElementById('day5').innerHTML = listDate[4];
-    //Display corresponding weather icon
-    document.getElementById('weather_icon1').src = listIconCode[0];
-    document.getElementById('weather_icon2').src = listIconCode[1];
-    document.getElementById('weather_icon3').src = listIconCode[2];
-    document.getElementById('weather_icon4').src = listIconCode[3];
-    document.getElementById('weather_icon5').src = listIconCode[4];
-    //Display forecasted temperature
-    document.getElementById("highTemp1").innerHTML = listTemp[0];
-    document.getElementById("highTemp2").innerHTML = listTemp[1];
-    document.getElementById("highTemp3").innerHTML = listTemp[2];
-    document.getElementById("highTemp4").innerHTML = listTemp[3];
-    document.getElementById("highTemp5").innerHTML = listTemp[4];
+    for (var i = 1; i <= 5; i++) {
+        document.getElementById("highTemp" + i).innerHTML = listTemp[i -1];
+        document.getElementById("weather_icon" + i).src = listIconCode[i -1];
+        document.getElementById("day" + i).innerHTML = listDate[i -1];
+    }
 }
 
 //EVENTS FOR PRESTON
@@ -120,3 +105,12 @@ function showData(jsonObj) {
         aside.appendChild(myDiv);
     }
 }
+
+//PRESTON IDAHO MAP
+mapboxgl.accessToken = 'pk.eyJ1IjoibXBhdXN0aW4iLCJhIjoiY2pzNmNxa3d4MGFscDQ5bXYzZ3d0bDB4OSJ9.T4H6-wayVCA2MN73PmF8aQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-111.8766, 42.0963], // starting position
+zoom: 9
+});

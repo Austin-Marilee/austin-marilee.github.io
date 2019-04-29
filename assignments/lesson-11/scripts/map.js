@@ -6,8 +6,3 @@ style: 'mapbox://styles/mapbox/streets-v11',
 center: [-111.8766, 42.0963], // starting position
 zoom: 9
 });
-
-
-
-
-

@@ -43,23 +43,12 @@ weatherForecast.onload = function () {
             var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
             listIconCode.push(icon_path);
         }
-        continue;
     }
-    document.getElementById('day1').innerHTML = listDate[0];
-    document.getElementById('day2').innerHTML = listDate[1];
-    document.getElementById('day3').innerHTML = listDate[2];
-    document.getElementById('day4').innerHTML = listDate[3];
-    document.getElementById('day5').innerHTML = listDate[4];
-    document.getElementById('weather_icon1').src = listIconCode[0];
-    document.getElementById('weather_icon2').src = listIconCode[1];
-    document.getElementById('weather_icon3').src = listIconCode[2];
-    document.getElementById('weather_icon4').src = listIconCode[3];
-    document.getElementById('weather_icon5').src = listIconCode[4];
-    document.getElementById("highTemp1").innerHTML = listTemp[0];
-    document.getElementById("highTemp2").innerHTML = listTemp[1];
-    document.getElementById("highTemp3").innerHTML = listTemp[2];
-    document.getElementById("highTemp4").innerHTML = listTemp[3];
-    document.getElementById("highTemp5").innerHTML = listTemp[4];
+    for (var i = 1; i <= 5; i++) {
+        document.getElementById("highTemp" + i).innerHTML = listTemp[i -1];
+        document.getElementById("weather_icon" + i).src = listIconCode[i -1];
+        document.getElementById("day" + i).innerHTML = listDate[i -1];
+    }
 }
 var aside = document.querySelector('aside');
 var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
@@ -90,3 +79,15 @@ function showData(jsonObj) {
         aside.appendChild(myDiv);
     }
 }
+
+//FISH HAVEN IDAHO MAP
+mapboxgl.accessToken = 'pk.eyJ1IjoibXBhdXN0aW4iLCJhIjoiY2pzNmNxa3d4MGFscDQ5bXYzZ3d0bDB4OSJ9.T4H6-wayVCA2MN73PmF8aQ';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-111.3960, 42.0372], // starting position
+zoom: 9
+});
+
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
