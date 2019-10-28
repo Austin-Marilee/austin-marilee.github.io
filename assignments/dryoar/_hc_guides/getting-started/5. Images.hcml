@@ -1,0 +1,28 @@
+Images and similar assets in Handcraft get their own dedicated bookmark. To see how it works,
+let's upload an image. Just go ahead and drag any image from your desktop onto the browser
+window and see what happens.
+
+You can upload any kind of file you'll need for web development. Here are some of the formats
+we accept:
+
+  * images (jpg, png, gif, bmp)
+  * audio (mp3, ogg)
+  * video (mp4, avi)
+  * resources (pdf, doc, docx)
+
+For obvious reasons, you can't host executable files with Handcraft. The rule of thumb is: if
+it's the kind of file you may want to include when prototyping an app, we'll accept it.
+
+Now that you've uploaded an image, you can include it in your HTML:
+
+<page url="/getting-started/step5">
+  <h1>I just uploaded a file! Here it is:</h1>
+  <img src="/myfile.jpg">
+</page>
+
+Go ahead and change the path to the path of the image you just uploaded, then hit view
+to see what it looks like. (Notice the auto-save and auto-refresh?)
+
+Note that you can rename uploaded assets in the same way you can with other files.
+
+Great! Now what? Hit next step to find out.

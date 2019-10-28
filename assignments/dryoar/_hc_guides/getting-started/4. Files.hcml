@@ -1,0 +1,24 @@
+Handcraft works just fine with regular files. Let's create one to see.
+Click on the red bookmark on the left (the project overview) and hit
+the "create a new file" button, then click on the blue bookmark (guides)
+and click on step 4 to return here.
+
+By default, you'll create a HTML file called /mynewfile.html. This HTML
+file is just like any HTML file you'd create on your desktop. To change
+where the file is located, you can click in the URL bar at the top of the
+page and type a different filename and path (as long as it starts with /).
+
+Clicking the dropdown next to the new file button will show you options
+for other types of files such as CSS, Javascript, etc. You can also create
+a new HCML sheet here, or even create different types of files we don't
+suggest by choosing "Other".
+
+HCML and regular files even work together. Take a look:
+
+<page url="/getting-started/step4">
+  <a href="/mynewfile.html">Check out my new file!</a>
+</page>
+
+Great! Any file in your project is accessible from any other file, regardless
+of format. So now we know how to create files. How about images? Hit next step
+to find out!

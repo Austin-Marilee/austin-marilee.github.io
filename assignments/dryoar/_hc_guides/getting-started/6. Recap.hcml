@@ -1,0 +1,29 @@
+OK, let's recap what you've seen so far:
+
+  * With Handcraft, you can build websites the regular way or with HCML
+  * Saving and viewing files is really easy
+  * HCML is great for creating lots of pages and organising them however you like
+  * You can create various kinds of files and upload all sorts of assets
+  * You can switch between guides, files and assets on the fly
+
+But wait, there's more! Here are some features of Handcraft we haven't talked about yet:
+
+  * Focus on writing. Hit this button at the bottom right of the page and we'll
+    dim all code but keep writing sharp, so you can focus on copy and text. Try it out
+    now and see how it affects the page below:
+
+    <page url="/getting-started/step6">
+      <h1 class="myclass">See how easy it is to focus on me now?</h1>
+    </page>
+
+  * Maximize. Hit the diagonal arrows in the top right of the page to go full screen.
+  * Keyboard shortcuts. Hit the 3rd tab on the right of the page (the one that looks
+    like a list) to see all the shortcuts we've added to make using Handcraft with
+    a keyboard a breeze. Or just press Ctrl + Shift + / to pop it open.
+
+So now you've learned the basics of Handcraft and you can get started with your
+own projects. If you want to learn more, you can see more guides by clicking
+"See more guides" on the left.
+
+PS. HCML is much more powerful than just the page element. Want to find out more? Check
+out the HCML guide!

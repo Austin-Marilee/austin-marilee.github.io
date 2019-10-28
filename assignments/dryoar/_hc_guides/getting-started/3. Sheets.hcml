@@ -1,0 +1,38 @@
+HCML files are known as "sheets". A sheet can contain multiple HCML elements,
+such as pages. Here's an example:
+
+<page url="/getting-started/step3/page1">
+  <h1>I'm the first page in step 3!</h1>
+</page>
+
+<page url="/getting-started/step3/page2">
+  <h1>I'm the second page in step 3!</h1>
+</page>
+
+It's easy to use HCML to put together websites and organise them however
+you want to. Handcraft doesn't care which sheets contain which pages, so
+you can order things however you like. See what happens when you put
+the cursor in each of the above pages and hit View!
+
+Pages can be used for more than just HTML, though. Check this out:
+
+<page url="/getting-started/step3/style.css" type="css">
+  h1 { color: green; }
+</page>
+
+<page url="/getting-started/step3/page3">
+  <link rel="stylesheet" href="/getting-started/step3/style.css">
+  <h1>I'm page 3, I'm green, and I don't even care!</h1>
+</page>
+
+That's right, pages can have different types. Some of the types we support:
+
+  * html and xhtml
+  * js and coffee
+  * css and less
+  * xml and text
+
+And of course, you can refer to one page from another, like we did above
+with the inclusion of a stylesheet. Great!
+
+Hit next step and let's see what we can do with regular files.

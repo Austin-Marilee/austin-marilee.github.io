@@ -1,0 +1,19 @@
+Besides basic files like HTML and CSS, Handcraft has its
+own templating language caleld HCML that you can use to
+quickly put together websites. Our guides also use
+HCML to help you understand Handcraft's features.
+
+Here's what a regular page looks like in HCML:
+
+<page url="/getting-started/step2">
+  Hello world!
+</page>
+
+Click the view button to the top right to see what that looks like.
+
+The url="/..." part indicates where this page is accessible, in this
+case from http://your_project.handcraft.com/getting-started/step2.
+Try changing the url above to something like "/my-url" and then
+click the view button again.
+
+After you're done, hit next step to advance to step 3.

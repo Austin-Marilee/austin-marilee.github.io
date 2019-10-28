@@ -1,0 +1,19 @@
+Welcome to Handcraft!
+
+This guide explains how Handcraft works and what you can do with it.
+You can edit guides to play around with them. If you accidentally
+mess one up, just hit Reset in the top right.
+
+Handcraft is a prototyping tool for frontend designers and developers.
+You can create complete client-side websites and apps with Handcraft,
+and we'll happily host them for you. We'll also store all changes on
+our server so you don't have to worry about losing anything.
+
+Here's an overview of the kinds of files we support:
+
+  * HTML, CSS and Javascript
+  * Less and Coffeescript
+  * HCML, Handcraft's own template language
+  * Uploaded files such as images, PDFs, etc up to 5 MB
+
+Click next step on the left to continue.
