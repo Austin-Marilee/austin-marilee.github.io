@@ -13,6 +13,9 @@
     <link href="styles/small.css" type="text/css" rel="stylesheet">
     <link href="styles/medium.css" type="text/css" rel="stylesheet">
     <link href="styles/large.css" type="text/css" rel="stylesheet">
+    <!--JQuery-->
+    <script data-require="jquery@3.1.1" data-semver="3.1.1"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -53,6 +56,7 @@
             </div>
         </div>
         <div class="width-3">
+
             <!--CART ITEMS-->
             <div class="outer-section">
                 <h3>Review Your Cart</h3>
@@ -63,7 +67,6 @@
                             <th>Description</th>
                             <th>Condition</th>
                             <th>Quantity</th>
-                            <th></th>
                         </tr>
                         <tr>
                             <td><img src="images/item-photo.jpg" alt="item photo"></td>
@@ -71,49 +74,121 @@
                                 Gray Harness, Gagues on Front, Hoses and zipper
                                 on
                                 Back, Red stripes on sides Pattern/ Red Arms / Black Hands<br>
+                                <br>
                                 <div class="black"></div>Black
                             </td>
-                            <td class="condition">New</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
-                            <td><a href="#">Remove</a></td>
+                            <td class="condition"><select id="condition1">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty"
+                                        class="input-text qty text"><input type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                         </tr>
                         <tr>
                             <td><img src="images/bracket.jpg" alt="item photo"></td>
                             <td class="description"><a href="#">44728</a><br>Bracket 1 x 2 - 2 x 2<br>
+                                <br>
                                 <div class="black"></div>Black
                             </td>
-                            <td class="condition">New</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
-                            <td><a href="#">Remove</a></td>
+                            <td class="condition"><select id="condition2">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty"
+                                        class="input-text qty text"><input type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                         </tr>
                         <tr>
                             <td><img src="images/round.jpg" alt="item photo"></td>
                             <td class="description"><a href="#">30361c</a><br>Brick, Round 2 x 2 x 2 Robot Body - with
                                 Bottom Axle Holder x Shape + Orientation<br>
+                                <br>
                                 <div class="dk-gray"></div>Dark Bluish Gray
                             </td>
-                            <td class="condition">New</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
-                            <td><a href="#">Remove</a></td>
+                            <td class="condition"><select id="condition3">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty"
+                                        class="input-text qty text"><input type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                         </tr>
                         <tr>
                             <td><img src="images/headgear.jpg" alt="item photo"></td>
                             <td class="description"><a href="#">87754</a><br>Minifigure, Headgear Helmet, Underwater<br>
+                                <br>
                                 <div class="lt-gray"></div>Light Bluish Gray
                             </td>
-                            <td class="condition">New</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
-                            <td><a href="#">Remove</a></td>
+                            <td class="condition"><select id="condition4">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty"
+                                        class="input-text qty text"><input type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                         </tr>
                         <tr>
                             <td><img src="images/orange-shirt.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">973pb2015c01</a><br>Torso Diving Suit Silver Chest Plate and Hoses over
+                            <td class="description"><a href="#">973pb2015c01</a><br>Torso Diving Suit Silver Chest Plate
+                                and Hoses over
                                 Dark Bluish Gray Harness, Silver
                                 Diving Weights Pattern / Orange Arms / Blank Hands<br>
+                                <br>
                                 <div class="orange"></div>Orange
                             </td>
-                            <td class="condition">New</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>                             <td><a href="#">Remove</a></td>
+                            <td class="condition"><select id="condition5">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty"
+                                        class="input-text qty text"><input type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -133,7 +208,7 @@
                         <label class="hidden-field"><span>Address</span></label>
                         <input name="address" type="text" placeholder="Street Address" required>
                         <input name="address" type="text" placeholder="Apt/Suite Number">
-                        <select name="Country">
+                        <select class="select-css" name="Country">
                             <option value="NA" disabled selected>Country</option>
                             <option value="US">United States</option>
                             <option value="AF">Afghanistan</option>
@@ -400,11 +475,11 @@
             </div>
             <!--SHIPPING OPTIONS-->
             <div class="outer-section">
-                <h3>3. Choose Shipping Options</h3>
+                <h3>Choose Seller Options</h3>
                 <div class="inner-section">
                     <div class="blue-bar"></div>
                     <p><strong>Shipping From:</strong></p>
-                    <select name="Country">
+                    <select class="select-css" name="Country">
                         <option value="NA" disabled selected>Country</option>
                         <option value="AW">ANYWHERE</option>
                         <option value="US">United States</option>
@@ -681,6 +756,7 @@
     <footer>
 
     </footer>
+    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>

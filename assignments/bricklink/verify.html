@@ -13,6 +13,9 @@
     <link href="styles/small.css" type="text/css" rel="stylesheet">
     <link href="styles/medium.css" type="text/css" rel="stylesheet">
     <link href="styles/large.css" type="text/css" rel="stylesheet">
+    <!--JQuery-->
+    <script data-require="jquery@3.1.1" data-semver="3.1.1"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -65,11 +68,9 @@
                             <th>Item</th>
                             <th>Description</th>
                             <th>Condition</th>
-                            <th>Each</th>
                             <th>Quantity</th>
+                            <th>Each</th>
                             <th>Item Total</th>
-                            <th></th>
-                            <th></th>
                         </tr>
                         <tr>
                             <td><img src="images/item-photo.jpg" alt="item photo"></td>
@@ -78,85 +79,133 @@
                                 on Front, Hoses and zipper
                                 on
                                 Back, Red stripes on sides Pattern/ Red Arms / Black Hands<br>
+                                <br>
                                 <div class="black"></div>Black
                             </td>
-                            <td class="condition">New</td>
+                            <td class="condition"><select id="condition1">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty" class="input-text qty text"><input
+                                        type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                             <td>US $0.05</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
                             <td>US $0.20</td>
-                            <td><a href="#">Save for Later</a></td>
-                            <td><a href="#">Remove</a></td>
                         </tr>
                         <tr>
                             <td><img src="images/bracket.jpg" alt="item photo"></td>
                             <td class="description"><a href="#">44728</a><br>Bracket 1 x 2 - 2 x 2<br>
+                                <br>
                                 <div class="black"></div>Black
                             </td>
-                            <td class="condition">New</td>
+                            <td class="condition"><select id="condition2">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty" class="input-text qty text"><input
+                                        type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                             <td>US $0.05</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
                             <td>US $0.20</td>
-                            <td><a href="#">Save for Later</a></td>
-                            <td><a href="#">Remove</a></td>
                         </tr>
                         <tr>
                             <td><img src="images/round.jpg" alt="item photo"></td>
                             <td class="description"><a href="#">30361c</a><br>Brick, Round 2 x 2 x 2 Robot Body - with
                                 Bottom Axle Holder x
                                 Shape + Orientation<br>
+                                <br>
                                 <div class="dk-gray"></div>Dark Bluish Gray
                             </td>
-                            <td class="condition">New</td>
+                            <td class="condition"><select id="condition3">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty" class="input-text qty text"><input
+                                        type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                             <td>US $0.05</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
                             <td>US $0.20</td>
-                            <td><a href="#">Save for Later</a></td>
-                            <td><a href="#">Remove</a></td>
                         </tr>
                     </table>
 
                     <form class="shipping">
                         <p class="choice">Please Choose a shipping method:</p>
                         <label class="container">UPS $4.26
-                            <input type="radio"  name="shipping1">
+                            <input type="radio" name="shipping1">
                             <span class="checkmark"></span>
                         </label>
-
                         <label class="container">FEDEX $6.66
                             <input type="radio" name="shipping1">
                             <span class="checkmark"></span>
                         </label>
-
                         <label class="container">DHL $1.99
                             <input type="radio" name="shipping1">
                             <span class="checkmark"></span>
                         </label>
                     </form>
                     <p class="total">Total for Seller #1: $7.99</p>
-                    <br>
+                    <div class="long-line"></div>
                     <h4>Seller #2</h4>
                     <table>
                         <tr>
                             <th>Item</th>
                             <th>Description</th>
                             <th>Condition</th>
-                            <th>Each</th>
                             <th>Quantity</th>
+                            <th>Each</th>
                             <th>Item Total</th>
-                            <th></th>
-                            <th></th>
                         </tr>
                         <tr>
                             <td><img src="images/headgear.jpg" alt="item photo"></td>
                             <td class="description"><a href="#">87754</a><br>Minifigure, Headgear Helmet, Underwater<br>
+                                <br>
                                 <div class="lt-gray"></div>Light Bluish Gray
                             </td>
-                            <td class="condition">New</td>
+                            <td class="condition"><select id="condition4">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty" class="input-text qty text"><input
+                                        type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                             <td>US $0.05</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
                             <td>US $0.20</td>
-                            <td><a href="#">Save for Later</a></td>
-                            <td><a href="#">Remove</a></td>
                         </tr>
                         <tr>
                             <td class="description"><img src="images/orange-shirt.jpg" alt="item photo"></td>
@@ -164,20 +213,33 @@
                                 and Hoses over Dark
                                 Bluish Gray Harness, Silver
                                 Diving Weights Pattern / Orange Arms / Blank Hands<br>
+                                <br>
                                 <div class="orange"></div>Orange
                             </td>
-                            <td class="condition">New</td>
+                            <td class="condition"><select id="condition5">
+                                    <option value="new">New</option>
+                                    <option value="used-excellent">Used-Excellent</option>
+                                    <option value="used-good">Used-Good</option>
+                                    <option value="used-fair">Used-Fair</option>
+                                </select></td>
+                            <td>
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
+                                        max="200" name="quantity" value="1" title="Qty" class="input-text qty text"><input
+                                        type="button" value="+" class="plus">
+                                </div><br>
+                                <a href="#">Remove</a>
+                                <p>or</p>
+                                <a href="#">Save for Later</a>
+                            </td>
                             <td>US $0.05</td>
-                            <td><img src="images/quantity.jpg" alt="Quantity Boxes"></td>
                             <td>US $0.20</td>
-                            <td><a href="#">Save for Later</a></td>
-                            <td><a href="#">Remove</a></td>
                         </tr>
                     </table>
                     <form class="shipping">
                         <p>Please Choose a shipping method:</p>
                         <label class="container">UPS $4.26
-                            <input type="radio"  name="shipping2">
+                            <input type="radio" name="shipping2">
                             <span class="checkmark"></span>
                         </label>
 
@@ -249,6 +311,8 @@
     <footer>
 
     </footer>
+    <script src="scripts/scripts.js"></script>
 </body>
+
 
 </html>

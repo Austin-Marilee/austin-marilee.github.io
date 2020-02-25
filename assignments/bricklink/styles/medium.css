@@ -44,7 +44,7 @@
         .width-1 {
             max-width: 557px;
             margin: 50px auto;
-            text-align: center;
+
         }
 
         .width-2 {
@@ -60,7 +60,5 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
         }
-
-
 
     }
