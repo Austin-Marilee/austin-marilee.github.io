@@ -1,0 +1,485 @@
+/*DEFAULT OR SMALL SIZES*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Monserrat', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*HEADER/NAVIGATION*/
+
+header {
+    border-bottom: 2px solid #000;
+    background: #f9f9f9;
+}
+
+header input {
+    display: none;
+}
+
+.logo {
+    width: 100%;
+    max-width: 150px;
+    padding-left: 5px;
+}
+
+label[for="toggle"] {
+    float: right;
+    font-size: 1.4em;
+    cursor: pointer;
+    margin: 7px;
+}
+
+#menu {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+#toggle:checked~#menu {
+    display: block;
+}
+
+nav ul li {
+    list-style-type: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.116);
+}
+
+nav ul li a img {
+    display: none;
+}
+
+nav ul li a:link {
+    display: inline-block;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #2e8bc5;
+
+}
+
+nav ul li a:visited {
+    color: #000;
+}
+
+nav ul li a:hover {
+    color: #117729;
+}
+
+nav ul li a:active {
+    color: #e22828
+}
+
+/*WAYFINDING*/
+
+.wayfinding {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+
+}
+
+.circle-box {
+    display: block;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+}
+
+.circle-box p {
+    position: relative;
+    right: 92px;
+    bottom: 10px;
+    width: 200px;
+    font-size: .6em;
+}
+
+.circle-yellow {
+    margin: auto;
+    height: 15px;
+    width: 15px;
+    background: #fed04f;
+    border-radius: 50%;
+}
+
+.circle-gray {
+    height: 15px;
+    width: 15px;
+    background: rgb(180, 180, 180);
+    border-radius: 50%;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background: rgb(180, 180, 180);
+    align-self: center;
+    margin: 0 20px;
+}
+
+.wayfinding a:link {
+    text-decoration: none;
+    color: #000;
+}
+
+.wayfinding a:visited {
+    color: #2e8bc5;
+}
+
+.wayfinding a:hover {
+    color: #117729;
+}
+
+.wayfinding a:active {
+    color: #e22828;
+}
+
+/* MAIN TABLE PROPERTIES*/
+
+.width {
+    margin-top: 50px;
+}
+
+.outer-section {
+    margin: 20px;
+    padding: 10px;
+    background: #ebebeb;
+}
+
+.outer-section h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.inner-section {
+    font-size: .6em;
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+tr:first-of-type {
+    background: #c8d3db;
+}
+
+.blue-bar {
+    width: 100%;
+    background: #c8d3db;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+/*SHOPPING CART*/
+
+.black {
+    width: 25px;
+    height: 15px;
+    background: black;
+}
+
+.dk-gray {
+    width: 25px;
+    height: 15px;
+    background: rgb(105, 104, 104);
+}
+
+.lt-gray {
+    width: 25px;
+    height: 15px;
+    background: rgb(223, 223, 223);
+}
+
+.orange {
+    width: 25px;
+    height: 15px;
+    background: rgb(255, 126, 51);
+}
+
+table img {
+    width: 100%;
+}
+
+tr {
+    border-bottom: 1px solid rgb(172, 171, 171);
+}
+
+.description {
+    text-align: left;
+    width: 20%;
+}
+
+.condition {
+    width: 20%;
+}
+
+/*CUSTOMER INFO*/
+
+.hidden-field {
+    display: none;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 7px;
+    border-radius: 4px;
+    width: 96%;
+}
+
+select {
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    width: 96%;
+}
+
+/*SHIPPING*/
+
+/*START RATING BY ADAM ORCHARD*/
+.star-rating {
+    font-family: 'FontAwesome';
+}
+
+.star-rating>fieldset {
+    border: none;
+    display: inline-block;
+}
+
+.star-rating>fieldset:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.star-rating>fieldset:not(:checked)>label {
+    float: right;
+    width: 1em;
+    padding: 0 0.05em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    color: #fed04f;
+}
+
+.star-rating>fieldset:not(:checked)>label:before {
+    content: '\f006  ';
+}
+
+.star-rating>fieldset:not(:checked)>label:hover,
+.star-rating>fieldset:not(:checked)>label:hover~label {
+    color: #fed04f;
+    text-shadow: 0 0 3px #fed04f;
+}
+
+.star-rating>fieldset:not(:checked)>label:hover:before,
+.star-rating>fieldset:not(:checked)>label:hover~label:before {
+    content: '\f005  ';
+}
+
+.star-rating>fieldset>input:checked~label:before {
+    content: '\f005  ';
+}
+
+.star-rating>fieldset>label:active {
+    position: relative;
+    top: 2px;
+}
+
+a.submitBtn {
+    background: #ea2309;
+    color: #fff;
+    text-decoration: none;
+    width: 95%;
+    max-width: 400px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 5px;
+    border-radius: 4px;
+}
+
+a.submitBtn:hover {
+    background: #fed04f;
+    color: #000;
+}
+
+a.submitBtn:active {
+    background: #eeeeee;
+}
+
+/*ITEMIZED ORDER*/
+
+h4 {
+    font-size: 1.6em;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin: 12px;
+    cursor: pointer;
+    font-size: .7rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #ea2309;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.shipping p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.total {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+/*PAYMENT*/
+
+.pay-button {
+    border: 1px solid #c8d3db;
+    width: 100%;
+    padding: 5px 0;
+    background: #fff;
+    text-align: left;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.pay-button img {
+    vertical-align: middle;
+}
+
+.summary-h3 {
+    font-size: 2em;
+    padding-bottom: 15px;
+}
+
+.total-summary {
+    background: #fff;
+}
+
+.total-summary div:nth-child(3) {
+    font-size: 1.3em;
+    font-weight: 800;
+    background: #eee;
+}
+
+.amount {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 10px;
+    border: 1px solid #c8d3db;
+}
+
+.amount p:nth-child(2) {
+    text-align: right;
+}
+
+.long-line {
+    background: #7f7f7f;
+    margin: 50px 0;
+    width: 100%;
+    height: 4px;
+}
+
+.notice {
+    color: #ea2309;
+}
+
+.width-1 a:link {
+    color: #2e8bc5;
+    text-decoration: none;
+}
+
+.width-1 a:visited {
+    color: #000;
+}
+
+.width-1 a:hover {
+    color: #117729;
+}
+.width-1 a:active {
+    color: #e22828;
+}
+
+
+
+
+
