@@ -209,6 +209,25 @@ tr:first-of-type {
     background: rgb(255, 126, 51);
 }
 
+@media(max-width: 640px) {
+
+    table,
+    table td,
+    table tr {
+        display: block;
+        text-align: left;
+    }
+
+table tr:first-child {
+    display: none;
+}
+
+td.description {
+    margin: 0;
+}
+
+}
+
 table img {
     width: 100%;
     max-width: 100px;
@@ -241,7 +260,6 @@ td a:active {
 
 .description {
     text-align: left;
-    width: 20%;
 }
 
 /*QUANTITY CODE FROM PINKR https://embed.plnkr.co/B5waxZ/*/
@@ -250,6 +268,7 @@ td a:active {
 
 .quantity {
     display: inline-block;
+    margin: auto;
 }
 
 .quantity .input-text.qty {
@@ -300,6 +319,19 @@ td a:active {
 .quantity.buttons_added .minus:focus,
 .quantity.buttons_added .plus:focus {
     outline: none;
+}
+
+.quantity-final {
+    border: 1px solid rgb(163, 163, 163);
+    width: 25px;
+    height: 25px;
+    margin: auto;
+
+}
+
+.quantity-final p {
+    margin: auto;
+    padding-top: 5px;
 }
 
 /*CUSTOMER INFO*/
