@@ -127,7 +127,7 @@ h1 {
 }
 
 main {
-    background-image: url("/images/yellow-plate.jpg");
+    background-image: url("../images/yellow-plate.jpg");
     background-color: #fed04f;
     background-size: 1400px;
     padding: 20px 0 50px 0;
