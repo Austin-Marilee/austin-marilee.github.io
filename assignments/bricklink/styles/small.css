@@ -693,12 +693,12 @@ footer {
     padding: 70px 20px;
     text-align: center;
     height: 200px;
-    color: #fff;
-    background: #000;
+    color: #000;
+    background: #fed04f;
     border-top: 5px solid #000;
 }
 
 footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: #fff;
+    color: #000;
 }
 
