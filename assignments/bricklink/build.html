@@ -12,12 +12,12 @@
     <link href="styles/normalize.css" type="text/css" rel="stylesheet">
     <link href="styles/small.css" type="text/css" rel="stylesheet">
     <link href="styles/medium.css" type="text/css" rel="stylesheet">
-    <link href="styles/large.css" type="text/css" rel="stylesheet">
     <!--JQuery-->
     <script data-require="jquery@3.1.1" data-semver="3.1.1"
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
-
 <body>
     <header>
         <!-- site navigation -->
@@ -26,168 +26,232 @@
             <input id="toggle" type="checkbox">
             <a href="build.html"><img class="logo" src="images/bricklink-logo.jpg" alt="Bricklink Logo"></a>
             <ul id="menu">
-                <li><a href="#"><img src="images/market-logo.jpg" alt="Market Logo">Market</a></li>
-                <li><a href="#"><img src="images/community-logo.jpg" alt="Community Logo">Community</a></li>
-                <li><a href="#"><img src="images/studio-logo.jpg" alt="Studio Logo">Studio</a></li>
+                <li><a href="https://www.bricklink.com/catalog.asp" target="_blank"><img src="images/market-logo.jpg"
+                            alt="Market Logo">Market</a></li>
+                <li><a href="https://www.bricklink.com/messageList.asp" target="_blank"><img
+                            src="images/community-logo.jpg" alt="Community Logo">Community</a></li>
+                <li><a href="https://www.lego.com/en-us/life/build-ideas" target="_blank"><img
+                            src="images/studio-logo.jpg" alt="Studio Logo">Studio</a></li>
 
                 <li><a href="build.html"><img src="images/cart-logo.jpg" alt="Shopping Cart">Cart</a></li>
             </ul>
         </nav>
     </header>
+    <!--WAYFINDING-->
+    <div class="wayfinding">
+        <h1>1. Build Your Order</h1>
+    </div>
     <main>
-        <!--WAYFINDING-->
-        <div class="wayfinding">
-            <div class="circle-box">
-                <div class=circle-yellow>
-                </div>
-                <p>Build</p>
-            </div>
-            <div class="line"></div>
-            <div class="circle-box">
-                <div class=circle-gray>
-                </div>
-                <p>Verify</p>
-            </div>
-            <div class="line"></div>
-            <div class="circle-box">
-                <div class=circle-gray>
-                </div>
-                <p>Pay</p>
-            </div>
-        </div>
         <div class="width-3">
-
             <!--CART ITEMS-->
             <div class="outer-section">
-                <h3>Review Your Cart</h3>
+
                 <div class="inner-section">
+                    <div class="blue-bar">
+                        <h3>Review Your Cart</h3>
+                    </div>
                     <table>
                         <tr>
-                            <th>Item</th>
-                            <th>Description</th>
-                            <th>Condition</th>
-                            <th>Quantity</th>
-                        </tr>
-                        <tr>
-                            <td><img src="images/item-photo.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">973pb2015c01</a><br>Torso Diving Suit with Dark Bluish
-                                Gray Harness, Gagues on Front, Hoses and zipper
-                                on
-                                Back, Red stripes on sides Pattern/ Red Arms / Black Hands<br>
-                                <br>
-                                <div class="black"></div>Black
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=973pb2015c01&C=0#T=C&C=0"
+                                    target="_blank">
+                                    <p class="item-title">Diving Suit</p>
+                                    <img src="images/item-photo.jpg" alt="item photo">
+                                </a>
+                                <div class="color black">Black</div>
                             </td>
-                            <td class="condition"><select id="condition1">
+                            <td class="description">
+                                <p>Torso Diving Suit with Dark Bluish
+                                    Gray Harness, Gagues on Front, Hoses and zipper
+                                    on
+                                    Back, Red stripes on sides Pattern/ Red Arms / Black Hands</p>
+                            </td>
+                            <td>
+                                <p class="bold">Condition</p>
+                                <select class="select-css condition">
                                     <option value="new">New</option>
                                     <option value="used-excellent">Used-Excellent</option>
                                     <option value="used-good">Used-Good</option>
                                     <option value="used-fair">Used-Fair</option>
-                                </select></td>
+                                </select>
+                                <br>
+                                <div class="quantity-box">
+                                    <p class="bold">Quantity</p>
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1"
+                                            min="1" max="200" name="quantity" value="1" title="Qty"
+                                            class="input-text qty text"><input type="button" value="+" class="plus">
+                                    </div>
+                                </div>
+                            </td>
                             <td>
-                                <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
-                                        max="200" name="quantity" value="1" title="Qty"
-                                        class="input-text qty text"><input type="button" value="+" class="plus">
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <div class="tooltip">
+                                    <span class="tooltiptext">Remove Item from Cart</span>
+                                    <a href="#"><i class="far fa-trash-alt icons"></i></a>
+                                </div>
+                                <div class="tooltip"><span class="tooltiptext">Save Item for Later</span><a href="#"
+                                        class="underline"><i class="fas fa-heart icons"></i></a>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="images/bracket.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">44728</a><br>Bracket 1 x 2 - 2 x 2<br>
-                                <br>
-                                <div class="black"></div>Black
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=44728&C=11#T=C&C=11"
+                                    target="_blank">
+                                    <p class="item-title">Bracket</p>
+
+                                    <img src="images/bracket.jpg" alt="item photo">
+                                </a>
+                                <div class="color black">Black</div>
                             </td>
-                            <td class="condition"><select id="condition2">
+                            <td class="description">
+                                <p>Bracket 1 x 2 - 2 x 2</p>
+                            </td>
+                            <td>
+                                <p class="bold">Condition</p>
+                                <select class="select-css">
                                     <option value="new">New</option>
                                     <option value="used-excellent">Used-Excellent</option>
                                     <option value="used-good">Used-Good</option>
                                     <option value="used-fair">Used-Fair</option>
-                                </select></td>
+                                </select>
+                                <br>
+                                <div class="quantity-box">
+                                    <p class="bold">Quantity</p>
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1"
+                                            min="1" max="200" name="quantity" value="1" title="Qty"
+                                            class="input-text qty text"><input type="button" value="+" class="plus">
+                                    </div>
+                                </div>
+                            </td>
                             <td>
-                                <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
-                                        max="200" name="quantity" value="1" title="Qty"
-                                        class="input-text qty text"><input type="button" value="+" class="plus">
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <div class="tooltip">
+                                    <span class="tooltiptext">Remove Item from Cart</span>
+                                    <a href="#"><i class="far fa-trash-alt icons"></i></a>
+                                </div>
+                                <div class="tooltip"><span class="tooltiptext">Save Item for Later</span><a href="#"
+                                        class="underline"><i class="fas fa-heart icons"></i></a>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="images/round.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">30361c</a><br>Brick, Round 2 x 2 x 2 Robot Body - with
-                                Bottom Axle Holder x Shape + Orientation<br>
-                                <br>
-                                <div class="dk-gray"></div>Dark Bluish Gray
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=30361c&C=85#T=C&C=85"
+                                    target="_blank">
+                                    <p class="item-title">Robot Body</p>
+                                    <img src="images/round.jpg" alt="item photo">
+                                </a>
+                                <div class="color dk-gray">dk Bluish Gray</div>
                             </td>
-                            <td class="condition"><select id="condition3">
+                            <td class="description">
+                                <p>Brick, Round 2 x 2 x 2 Robot Body - with
+                                    Bottom Axle Holder x Shape + Orientation</p>
+                            </td>
+                            <td>
+                                <p class="bold">Condition</p>
+                                <select class="select-css">
                                     <option value="new">New</option>
                                     <option value="used-excellent">Used-Excellent</option>
                                     <option value="used-good">Used-Good</option>
                                     <option value="used-fair">Used-Fair</option>
-                                </select></td>
+                                </select>
+                                <br>
+                                <div class="quantity-box">
+                                    <p class="bold">Quantity</p>
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1"
+                                            min="1" max="200" name="quantity" value="1" title="Qty"
+                                            class="input-text qty text"><input type="button" value="+" class="plus">
+                                    </div>
+                                </div>
+                            </td>
                             <td>
-                                <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
-                                        max="200" name="quantity" value="1" title="Qty"
-                                        class="input-text qty text"><input type="button" value="+" class="plus">
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <div class="tooltip">
+                                    <span class="tooltiptext">Remove Item from Cart</span>
+                                    <a href="#"><i class="far fa-trash-alt icons"></i></a>
+                                </div>
+                                <div class="tooltip"><span class="tooltiptext">Save Item for Later</span><a href="#"
+                                        class="underline"><i class="fas fa-heart icons"></i></a>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="images/headgear.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">87754</a><br>Minifigure, Headgear Helmet, Underwater<br>
-                                <br>
-                                <div class="lt-gray"></div>Light Bluish Gray
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=87754&C=86#T=C&C=86"
+                                    target="_blank">
+                                    <p class="item-title">Underwater Helmet</p>
+                                    <img src="images/headgear.jpg" alt="item photo">
+                                </a>
+                                <div class="color lt-gray">lt Bluish Gray</div>
                             </td>
-                            <td class="condition"><select id="condition4">
+                            <td class="description">
+                                <p>Minifigure, Headgear Helmet, Underwater</p>
+                            </td>
+                            <td>
+                                <p class="bold">Condition</p>
+                                <select class="select-css">
                                     <option value="new">New</option>
                                     <option value="used-excellent">Used-Excellent</option>
                                     <option value="used-good">Used-Good</option>
                                     <option value="used-fair">Used-Fair</option>
-                                </select></td>
+                                </select>
+                                <br>
+                                <div class="quantity-box">
+                                    <p class="bold">Quantity</p>
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1"
+                                            min="1" max="200" name="quantity" value="1" title="Qty"
+                                            class="input-text qty text"><input type="button" value="+" class="plus">
+                                    </div>
+                                </div>
+                            </td>
                             <td>
-                                <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
-                                        max="200" name="quantity" value="1" title="Qty"
-                                        class="input-text qty text"><input type="button" value="+" class="plus">
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <div class="tooltip">
+                                    <span class="tooltiptext">Remove Item from Cart</span>
+                                    <a href="#"><i class="far fa-trash-alt icons"></i></a>
+                                </div>
+                                <div class="tooltip"><span class="tooltiptext">Save Item for Later</span><a href="#"
+                                        class="underline"><i class="fas fa-heart icons"></i></a>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td><img src="images/orange-shirt.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">973pb2015c01</a><br>Torso Diving Suit Silver Chest Plate
-                                and Hoses over
-                                Dark Bluish Gray Harness, Silver
-                                Diving Weights Pattern / Orange Arms / Blank Hands<br>
-                                <br>
-                                <div class="orange"></div>Orange
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=973pb2016c01&C=4#T=C&C=4"
+                                    target="_blank">
+                                    <p class="item-title">Diving Suit</p><img src="images/orange-shirt.jpg"
+                                        alt="item photo">
+                                </a>
+                                <div class="color orange">Orange</div>
                             </td>
-                            <td class="condition"><select id="condition5">
+                            <td class="description">
+                                <p>Torso Diving Suit Silver Chest Plate
+                                    and Hoses over
+                                    Dark Bluish Gray Harness, Silver
+                                    Diving Weights Pattern / Orange Arms / Blank Hands</p>
+                            </td>
+                            <td>
+                                <p class="bold">Condition</p>
+                                <select class="select-css ">
                                     <option value="new">New</option>
                                     <option value="used-excellent">Used-Excellent</option>
                                     <option value="used-good">Used-Good</option>
                                     <option value="used-fair">Used-Fair</option>
-                                </select></td>
+                                </select>
+                                <br>
+                                <div class="quantity-box">
+                                    <p class="bold">Quantity</p>
+                                    <div class="quantity buttons_added">
+                                        <input type="button" value="-" class="minus"><input type="number" step="1"
+                                            min="1" max="200" name="quantity" value="1" title="Qty"
+                                            class="input-text qty text"><input type="button" value="+" class="plus">
+                                    </div>
+                                </div>
+                            </td>
                             <td>
-                                <div class="quantity buttons_added">
-                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1"
-                                        max="200" name="quantity" value="1" title="Qty"
-                                        class="input-text qty text"><input type="button" value="+" class="plus">
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <div class="tooltip">
+                                    <span class="tooltiptext">Remove Item from Cart</span>
+                                    <a href="#"><i class="far fa-trash-alt icons"></i></a>
+                                </div>
+                                <div class="tooltip"><span class="tooltiptext">Save Item for Later</span><a href="#"
+                                        class="underline"><i class="fas fa-heart icons"></i></a>
+                                </div>
                             </td>
                         </tr>
                     </table>
@@ -195,9 +259,12 @@
             </div>
             <!--CUSTOMER INFO-->
             <div class="outer-section">
-                <h3>Enter Your Shipping Information</h3>
+
                 <div class="inner-section">
-                    <div class="blue-bar"></div>
+                    <div class="blue-bar">
+                        <h3>Shipping Information</h3>
+                    </div>
+                    <h5>All Fields Are Required</h5>
                     <form>
                         <label class="hidden-field"><span>First Name</span></label>
                         <input name="fullname" type="text" value="" pattern="[a-zA-Z -._]{5,99}"
@@ -475,9 +542,10 @@
             </div>
             <!--SHIPPING OPTIONS-->
             <div class="outer-section">
-                <h3>Choose Seller Options</h3>
                 <div class="inner-section">
-                    <div class="blue-bar"></div>
+                    <div class="blue-bar">
+                        <h3>Choose Seller Options</h3>
+                    </div>
                     <p><strong>Shipping From:</strong></p>
                     <select class="select-css" name="Country">
                         <option value="NA" disabled selected>Country</option>
@@ -749,12 +817,13 @@
                         </fieldset>
                     </div>
                 </div>
-                <a class="submitBtn" href="verify.html">Build Your Order</a>
+                <a class="submitBtn" href="loading2.html">Build Your Order</a>
             </div>
         </div>
     </main>
     <footer>
-
+        <p>This page is a student simulation of the <a href="https://www.bricklink.com/v2/main.page" target="_blank">www.bricklink.com</a> shopping cart and checkout.</p>
+        <p>Copyright &copy; 2020 Marilee Austin</p>
     </footer>
     <script src="scripts/scripts.js"></script>
 </body>

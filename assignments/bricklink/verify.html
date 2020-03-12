@@ -12,13 +12,15 @@
     <link href="styles/normalize.css" type="text/css" rel="stylesheet">
     <link href="styles/small.css" type="text/css" rel="stylesheet">
     <link href="styles/medium.css" type="text/css" rel="stylesheet">
-    <link href="styles/large.css" type="text/css" rel="stylesheet">
     <!--JQuery-->
     <script data-require="jquery@3.1.1" data-semver="3.1.1"
         src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
+
     <header>
         <!-- site navigation -->
         <nav>
@@ -26,209 +28,240 @@
             <input id="toggle" type="checkbox">
             <a href="build.html"><img class="logo" src="images/bricklink-logo.jpg" alt="Bricklink Logo"></a>
             <ul id="menu">
-                <li><a href="#"><img src="images/market-logo.jpg" alt="Market Logo">Market</a></li>
-                <li><a href="#"><img src="images/community-logo.jpg" alt="Community Logo">Community</a></li>
-                <li><a href="#"><img src="images/studio-logo.jpg" alt="Studio Logo">Studio</a></li>
+                <li><a href="https://www.bricklink.com/catalog.asp" target="_blank"><img src="images/market-logo.jpg"
+                            alt="Market Logo">Market</a></li>
+                <li><a href="https://www.bricklink.com/messageList.asp" target="_blank"><img
+                            src="images/community-logo.jpg" alt="Community Logo">Community</a></li>
+                <li><a href="https://www.lego.com/en-us/life/build-ideas" target="_blank"><img
+                            src="images/studio-logo.jpg" alt="Studio Logo">Studio</a></li>
 
                 <li><a href="build.html"><img src="images/cart-logo.jpg" alt="Shopping Cart">Cart</a></li>
             </ul>
         </nav>
     </header>
+    <!--WAYFINDING-->
+    <div class="wayfinding">
+
+        <h1>2. Verify & Pay</h1>
+        <a href="build.html">
+            <p class="return"><i class="far fa-arrow-alt-circle-left"></i> Return to Build an Order</p>
+        </a>
+    </div>
     <main>
-        <!--WAYFINDING-->
-        <div class="wayfinding">
-            <a href="build.html">
-                <div class="circle-box">
-                    <div class=circle-gray>
-                    </div>
-                    <p>Build</p>
-                </div>
-            </a>
-            <div class="line"></div>
-            <div class="circle-box">
-                <div class=circle-yellow>
-                </div>
-                <p>Verify</p>
-            </div>
-            <div class="line"></div>
-            <div class="circle-box">
-                <div class=circle-gray>
-                </div>
-                <p>Pay</p>
-            </div>
-        </div>
         <div class="width-2">
             <!--CART ITEMS-->
             <div class="outer-section">
-                <h3>Itemized Order</h3>
                 <div class="inner-section">
-                    <h4>Seller #1</h4>
+                    <div class="blue-bar">
+                        <h3>Itemized Order</h3>
+                    </div>
+                    <h4>Seller #1: <span class="tooltip"><span class="tooltiptext">See Seller Details</span><a
+                                href="https://store.bricklink.com/jkris53406#/shop" target="_blank">Badgerland
+                                Bricks</a></span>
+                    </h4>
                     <table>
                         <tr>
-                            <th>Item</th>
-                            <th>Description</th>
-                            <th>Condition</th>
-                            <th>Quantity</th>
-                            <th>Each</th>
-                            <th>Item Total</th>
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=973pb2015c01&C=0#T=C&C=0"
+                                    target="_blank">
+                                    <p class="item-title">Diving Suit</p>
+                                    <img src="images/item-photo.jpg" alt="item photo">
+                                </a>
+                                <div class="color black">Black</div>
+                            </td>
+                            <td class="description">
+                                <p>Torso Diving Suit with Dark Bluish
+                                    Gray Harness, Gagues on Front, Hoses and zipper
+                                    on
+                                    Back, Red stripes on sides Pattern/ Red Arms / Black Hands</p>
+                            </td>
+                            <td>
+                                <p class="bold">(1)</p>
+                                <p class="bold">New</p>
+                            </td>
+                            <td>Each<p class="bold">$1.50</p>
+                            </td>
+                            <td>Total<p class="bold">$1.50</p>
+                            </td>
                         </tr>
                         <tr>
-                            <td><img src="images/item-photo.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">973pb2015c01</a><br>Torso Diving Suit with Dark Bluish
-                                Gray Harness, Guagues
-                                on Front, Hoses and zipper
-                                on
-                                Back, Red stripes on sides Pattern/ Red Arms / Black Hands<br>
-                                <br>
-                                <div class="black"></div>Black
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=44728&C=11#T=C&C=11"
+                                    target="_blank">
+                                    <p class="item-title">Bracket</p>
+
+                                    <img src="images/bracket.jpg" alt="item photo">
+                                </a>
+                                <div class="color black">Black</div>
                             </td>
-                            <td class="condition">New</td>
+                            <td class="description">
+                                <p>Bracket 1 x 2 - 2 x 2</p>
+                            </td>
                             <td>
-                                <div class="quantity-final">
-                                    <p>1</p>
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <p class="bold">(4)</p>
+                                <p class="bold">Used-Good</p>
                             </td>
-                            <td>US $0.05</td>
-                            <td>US $0.20</td>
+                            <td>Each<p class="bold">$0.15</p>
+                            </td>
+                            <td>Total<p class="bold">$0.60</p>
+                            </td>
                         </tr>
                         <tr>
-                            <td><img src="images/bracket.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">44728</a><br>Bracket 1 x 2 - 2 x 2<br>
-                                <br>
-                                <div class="black"></div>Black
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=30361c&C=85#T=C&C=85"
+                                    target="_blank">
+                                    <p class="item-title">Robot Body</p>
+                                    <img src="images/round.jpg" alt="item photo">
+                                </a>
+                                <div class="color dk-gray">dk Bluish Gray</div>
                             </td>
-                            <td class="condition">Used-Excellent</td>
+                            <td class="description">
+                                <p>Brick, Round 2 x 2 x 2 Robot Body - with
+                                    Bottom Axle Holder x Shape + Orientation</p>
+                            </td>
                             <td>
-                                <div class="quantity-final">
-                                    <p>4</p>
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <p class="bold">(2)</p>
+                                <p class="bold">Used-Excellent</p>
                             </td>
-                            <td>US $0.05</td>
-                            <td>US $0.20</td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/round.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">30361c</a><br>Brick, Round 2 x 2 x 2 Robot Body - with
-                                Bottom Axle Holder x
-                                Shape + Orientation<br>
-                                <br>
-                                <div class="dk-gray"></div>Dark Bluish Gray
+                            <td>Each<p class="bold">$0.50</p>
                             </td>
-                            <td class="condition">Used-Fair</td>
-                            <td>
-                                <div class="quantity-final">
-                                    <p>2</p>
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                            <td>Total<p class="bold">$1.00</p>
                             </td>
-                            <td>US $0.05</td>
-                            <td>US $0.20</td>
                         </tr>
                     </table>
 
                     <form class="shipping">
                         <p class="choice">Please Choose a shipping method:</p>
-                        <label class="container">UPS $4.26
+                        <label class="container">UPS $4.26 (5-7 Days)
                             <input type="radio" name="shipping1">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container">FEDEX $6.66
+                        <label class="container">FEDEX $16.66 (2-Day Express)
                             <input type="radio" name="shipping1">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container">DHL $1.99
-                            <input type="radio" name="shipping1">
+                        <label class="container">USPS $2.99 (3-5 Days)
+                            <input type="radio" name="shipping1" onclick="badgerTotal(); payTotal1()">
                             <span class="checkmark"></span>
                         </label>
                     </form>
-                    <p class="total">Total for Seller #1: $7.99</p>
+                    <p class="total">Total for Badgerland Bricks: $<span id="seller1">3.10</span></p>
                     <div class="long-line"></div>
-                    <h4>Seller #2</h4>
+
+                    <h4>Seller #2: <span class="tooltip"><span class="tooltiptext">See Seller Details</span><a
+                                href="https://store.bricklink.com/Nightshade#/shop" target="_blank">Bag-O-Bricks</a>
+                    </span>
+                    </h4>
                     <table>
                         <tr>
-                            <th>Item</th>
-                            <th>Description</th>
-                            <th>Condition</th>
-                            <th>Quantity</th>
-                            <th>Each</th>
-                            <th>Item Total</th>
+                            <td>
+                                <a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=87754&C=86#T=C&C=86"
+                                    target="_blank">
+                                    <p class="item-title">Underwater Helmet</p>
+                                    <img src="images/headgear.jpg" alt="item photo">
+                                </a>
+                                <div class="color lt-gray">lt Bluish Gray</div>
+                            </td>
+                            <td class="description">
+                                <p>Minifigure, Headgear Helmet, Underwater</p>
+                            </td>
+                            <td>
+                                <p class="bold">(2)</p>
+                                <p class="bold">New</p>
+                            </td>
+                            <td>Each<p class="bold">$2.00</p>
+                            </td>
+                            <td>Total<p class="bold">$4.00</p>
+                            </td>
                         </tr>
                         <tr>
-                            <td><img src="images/headgear.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">87754</a><br>Minifigure, Headgear Helmet, Underwater<br>
-                                <br>
-                                <div class="lt-gray"></div>Light Bluish Gray
+                            <td><a href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=973pb2016c01&C=4#T=C&C=4"
+                                    target="_blank">
+                                    <p class="item-title">Diving Suit</p><img src="images/orange-shirt.jpg"
+                                        alt="item photo">
+                                </a>
+                                <div class="color orange">Orange</div>
                             </td>
-                            <td class="condition">Used-Good</td>
+                            <td class="description">
+                                <p>Torso Diving Suit Silver Chest Plate
+                                    and Hoses over
+                                    Dark Bluish Gray Harness, Silver
+                                    Diving Weights Pattern / Orange Arms / Blank Hands</p>
+                            </td>
                             <td>
-                                <div class="quantity-final">
-                                    <p>1</p>
-                                </div><br>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                                <p class="bold">(1)</p>
+                                <p class="bold">New</p>
                             </td>
-                            <td>US $0.05</td>
-                            <td>US $0.20</td>
-                        </tr>
-                        <tr>
-                            <td class="description"><img src="images/orange-shirt.jpg" alt="item photo"></td>
-                            <td class="description"><a href="#">973pb2015c01</a><br>Torso Diving Suit Silver Chest Plate
-                                and Hoses over Dark
-                                Bluish Gray Harness, Silver
-                                Diving Weights Pattern / Orange Arms / Blank Hands<br>
-                                <br>
-                                <div class="orange"></div>Orange
+                            <td>Each<p class="bold">$5.00</p>
                             </td>
-                            <td class="condition">New</td>
-                            <td>
-                                <div class="quantity-final">
-                                    <p>1</p>
-                                </div>
-                                <a href="#">Remove</a>
-                                <p>or</p>
-                                <a href="#">Save for Later</a>
+                            <td>Total<p class="bold">$5.00</p>
                             </td>
-                            <td>US $0.05</td>
-                            <td>US $0.20</td>
                         </tr>
                     </table>
                     <form class="shipping">
                         <p>Please Choose a shipping method:</p>
-                        <label class="container">UPS $4.26
+                        <label class="container">UPS $7.22 (5-7 Days)
                             <input type="radio" name="shipping2">
                             <span class="checkmark"></span>
                         </label>
-
-                        <label class="container">FEDEX $6.66
+                        <label class="container">FEDEX $16.66 (2-Day Express)
                             <input type="radio" name="shipping2">
                             <span class="checkmark"></span>
                         </label>
-
-                        <label class="container">DHL $1.99
-                            <input type="radio" name="shipping2">
+                        <label class="container">USPS $4.99 (3-5 Days)
+                            <input onclick="bagOTotal(); payTotal2()" type="radio" name="shipping2">
                             <span class="checkmark"></span>
                         </label>
-                        <p class="total">Total for Seller #1: $7.99</p>
+                        <p class="total">Total for Bag-O-Bricks: $<span id="seller2">9.00</span></p>
                     </form>
                 </div>
             </div>
             <div class="outer-section">
-                <h3>Enter Your Payment</h3>
                 <div class="inner-section">
-                    <div class="blue-bar"></div>
-                    <a href="https://www.paypal.com/webapps/mpp/paypal-popup" target="_blank">
-                        <div class="pay-button"><img src="images/paypal.jpg" alt="PayPal Acceptance Mark">PayPal
+                    <div class="blue-bar">
+                        <h3>Shipping Summary</h3>
+                    </div>
+                    <div class="summary">
+                        <p class="bold">Shipping to:</p>
+                        <p>Josh Brickham</p>
+                        <p>1235 Minifigure Way</p>
+                        <p>LEGO City, MO 44556</p>
+                        <p>555-567-5621</p>
+                        <p>brickham@gmail.com</p>
+                        <p class="link"><a href="build.html">(edit)</a></p>
+                        <br>
+                        <p class="bold">Shipping From:</p>
+                        <p>Country: United States</p>
+                        <p>Sellers have at least: 4 stars</p>
+                    </div>
+                </div>
+                <br>
+                <div class="inner-section">
+                    <div class="blue-bar">
+                        <h3>Order Total</h3>
+                    </div>
+                    <div class="total-summary">
+                        <div class="amount">
+                            <p>Subtotal</p>
+                            <p>$12.10</p>
                         </div>
-                    </a>
+                        <div class="amount">
+                            <p>Shipping</p>
+                            <p><span id="totalShip">$0.00</span></p>
+                        </div>
+                        <div class="amount">
+                            <p>TOTAL</p>
+                            <p>USD $<span id="totalPrice">12.10</span></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="inner-section">
+                    <div class="blue-bar">
+                        <h3>Enter Your Payment</h3>
+                    </div>
+                    <div class="link pay-button">
+                        <a href="https://www.paypal.com/webapps/mpp/paypal-popup" target="_blank">
+<img src="images/paypal.jpg" alt="PayPal Acceptance Mark">PayPal
+                        
+                        </a></div>
                     <button class="pay-button" onClick="pay();"><img src="images/credit-card.jpg"
                             alt="credit card icon">Credit Card</button>
                     <script src="https://sdk.paylike.io/3.js"></script>
@@ -247,34 +280,15 @@
                             });
                         }
                     </script>
-                    <br>
-                    <br>
-                    <br>
-                    <h3 class="summary-h3">Order Summary</h3>
-                    <div class="blue-bar"></div>
-                    <div class="outer-section">
-                        <div class="total-summary">
-                            <div class="amount">
-                                <p>Item Total</p>
-                                <p>$11.22</p>
-                            </div>
-                            <div class="amount">
-                                <p>Shipping</p>
-                                <p>$3.22</p>
-                            </div>
-                            <div class="amount">
-                                <p>TOTAL</p>
-                                <p>USD $14.44</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <a class="submitBtn" href="paid.html">Place Order</a>
+                <br>
+                <a class="submitBtn" href="loading.html">Place Order</a>
             </div>
         </div>
     </main>
     <footer>
-
+        <p>This page is a student simulation of the <a href="https://www.bricklink.com/v2/main.page" target="_blank">www.bricklink.com</a> shopping cart and checkout.</p>
+        <p>Copyright &copy; 2020 Marilee Austin</p>
     </footer>
     <script src="scripts/scripts.js"></script>
 </body>

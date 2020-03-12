@@ -15,6 +15,23 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.link a:link {
+    color: #2e8bc5;
+    text-decoration: none;
+}
+
+.link a:visited {
+    color: #2e8bc5;
+}
+
+.link a:hover {
+    color: #e22828;
+}
+
+.link a:active {
+    color: #fed04f;
+}
+
 /*HEADER/NAVIGATION*/
 
 header {
@@ -28,15 +45,15 @@ header input {
 
 .logo {
     width: 100%;
-    max-width: 150px;
-    padding-left: 5px;
+    max-width: 200px;
+    padding-left: 15px;
 }
 
 label[for="toggle"] {
     float: right;
     font-size: 1.4em;
     cursor: pointer;
-    margin: 7px;
+    margin: 10px 20px;
 }
 
 #menu {
@@ -81,48 +98,15 @@ nav ul li a:active {
 /*WAYFINDING*/
 
 .wayfinding {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    margin: 0;
-}
-
-.circle-box {
-    display: block;
     text-align: center;
-    width: 15px;
-    height: 15px;
+    padding-top: 30px;
+
 }
 
-.circle-box p {
-    position: relative;
-    right: 92px;
-    bottom: 10px;
-    width: 200px;
-    font-size: .6em;
-}
-
-.circle-yellow {
-    margin: auto;
-    height: 15px;
-    width: 15px;
-    background: #fed04f;
-    border-radius: 50%;
-}
-
-.circle-gray {
-    height: 15px;
-    width: 15px;
-    background: rgb(180, 180, 180);
-    border-radius: 50%;
-}
-
-.line {
-    width: 100px;
-    height: 2px;
-    background: rgb(180, 180, 180);
-    align-self: center;
-    margin: 0 20px;
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .wayfinding a:link {
@@ -142,21 +126,33 @@ nav ul li a:active {
     color: #e22828;
 }
 
+main {
+    background-image: url("/images/yellow-plate.jpg");
+    background-color: #fed04f;
+    background-size: 1400px;
+    padding: 20px 0 50px 0;
+}
+
+.return {
+    margin: -10px 0 20px 0;
+}
+
 /* MAIN TABLE PROPERTIES*/
 
 .outer-section {
-    margin: 20px;
+    margin: 40px 20px 0 20px;
     padding: 10px;
     background: #ebebeb;
 }
 
-.outer-section h3 {
+h3 {
+    font-size: 1.1rem;
     text-align: center;
     margin: 0;
 }
 
 .inner-section {
-    font-size: .6em;
+    font-size: .7rem;
     margin: 10px;
     padding: 10px;
     background: #fff;
@@ -167,45 +163,44 @@ table {
     text-align: center;
 }
 
-th {
-    padding: 10px;
-    border-bottom: 2px solid #ddd;
-}
-
-tr:first-of-type {
-    background: #c8d3db;
-}
-
 .blue-bar {
     width: 100%;
-    background: #c8d3db;
-    height: 30px;
-    margin-bottom: 20px;
+    background: #2e8bc5;
+    height: 40px;
+    color: #fff;
+    padding-top: 10px;
 }
+
 
 /*SHOPPING CART*/
 
+.item-title {
+    font-weight: 800;
+}
+
+.color {
+    width: 70px;
+    height: 20px;
+    padding: 5px 5px 20px 5px;
+    text-align: center;
+}
+
 .black {
-    width: 25px;
-    height: 15px;
     background: black;
+    color: #fff;
 }
 
 .dk-gray {
-    width: 25px;
-    height: 15px;
+    color: #fff;
     background: rgb(105, 104, 104);
 }
 
 .lt-gray {
-    width: 25px;
-    height: 15px;
     background: rgb(223, 223, 223);
 }
 
 .orange {
-    width: 25px;
-    height: 15px;
+    color: #fff;
     background: rgb(255, 126, 51);
 }
 
@@ -218,13 +213,9 @@ tr:first-of-type {
         text-align: left;
     }
 
-table tr:first-child {
-    display: none;
-}
-
-td.description {
-    margin: 0;
-}
+    td.description {
+        margin: 0;
+    }
 
 }
 
@@ -239,6 +230,10 @@ tr {
 
 td {
     padding: 10px;
+}
+
+td p {
+    margin: 0 0 10px 0;
 }
 
 td a:link {
@@ -258,8 +253,8 @@ td a:active {
     color: #e22828;
 }
 
-.description {
-    text-align: left;
+.bold {
+    font-weight: 800;
 }
 
 /*QUANTITY CODE FROM PINKR https://embed.plnkr.co/B5waxZ/*/
@@ -274,25 +269,27 @@ td a:active {
 .quantity .input-text.qty {
     text-align: center;
     background-color: transparent;
-    border: 1px solid #ddd;
-    font-size: 1.3em;
-    max-width: 10px;
+    border: 1px solid #aaa;
+    max-width: 40px;
 }
 
 .quantity.buttons_added {
     white-space: nowrap;
+    margin-right: 10px;
+
 }
 
 .quantity.buttons_added input {
     vertical-align: top;
-    font-size: 1.3em;
-    max-width: 20px;
+    max-width: 25px;
 }
 
 .quantity.buttons_added .minus,
 .quantity.buttons_added .plus {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
     background-color: #ffffff;
-    border: 1px solid #ddd;
     cursor: pointer;
 }
 
@@ -322,16 +319,53 @@ td a:active {
 }
 
 .quantity-final {
-    border: 1px solid rgb(163, 163, 163);
+    border: 1px solid #7f7f7f;
     width: 25px;
     height: 25px;
     margin: auto;
-
 }
 
 .quantity-final p {
     margin: auto;
     padding-top: 5px;
+}
+
+.icons {
+    margin: 0 15px 0 0;
+    font-size: 1rem;
+}
+
+
+
+/*TOOLTIPS FROM W3SCHOOLS*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color:#7f7f7f;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: .8rem;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 /*CUSTOMER INFO*/
@@ -344,22 +378,30 @@ input {
     margin-bottom: 20px;
     padding: 7px;
     border-radius: 4px;
+    border: 1px solid #aaa;
     width: 96%;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: .8rem;
+    color: #e22828;
+    text-align: center;
+    margin: 10px 0;
 }
 
 
 /*SELECT CODE FROM https://www.filamentgroup.com/lab/select-css.html FILAMENT GROUP*/
 .select-css {
     display: block;
-    font-size: 14px;
-    font-family: sans-serif;
-    color: rgb(136, 136, 136);
     line-height: 1.3;
     padding: 7px;
+    margin-bottom: 20px;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
-    margin: -5px 0 15px;
     border: 1px solid #aaa;
     border-radius: 4px;
     box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
@@ -367,8 +409,7 @@ input {
     -webkit-appearance: none;
     appearance: none;
     background-color: #fff;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-        linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
@@ -382,7 +423,9 @@ input {
     border-color: #888;
 }
 
-.select-css:focus {
+.select-css:focus,
+.quantity.buttons_added .minus:focus,
+.quantity.buttons_added .plus:focus {
     border-color: #aaa;
     box-shadow: 0 0 1px 3px #2e8bc5;
     box-shadow: 0 0 0 3px -moz-mac-focusring;
@@ -390,9 +433,10 @@ input {
     outline: none;
 }
 
-.select-css option {
-    font-weight: normal;
+.select-css.condition {
+    width: 110px;
 }
+
 
 /*SHIPPING*/
 
@@ -473,7 +517,27 @@ a.submitBtn:active {
 /*ITEMIZED ORDER*/
 
 h4 {
-    font-size: 1.6em;
+    text-align: center;
+    color: #e22828;
+    background: #eee;
+    padding-top: 15px;
+}
+
+h4 a:link {
+    color: #2e8bc5;
+    text-decoration: none;
+}
+
+h4 a:visited {
+    color: #2e8bc5;
+}
+
+h4 a:hover {
+    color: #fed04f;
+}
+
+h4 a:active {
+    color: #117729;
 }
 
 /* Customize the label (the container) CODE FROM W3SCHOOLS */
@@ -483,7 +547,6 @@ h4 {
     padding-left: 35px;
     margin: 12px;
     cursor: pointer;
-    font-size: .7rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -543,16 +606,21 @@ h4 {
 }
 
 .shipping p {
-    font-size: 1.5em;
     margin-top: 20px;
 }
 
 .total {
-    font-size: 1.5em;
+    font-size: 1.1rem;
     font-weight: 800;
 }
 
 /*PAYMENT*/
+
+.summary {
+    font-size: .9rem;
+    line-height: .5rem;
+    padding-left: 20px;
+}
 
 .pay-button {
     border: 1px solid #c8d3db;
@@ -560,7 +628,6 @@ h4 {
     padding: 5px 0;
     background: #fff;
     text-align: left;
-    font-size: 1.2em;
     cursor: pointer;
 }
 
@@ -568,17 +635,12 @@ h4 {
     vertical-align: middle;
 }
 
-.summary-h3 {
-    font-size: 2em;
-    padding-bottom: 15px;
-}
-
 .total-summary {
+    font-size: .8rem;
     background: #fff;
 }
 
 .total-summary div:nth-child(3) {
-    font-size: 1.3em;
     font-weight: 800;
     background: #eee;
 }
@@ -598,12 +660,12 @@ h4 {
     background: #7f7f7f;
     margin: 40px 0;
     width: 100%;
-    height: 4px;
+    height: 3px;
 }
 
 .notice {
+    font-size: 1.1rem;
     color: #ea2309;
-    margin-bottom: -20px;
 }
 
 .width-1 {
@@ -627,6 +689,15 @@ h4 {
     color: #e22828;
 }
 
-.small-print {
-    font-size: .7em;
+footer {
+    padding: 70px 20px;
+    text-align: center;
+    height: 200px;
+    background: #fed04f;
+    border-top: 5px solid #000;
 }
+
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+    color: #000;
+}
+
