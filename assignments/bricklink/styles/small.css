@@ -127,8 +127,6 @@ h1 {
 }
 
 main {
-    background-image: url("../images/yellow-plate.jpg");
-    background-color: #fed04f;
     background-size: 1400px;
     padding: 20px 0 50px 0;
 }
@@ -693,12 +691,12 @@ footer {
     padding: 70px 20px;
     text-align: center;
     height: 200px;
-    color: #000;
-    background: #fed04f;
+    color: #fff;
+    background: #000;
     border-top: 5px solid #000;
 }
 
 footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: #000;
+    color: #fff;
 }
 
