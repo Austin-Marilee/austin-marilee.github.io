@@ -50,8 +50,3 @@ $(document).ready(function(){
     
   });
   
-  
-  function responseMessage(msg) {
-    $('.success-box').fadeIn(200);  
-    $('.success-box div.text-message').html("<span>" + msg + "</span>");
-  }
