@@ -106,7 +106,6 @@ nav ul li a:active {
 h1 {
     font-size: 1.5rem;
     margin: 0;
-    padding-bottom: 20px;
 }
 
 .wayfinding a:link {
@@ -128,7 +127,7 @@ h1 {
 
 main {
     background-size: 1400px;
-    padding: 20px 0 50px 0;
+    padding: 0 0 50px 0;
 }
 
 .return {
@@ -345,7 +344,7 @@ td a:active {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color:#7f7f7f;
+    background-color: #7f7f7f;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -489,7 +488,7 @@ h5 {
     top: 2px;
 }
 
-a.submitBtn {
+span.submitBtn {
     background: #ea2309;
     color: #fff;
     text-decoration: none;
@@ -503,12 +502,12 @@ a.submitBtn {
     border-radius: 4px;
 }
 
-a.submitBtn:hover {
+span.submitBtn:hover {
     background: #fed04f;
     color: #000;
 }
 
-a.submitBtn:active {
+span.submitBtn:active {
     background: #eeeeee;
 }
 
@@ -696,7 +695,91 @@ footer {
     border-top: 5px solid #000;
 }
 
-footer a:link, footer a:visited, footer a:hover, footer a:active {
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
     color: #fff;
 }
 
+/*POPUP*/
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 88%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    bottom: -360px;
+    left: 26%;
+    margin-left: -80px;
+
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .showPop {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+a.next:link {
+    color: #000;
+    text-decoration: none;
+    background: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+a.next:visited {
+    color: #000;
+}
+
+a.next:hover {
+    opacity: .7;
+}
+a.next:active {
+    background: #e22828;
+}
+
+.next-box {
+    margin: 40px auto;
+
+}

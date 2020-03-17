@@ -52,3 +52,10 @@ function payTotal2() {
     document.getElementById('totalShip').innerHTML = shipTotal;
     document.getElementById('totalPrice').innerHTML = items + shipTotal;
 }
+
+// When the user clicks on div, open the popup
+function myPopup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("showPop");
+  }
+  
