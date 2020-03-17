@@ -750,7 +750,7 @@ footer a:active {
     padding: 20px;
     position: absolute;
     z-index: 1;
-    bottom: -360px;
+    bottom: -380px;
     left: 26%;
     margin-left: -80px;
 
@@ -791,6 +791,7 @@ a.next:link {
     padding: 15px;
     border-radius: 5px;
     margin: 10px;
+    
 }
 
 a.next:visited {
@@ -806,5 +807,5 @@ a.next:active {
 
 .next-box {
     margin: 40px auto;
-
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
 }
