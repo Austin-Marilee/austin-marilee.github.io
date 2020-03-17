@@ -131,7 +131,7 @@ main {
 }
 
 .return {
-    margin: -10px 0 20px 0;
+    margin: 10px 0 20px 0;
 }
 
 /* MAIN TABLE PROPERTIES*/
@@ -500,6 +500,7 @@ span.submitBtn {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px 0 5px 0;
     border-radius: 4px;
+    cursor: pointer
 }
 
 span.submitBtn:hover {
@@ -508,6 +509,30 @@ span.submitBtn:hover {
 }
 
 span.submitBtn:active {
+    background: #eeeeee;
+}
+
+a.submitBtn2 {
+    background: #ea2309;
+    color: #fff;
+    text-decoration: none;
+    width: 95%;
+    height: 30px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 0 5px 0;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+a.submitBtn2:hover {
+    background: #fed04f;
+    color: #000;
+}
+
+a.submitBtn2:active {
     background: #eeeeee;
 }
 
