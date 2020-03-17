@@ -434,58 +434,48 @@ h5 {
     width: 110px;
 }
 
-
 /*SHIPPING*/
 
-/*START RATING BY ADAM ORCHARD*/
-.star-rating {
-    font-family: 'FontAwesome';
+.star-box {
+    margin: 25px 0;
 }
 
-.star-rating>fieldset {
-    border: none;
+.starRating:not(old) {
     display: inline-block;
-}
-
-.star-rating>fieldset:not(:checked)>input {
-    position: absolute;
-    top: -9999px;
-    clip: rect(0, 0, 0, 0);
-}
-
-.star-rating>fieldset:not(:checked)>label {
-    float: right;
-    width: 1em;
-    padding: 0 0.05em;
+    width: 7.5em;
+    height: 1.5em;
     overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 200%;
-    color: #fed04f;
+    vertical-align: bottom;
 }
 
-.star-rating>fieldset:not(:checked)>label:before {
-    content: '\f006  ';
+.starRating:not(old)>input {
+    margin-right: -100%;
+    opacity: 0;
 }
 
-.star-rating>fieldset:not(:checked)>label:hover,
-.star-rating>fieldset:not(:checked)>label:hover~label {
-    color: #fed04f;
-    text-shadow: 0 0 3px #fed04f;
-}
-
-.star-rating>fieldset:not(:checked)>label:hover:before,
-.star-rating>fieldset:not(:checked)>label:hover~label:before {
-    content: '\f005  ';
-}
-
-.star-rating>fieldset>input:checked~label:before {
-    content: '\f005  ';
-}
-
-.star-rating>fieldset>label:active {
+.starRating:not(old)>label {
+    display: block;
+    float: right;
     position: relative;
-    top: 2px;
+    background: url('../images/star-off.svg');
+    background-size: contain;
+}
+
+.starRating:not(old)>label:before {
+    content: '';
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../images/star-on.svg');
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.starRating:not(old)>label:hover:before,
+.starRating:not(old)>label:hover~label:before,
+.starRating:not(:hover)> :checked~label:before {
+    opacity: 1;
 }
 
 span.submitBtn {
@@ -791,7 +781,7 @@ a.next:link {
     padding: 15px;
     border-radius: 5px;
     margin: 10px;
-    
+
 }
 
 a.next:visited {
@@ -801,6 +791,7 @@ a.next:visited {
 a.next:hover {
     opacity: .7;
 }
+
 a.next:active {
     background: #e22828;
 }
