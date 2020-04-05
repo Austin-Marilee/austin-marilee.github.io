@@ -35,8 +35,7 @@ body {
 /*HEADER/NAVIGATION*/
 
 header {
-    border-bottom: 2px solid #000;
-    background: #FFCC36;
+    border-bottom: 50px solid #FFCC36;
 }
 
 
@@ -48,6 +47,7 @@ header input {
     width: 100%;
     max-width: 200px;
     padding-left: 15px;
+    margin-top: 10px;
 }
 
 label[for="toggle"] {
@@ -55,10 +55,6 @@ label[for="toggle"] {
     font-size: 1.4em;
     cursor: pointer;
     margin: 10px 20px;
-}
-
-.fa-shopping-cart:before {
-    content: "\f07a";
 }
 
 #menu {
@@ -572,7 +568,6 @@ a.submitBtn2 {
     background: #ea2309;
     color: #fff;
     text-decoration: none;
-    width: 95%;
     height: 30px;
     display: block;
     text-align: center;
@@ -580,7 +575,14 @@ a.submitBtn2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px 0 5px 0;
     border-radius: 4px;
-    cursor: pointer
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.or {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 a.submitBtn2:hover {
@@ -703,14 +705,54 @@ h4 a:active {
 .pay-button {
     border: 1px solid #c8d3db;
     width: 100%;
+    height: 30px;
+    border-radius: 3px;
     padding: 5px 0;
-    background: #fff;
-    text-align: left;
     cursor: pointer;
+    text-align: center;
+    background: #FFCC36;
+    font-weight: 800;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.pay-button img {
+
+.paypal img {
     vertical-align: middle;
+    width: 100px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.creditCard img {
+    width: 50px;
+    vertical-align: middle;
+    margin: 25px 10px 25px 15px;
+}
+
+.creditCard {
+    text-align: center;
+}
+
+.dates {
+    margin-left: 20px;
+}
+
+.date-field {
+    display: flex;
+}
+
+.date-field select {
+    border-radius: 3px;
+    padding: 4px 15px 4px 0;
+    margin-top: 5px;
+}
+
+.month {
+    margin-right: 25px;
+}
+
+.formRow {
+    display: flex;
 }
 
 .total-summary {
@@ -744,8 +786,13 @@ h4 a:active {
 .notice {
     font-size: 1rem;
     color: #ea2309;
-    max-width: 500px;
+    max-width: 700px;
     margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    text-align: center;
+    border: 2px solid #e22828;
 }
 
 .width-1 {
